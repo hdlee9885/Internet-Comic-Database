@@ -1,4 +1,4 @@
-# ->Angular Reference Sheet<-
+->Angular Reference Sheet<-
 # Setup
 First, you need to make sure that node.js and npm package manager are installed. To install node.js, got to https://nodejs.org/en/, or if on Unix using the command `sudo apt install nodejs`. Angular uses libraries that can be managed with npm. For windows, npm should automatically be installed with node.js. On Unix, it can be installed with `sudo apt install npm`.
 
@@ -17,6 +17,6 @@ The full startup tutorial can be found at https://angular.io/guide/setup-local.
 * When running `ng serve --open` in the workspace folder, compilation fails with the error: `An unhandled exception occurred: Cannot find module '@angular-devkit/build-angular/package.json'`
   * Run `npm install --save-dev @angular-devkit/build-angular`
 * When running `ng serve --open` in the workspace folder, it fails because you have multiple Angular servers running already.
-  * You need to kill the processes that are on port where Angular is configured to start the server, then start the server again.
+  * You need to kill the processes that are on port where Angular is configured to start the server, then start the server again. Use `ps -a` to view all processes and `kill -9 [pid]` to stop the ng serve --open process
 
 # Terms
