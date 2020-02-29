@@ -1,4 +1,4 @@
-                                                  # Angular Reference Sheet
+# ->Angular Reference Sheet<-
 # Setup
 First, you need to make sure that node.js and npm package manager are installed. To install node.js, got to https://nodejs.org/en/, or if on Unix using the command `sudo apt install nodejs`. Angular uses libraries that can be managed with npm. For windows, npm should automatically be installed with node.js. On Unix, it can be installed with `sudo apt install npm`.
 
