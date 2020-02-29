@@ -1,4 +1,5 @@
-   # Angular Reference Sheet
+# Angular Reference Sheet
+Note that the official Angular docs are available at https://angular.io/docs, but this reference sheet displays all the necessary information that pertains to our application.
 # Setup
 First, you need to make sure that node.js and npm package manager are installed. To install node.js, got to https://nodejs.org/en/, or if on Unix using the command `sudo apt install nodejs`. Angular uses libraries that can be managed with npm. For windows, npm should automatically be installed with node.js. On Unix, it can be installed with `sudo apt install npm`.
 
@@ -17,6 +18,15 @@ The full startup tutorial can be found at https://angular.io/guide/setup-local.
 * When running `ng serve --open` in the workspace folder, compilation fails with the error: `An unhandled exception occurred: Cannot find module '@angular-devkit/build-angular/package.json'`
   * Run `npm install --save-dev @angular-devkit/build-angular`
 * When running `ng serve --open` in the workspace folder, it fails because you have multiple Angular servers running already.
-  * You need to kill the processes that are on port where Angular is configured to start the server, then start the server again. Use `ps -a` to view all processes and `kill -9 [pid]` to stop the ng serve --open process
+  * Run `ng update @angular/core --next`. You might need to commit or stash any unsaved git changes.
+  
+# Architecture
+## Basic Overview
+The basic building blocks of an angular application are *modules* and *components*. Modules define a compilation context for components. An app always has a root module and typically more feature modules. Components define *views*, or sets of screen elements to be displayed, and can use *services*, which provide extra functionality not related to the view. Services can be *injected* into components as a *dependency*.
+
+# Navigation
+
+# Data Flow
 
 # Terms
+* Workspace - A collection of Angular projects that are powered by the Angular CLI and are typically located in a single-source version control directory like git.
