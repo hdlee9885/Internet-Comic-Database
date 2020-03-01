@@ -23,7 +23,7 @@ The full startup tutorial can be found at https://angular.io/guide/setup-local.
   
 # Architecture
 ## Basic Overview
-The basic building blocks of an angular application are *modules* and *components*. Modules define a compilation context for components. An app always has a root module and typically more feature modules. Components define *views*, or sets of screen elements to be displayed, and can use *services*, which provide extra functionality not related to the view. Services can be *injected* into components as a *dependency*.
+The basic building blocks of an angular application are *modules* and *components*. Components define *views*, or sets of screen elements to be displayed, and can use *services*, which provide extra functionality not related to the view. Services can be *injected* into components as a *dependency*. Modules define a compilation context for components. An app always has a root module and typically more feature modules.
 
 # Navigation
 
