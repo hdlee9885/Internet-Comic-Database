@@ -3,10 +3,10 @@ Welcome to our Software Lab Project!
 
 The docs folder contains reference sheets to various aspects of the project such as using the Angular framework and how we structured the code.
 
-# Project URL
+## Project URL
 
 
-# Project Members
+## Project Members
 
 We divided our team of six students into group of three, the backend and the frontend team. 
 
