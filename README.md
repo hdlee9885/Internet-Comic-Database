@@ -10,7 +10,6 @@ The docs folder contains reference sheets to various aspects of the project such
 
 We divided our team of six students into group of three, the backend and the frontend team. 
 
-----------------------------------------------
 ### Backend Team
 ----------------------------------------------
 Name            | EID            |Github ID
@@ -19,7 +18,6 @@ Jacob Grimm     |  |
 Sebastian Roble |  |
 William Gu      | wg4792   |
 
-----------------------------------------------
 ### Frontend Team
 ----------------------------------------------
 Name            | EID            |Github ID
