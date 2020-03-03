@@ -34,7 +34,62 @@ An Angular *NgModules* declares a compilation context for a set of components th
 Like Javascript modules (or Java packages), NgModules can import functionality from other NgModules or export their own functionality. Skip to Navigation now if following for Phase I.
 
 # Navigation
+The Angular *router* NgModule is a service that lets you define the navigation path among the different application states in the app. It's usage is similar to conventional browser navigation:
+* Enter a URL in the address bar and the browswer navigates to a corresponding page.
+* Click links on the page and the router navigates to a new page.
+* Click the browser's back and forward buttons and the router navigates accordingly.
+In Angular's case, the router maps URL's to *views* instead of pages. 
 
+## `<Base>` Element
+The `<base>` element can be added as the first child in the `<head>` tag of an index.html file. Using the `href` attribute, this element tells the router how to compose navigation URL's for this view. For example, if we are adding this element to an index.html file that in a folder that is the application root, the element should look like `<base href="/">`.
+
+## Importing the Router
+Since the router module is an optional service and is not part of the Angular core, we will need to import it into the component that wishes to use it. Import it by adding `import { RouterModule, Routes } from '@angular/router';` to the top of the component file (`.ts`) that wishes to use it.
+
+## Configuration
+There is only one singleton instance of an Angular router for per application. When the browser's URL changes, that router looks for a corresponding *Route* from which it can determine the component to display. A router has no routes until you add some.
+
+To configure a router, we must give it a list of route definitions. Each route definition is defined as a *Route Object* which has two fields: 
+1. A *path*, or the URL path for this route.
+1. A *component*, or the component associated with this route.
+Once we define our list of route definitions, we pass it to the RouterModule.forRoot() method. This method returns a module that contains the configured Router service provider. Essentially, it makes the router service available everywhere in the application. An example `src/app/app-routing.module.ts` file is below.
+```
+import { NgModule }              from '@angular/core';
+import { RouterModule, Routes }  from '@angular/router';
+
+import { CrisisListComponent }   from './crisis-list/crisis-list.component';
+import { HeroListComponent }     from './hero-list/hero-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const appRoutes: Routes = [
+  { path: 'crisis-center', component: CrisisListComponent },
+  { path: 'heroes',        component: HeroListComponent },
+  { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutingModule {}
+```
+Now, in the `src/app/app.module.ts` file, we must import the routing module with `import { AppRoutingModule } from './app-routing.module';` and add it to the NgModule import: 
+```
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  ```
 
 # Data Flow
 
