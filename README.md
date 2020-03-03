@@ -11,15 +11,17 @@ Backend Team
 ----------------------------------------------
 Name            | EID            |Github ID
 -------------   | -------------  | -------------
-Jacob Grimm     | Content Cell   |
-Sebastian Roble | Content Cell   |
+Jacob Grimm     |  |
+Sebastian Roble |  |
 William Gu      | wg4792   |
+
+
 Frontend Team
 ----------------------------------------------
 Name            | EID            |Github ID
 -------------   | -------------  | -------------
-Christopher Erattuparambil    | Content Cell   |
-Josh Kall | Content Cell   |
+Christopher Erattuparambil    | Content Cell   |chrisjoswin
+Josh Kall | Content Cell   |j-ka11
 Haosong Li      | hl27346   | hdlee9885
 
 
