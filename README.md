@@ -29,7 +29,7 @@ Haosong Li      | hl27346   | hdlee9885
 
 ## Estimated & Actual Completion Time for Each Member
 ----------------------------------------------
-Name            | Tasks           |Esitmated  | Actual
+Name            | Tasks           |Esitmated (hrs)  | Actual (hrs)
 -------------   | -------------  | -------------|-------------
 Jacob Grimm     |  | |
 Sebastian Roble |  | |
