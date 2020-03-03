@@ -26,7 +26,12 @@ The full startup tutorial can be found at https://angular.io/guide/setup-local.
 The basic building blocks of an angular application are *modules* and *components*. Components define *views*, or sets of screen elements to be displayed, and can use *services*, which provide extra functionality not related to the view. Services can be *injected* into components as a *dependency*. Modules define a compilation context for components. An app always has a root module and typically more feature modules.
 
 ## Components
-Components define a class that contains the app's data and logic. Separately, they control a *view*, or the template for how everything should be rendered on the screen. For phase I, we will need to create 14 components, per the 14 static pages requirement. Skip to Navigation now if following for Phase I.
+Components define a class that contains the app's data and logic. Separately, they control a *view*, or the template for how everything should be rendered on the screen. For phase I, we will need to create 14 components, per the 14 static pages requirement. Skip to Modules now if following for Phase I.
+
+## Modules
+An Angular *NgModules* declares a compilation context for a set of components that is dedicated to an application domain. An NgModule can associate its components with related code, such as services, to form functional units. Every Angular app has a root module, typically named *AppModule* that bootstraps the application.
+
+Like Javascript modules (or Java packages), NgModules can import functionality from other NgModules or export their own functionality. Skip to Navigation now if following for Phase I.
 
 # Navigation
 
