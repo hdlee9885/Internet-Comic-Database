@@ -14,15 +14,27 @@ We divided our team of six students into group of three, the backend and the fro
 ----------------------------------------------
 Name            | EID            |Github ID
 -------------   | -------------  | -------------
-Jacob Grimm     |  |
-Sebastian Roble |  |
-William Gu      | wg4792   |
+Jacob Grimm     | jag9794 |
+Sebastian Roble |  |JSRobles
+William Gu      | wg4792   | Minalinnski
 
 ### Frontend Team
 ----------------------------------------------
 Name            | EID            |Github ID
 -------------   | -------------  | -------------
-Christopher Erattuparambil    | Content Cell   |chrisjoswin
-Josh Kall | Content Cell   |j-ka11
+Christopher Erattuparambil    | 	ce7347   |chrisjoswin
+Josh Kall | 	jsk2544   |j-ka11
 Haosong Li      | hl27346   | hdlee9885
+
+
+## Estimated & Actual Completion Time for Each Member
+----------------------------------------------
+Name            | Tasks           |Esitmated  | Actual
+-------------   | -------------  | -------------
+Jacob Grimm     |  | |
+Sebastian Roble |  | |
+William Gu      |  | |
+Christopher Erattuparambil    | 	   | |
+Josh Kall |  | |
+Haosong Li      |   | |
 
