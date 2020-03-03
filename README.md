@@ -14,8 +14,8 @@ We divided our team of six students into group of three, the backend and the fro
 ----------------------------------------------
 Name            | EID            |Github ID
 -------------   | -------------  | -------------
-Jacob Grimm     | jag9794 |
-Sebastian Roble |  |JSRobles
+Jacob Grimm     | jag9794 | jacobgrimm
+Sebastian Roble | Jsr2834 |JSRobles
 William Gu      | wg4792   | Minalinnski
 
 ### Frontend Team
