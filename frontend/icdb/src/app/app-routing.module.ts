@@ -14,6 +14,7 @@ import { Character3Component} from './character3/character3.component';
 import { Issue1Component} from './issue1/issue1.component';
 import { Issue2Component} from './issue2/issue2.component';
 import { Issue3Component} from './issue3/issue3.component';
+import { AboutComponent} from './about/about.component';
 
 
 
@@ -26,18 +27,18 @@ const routes: Routes = [
   { path: 'characters', component: CharactersComponent },
   { path: 'issues', component: IssuesComponent },
   { path: 'splash', component: SplashComponent},
-  { path: 'author1', component: Author1Component},
-  { path: 'author2', component: Author2Component},
-  { path: 'author3', component: Author3Component},
-  { path: 'character1', component: Character1Component},
-  { path: 'character2', component: Character2Component},
-  { path: 'character3', component: Character3Component},
-  { path: 'issue1', component: Issue1Component},
-  { path: 'issue2', component: Issue2Component},
-  { path: 'issue3', component: Issue3Component},
-
-
-  { path: '', redirectTo: 'splash', pathMatch: 'full' }
+  { path: 'authors/author1', component: Author1Component},
+  { path: 'authors/author2', component: Author2Component},
+  { path: 'authors/author3', component: Author3Component},
+  { path: 'characters/character1', component: Character1Component},
+  { path: 'characters/character2', component: Character2Component},
+  { path: 'characters/character3', component: Character3Component},
+  { path: 'issues/issue1', component: Issue1Component},
+  { path: 'issues/issue2', component: Issue2Component},
+  { path: 'issues/issue3', component: Issue3Component},
+  { path: 'about', component: AboutComponent},
+  { path: '', redirectTo: 'splash', pathMatch: 'full' },
+  
 
 ];
 
