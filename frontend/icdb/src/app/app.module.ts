@@ -6,16 +6,17 @@ import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { CharactersComponent } from './characters/characters.component';
 import { IssuesComponent } from './issues/issues.component';
-import { Page5Component } from './page5/page5.component';
-import { Page6Component } from './page6/page6.component';
-import { Page7Component } from './page7/page7.component';
-import { Page8Component } from './page8/page8.component';
-import { Page9Component } from './page9/page9.component';
-import { Page10Component } from './page10/page10.component';
-import { Page11Component } from './page11/page11.component';
-import { Page12Component } from './page12/page12.component';
-import { Page13Component } from './page13/page13.component';
-import { Page14Component } from './page14/page14.component';
+import { SplashComponent } from './splash/splash.component';
+import { AboutComponent } from './about/about.component';
+import { Author1Component } from './author1/author1.component';
+import { Author2Component } from './author2/author2.component';
+import { Author3Component } from './author3/author3.component';
+import { Character1Component } from './character1/character1.component';
+import { Character2Component } from './character2/character2.component';
+import { Character3Component } from './character3/character3.component';
+import { Issue1Component } from './issue1/issue1.component';
+import { Issue2Component } from './issue2/issue2.component';
+import { Issue3Component } from './issue3/issue3.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +24,17 @@ import { Page14Component } from './page14/page14.component';
     AuthorsComponent,
     CharactersComponent,
     IssuesComponent,
-    Page5Component,
-    Page6Component,
-    Page7Component,
-    Page8Component,
-    Page9Component,
-    Page10Component,
-    Page11Component,
-    Page12Component,
-    Page13Component,
-    Page14Component
+    SplashComponent,
+    AboutComponent,
+    Author1Component,
+    Author2Component,
+    Author3Component,
+    Character1Component,
+    Character2Component,
+    Character3Component,
+    Issue1Component,
+    Issue2Component,
+    Issue3Component
   ],
   imports: [
     BrowserModule,
