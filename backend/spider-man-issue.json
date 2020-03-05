@@ -1,0 +1,61 @@
+{
+    "id": 55311,
+    "digitalId": 41734,
+    "title": "The Amazing Spider-Man (2015) #13",
+    "issueNumber": 13,
+    "variantDescription": "",
+    "description": "POWER PLAY CONTINUES! Things aren’t going well between the Amazing Spider-Man and the Invincible Iron Man and their conflict is opening the door for Regent and his plan against our heroes! Now that Regent has started imprisoning HEROES and stealing their powers things have gone from bad to worse.",
+    "upc": "75960608297101311",
+    "diamondCode": "APR160935",
+    "pageCount": 32,
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/55311",
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/20432",
+      "name": "The Amazing Spider-Man (2015 - 2018)"
+    },
+
+    "date": "2016-06-01T00:00:00-0400",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/80/574371c927322",
+      "extension": "jpg"
+    },
+    "creators": {
+      "available": 4,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/55311/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1141",
+          "name": "Giuseppe Camuncoli",
+          "role": "penciller"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/4300",
+          "name": "Nick Lowe",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/63",
+          "name": "Alex Ross",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12983",
+          "name": "Dan Slott",
+          "role": "writer"
+        }
+      ],
+      "returned": 4
+    },
+    "characters": {
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+          "name": "Iron Man"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009610",
+          "name": "Spider-Man"
+        }
+      ]
+    }
+}

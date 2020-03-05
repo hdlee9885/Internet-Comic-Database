@@ -1,0 +1,72 @@
+{
+    "id": 66979,
+    "digitalId": 47831,
+    "title": "Adventures of Captain America (1991) #2",
+    "issueNumber": 2,
+    "description": "Cap's war against fascism begins at last! Watch as Steve Rogers and Bucky Barnes meet for the first time! Marvel as Cap dons his costume and takes up his original shield!",
+    "modified": "2018-02-15T15:31:54-0500",
+    "format": "Comic",
+    "resourceURI": "http://gateway.marvel.com/v1/public/comics/66979",
+    "series": {
+      "resourceURI": "http://gateway.marvel.com/v1/public/series/24227",
+      "name": "Adventures of Captain America (1991 - 1992)"
+    },
+    "date": "1991-11-01T00:00:00-0500",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/b0/5a85e7930cd17",
+      "extension": "jpg"
+    },
+    "creators": {
+      "available": 5,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/66979/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11063",
+          "name": "Terry Kevin Austin",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/780",
+          "name": "Kevin Maguire",
+          "role": "penciller (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/479",
+          "name": "Paul Mounts",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/6001",
+          "name": "Fabian Nicieza",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/350",
+          "name": "Richard Starkings",
+          "role": "letterer"
+        }
+      ],
+      "returned": 5
+    },
+    "characters": {
+      "available": 3,
+      "collectionURI": "http://gateway.marvel.com/v1/public/comics/66979/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009211",
+          "name": "Bucky"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+          "name": "Captain America"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009535",
+          "name": "Red Skull"
+        }
+      ],
+      "returned": 3
+    }
+  
+
+}
