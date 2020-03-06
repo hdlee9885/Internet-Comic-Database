@@ -4,7 +4,7 @@ Welcome to our Software Lab Project!
 The docs folder contains reference sheets to various aspects of the project such as using the Angular framework and how we structured the code.
 
 ## Project URL
-
+https://icdb-270203.appspot.com
 
 ## Project Members
 
@@ -15,7 +15,7 @@ We divided our team of six students into group of three, the backend and the fro
 Name            | EID            |Github ID
 -------------   | -------------  | -------------
 Jacob Grimm     | jag9794 | jacobgrimm
-Sebastian Roble | jsr2834 |JSRobles
+Jerad Robles    | jsr2834 |JSRobles
 William Gu      | wg4792   | Minalinnski
 
 ### Frontend Team
