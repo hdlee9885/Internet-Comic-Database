@@ -30,9 +30,18 @@
         <p>Place of Birth: New York, New York</p>
         <p>First Appearance: Amazing Fantasy #15</p>
         <img src="https://i.pinimg.com/originals/d0/a9/da/d0a9dab2cf2db0924d3b39411e2f224b.jpg" style="width:30%">
-        <p>Power Stats</p>
-		<canvas id="radarChart"></canvas>
-        <script>
+        <p id="power">Power Stats</p>
+ 		<canvas id="radarChart"></canvas>
+ 		<!-- <button onclick="myFunction()">Click me</button>
+
+		<p id="demo">yo</p>
+		
+		<script>
+		function myFunction() {
+		  document.getElementById("demo").innerHTML = "Hello World";
+		}
+		</script>
+ -->     <script>
       	//radar
 	        var ctxR = document.getElementById("radarChart").getContext('2d');
 	        var myRadarChart = new Chart(ctxR, {
@@ -50,7 +59,7 @@
 		          {
 			        label: "Iron Man",
 			        data: [100, 85, 58, 85, 100, 64],
-			        backgroundColor: ['rgba(255, 255, 0, .2)',]
+			        backgroundColor: ['rgba(255, 255, 0, .2)',],
 			        borderColor: ['rgba(255, 255, 0, .7)',],
 			        borderWidth: 2
 		        	},
@@ -66,6 +75,7 @@
 	        	responsive: true
 	        }
 	        });
+      	
         </script>
         <!-- <table>
           <tr>
@@ -206,5 +216,6 @@
 		</table>
     </div>
     
-
+</body>
+</html>
 
