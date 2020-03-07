@@ -32,7 +32,7 @@ Haosong Li      | hl27346   | hdlee9885
 Name            | Tasks           |Esitmated (hrs)  | Actual (hrs)
 -------------   | -------------  | -------------|-------------
 Jacob Grimm     |  | |
-Sebastian Roble |  | |
+Jerad Robles    |  | |
 William Gu      |  | |
 Christopher Erattuparambil    | 	   | |
 Josh Kall |  | |
