@@ -10,6 +10,6 @@ export class Character3Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
+ 
+ }
 }

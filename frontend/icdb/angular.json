@@ -30,6 +30,7 @@
               "scripts": [
 		  "node_modules/jquery/dist/jquery.min.js",
 		  "node_modules/bootstrap/dist/js/bootstrap.min.js"
+		  "src/app/character3/character3.js"
 	      ]
           },
           "configurations": {
