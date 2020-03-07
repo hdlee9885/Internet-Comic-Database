@@ -29,12 +29,12 @@ Haosong Li      | hl27346   | hdlee9885
 
 ## Estimated & Actual Completion Time for Each Member
 ----------------------------------------------
-Name            | Tasks           |Esitmated (hrs)  | Actual (hrs)
--------------   | -------------  | -------------|-------------
-Jacob Grimm     |  | |
-Sebastian Roble |  | |
-William Gu      |  | |
-Christopher Erattuparambil    | 	   | |
-Josh Kall |  | |
-Haosong Li      |   | |
+Name            |Esitmated (hrs)  | Actual (hrs)
+-------------   |  -------------|-------------
+Jacob Grimm     |  6| 7
+Jerad Robles    |  6| 6
+William Gu      |  6| 6
+Christopher Erattuparambil    |6 	   |7
+Josh Kall |  6| 6
+Haosong Li      |6   | 6
 
