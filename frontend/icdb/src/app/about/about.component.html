@@ -1,1 +1,142 @@
-<p>about works!</p>
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS Stuff -->
+<body>
+	<h1> Welcome to About Page!</h1>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+	  <a class="navbar-brand" href="#">Home</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+	    aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarCollapse">
+	    <ul class="navbar-nav mr-auto">
+	
+	      <li class="nav-item">
+	        <a class="nav-link" routerLink="/authors">Author</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" routerLink="/issues">Issues</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" routerLink="/characters">Characters</a>
+	      </li>
+	    </ul>
+	  </div>
+    </nav>
+    <div class="about-section">
+    	<div>
+    		<h1>{{total}}</h1>
+    	</div>
+  		<h3>About Us Page</h3>
+      	<p>This site collects information for popular comics such as Marvel, DC, etc.</p>
+      	<p>The users can search by name, character, series, release time, and artist to find comics they want.</p>
+      	<p>Intended users are all comic lovers.</p>
+      	<p>Website Framework: Angular with Bootstrap CSS</p>
+      	<a href="https://github.com/chrisjoswin/EE461L_Project" target="_blank">Github Repo URL</a> 
+		<p>Number of Issues we have on GitHub: {{numOfIssue.number}}</p>
+	</div>
+
+	<h2 style="text-align:center">Our Team</h2>
+	<div class="row">
+  		<div class="column">
+    		<div class="card">
+      			<img src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png" alt="Chris" style="width:50%" class="center">
+      				<div class="container">
+        				<h3>Christopher Erattuparambil</h3>
+        				<p class="title">Frontend Team</p>
+        				<p>EID: ce7347</p>
+        				<p>Github ID: chrisjoswin</p>
+        				<p>Email: jchris.joswin@utexas.edu</p>
+        				<p><button class="button">Contact</button></p>
+        				<p>Commits: {{chris.total}}</p>
+        				<p>Number of Issue(s): 2</p>
+      				</div>
+    		</div>
+  		</div>
+
+  		<div class="column">
+    		<div class="card">
+      			<img src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png" alt="Josh" style="width:50%" class="center">
+      				<div class="container">
+        				<h3>Josh Kall</h3>
+        				<p class="title">Frontend Team</p>
+        				<p>EID: jsk2544</p>
+        				<p>Github ID: j-ka11</p>
+        				<p>Email: joshuakall@utexas.edu</p>
+        				<p><button class="button">Contact</button></p>
+        				<p>Commits: {{josh.total}}</p>
+						<p>Number of Issue(s): 1</p>
+      				</div>
+    		</div>
+  		</div>
+
+  		<div class="column">
+    		<div class="card">
+      			<img src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png" alt="Haosong" style="width:50%" class="center">
+      				<div class="container">
+        				<h3>Haosong Li</h3>
+        				<p class="title">Frontend Team</p>
+        				<p>EID: hl27346</p>
+        				<p>Github ID: hdlee9885</p>
+        				<p>Email: hl27346@utexas.edu</p>
+        				<p><button class="button">Contact</button></p>
+        				<p>Commits: {{haosong.total}}</p>
+						<p>Number of Issue(s): 1</p>
+      				</div>
+    		</div>
+  		</div>
+  		
+  		<div class="column">
+    		<div class="card">
+      			<img src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png" alt="Jacob" style="width:50%" class="center">
+      				<div class="container">
+        				<h3>Jacob Grimm</h3>
+        				<p class="title">Backend Team</p>
+        				<p>EID: jag9794</p>
+        				<p>Github ID: jacobgrimm</p>
+        				<p>Email: jacobgrimm@utexas.edu</p>
+        				<p><button class="button">Contact</button></p>
+        				<p>Commits: {{jacob.total}}</p>
+        				<p>Number of Issue(s): 2</p>
+      				</div>
+    		</div>
+  		</div>
+  		
+  		<div class="column">
+    		<div class="card">
+      			<img src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png" alt="Jerad" style="width:50%" class="center">
+      				<div class="container">
+        				<h3>Jerad Robles</h3>
+        				<p class="title">Backend Team</p>
+        				<p>EID: jsr2834</p>
+        				<p>Github ID: JSRobles</p>
+        				<p>Email: sebastian.robles@utexas.edu</p>
+        				<p><button class="button">Contact</button></p>
+        				<p>Commits: {{jerad.total}}</p>
+        				<p>Number of Issue(s): 2</p>
+      				</div>
+    		</div>
+  		</div>
+  		
+  		<div class="column">
+    		<div class="card">
+      			<img src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png" alt="William" style="width:50%" class="center">
+      				<div class="container">
+        				<h3>William Gu</h3>
+        				<p class="title">Backend Team</p>
+        				<p>EID: wg4792</p>
+        				<p>Github ID: Minalinnski</p>
+        				<p>Email: williamgu@utexas.edu</p>
+        				<p><button class="button">Contact</button></p>
+						<p>Commits: {{william.total}}</p>
+        				<p>Number of Issue(s): 1</p>
+      				</div>
+    		</div>
+  		</div>		
+</div>
+   
+</body>
+</html>

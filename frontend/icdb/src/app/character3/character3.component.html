@@ -1,1 +1,221 @@
-<p>character3 works!</p>
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS Stuff -->
+<body>
+	<h1> Welcome to About Page!</h1>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+	  <a class="navbar-brand" href="#">Home</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+	    aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarCollapse">
+	    <ul class="navbar-nav mr-auto">
+	
+	      <!-- <li class="nav-item">
+	        <a class="nav-link" routerLink="/splash">Home</a>
+        </li> -->
+        <li class="nav-item">
+	        <a class="nav-link" routerLink="/characters">Go Back</a>
+        </li>
+       
+	    </ul>
+	  </div>
+    </nav>
+    <div>
+        <h4>Spider-Man</h4>
+        <p>Name: Peter Parker</p>
+        <p>Place of Birth: New York, New York</p>
+        <p>First Appearance: Amazing Fantasy #15</p>
+        <img src="https://i.pinimg.com/originals/d0/a9/da/d0a9dab2cf2db0924d3b39411e2f224b.jpg" style="width:30%">
+        <p id="power">Power Stats</p>
+ 		<canvas id="radarChart"></canvas>
+ 		<!-- <button onclick="myFunction()">Click me</button>
+
+		<p id="demo">yo</p>
+		
+		<script>
+		function myFunction() {
+		  document.getElementById("demo").innerHTML = "Hello World";
+		}
+		</script>
+ -->     <script>
+      	//radar
+	        var ctxR = document.getElementById("radarChart").getContext('2d');
+	        var myRadarChart = new Chart(ctxR, {
+	        type: 'radar',
+	        data: {
+		        labels: ["Intelligence", "Strength", "Speed", "Durability", "Power", "Combat"],
+		        datasets: [
+		          {
+			        label: "Captain America",
+			        data: [69, 79, 48, 85, 60, 100],
+			        backgroundColor: ['rgba(0, 0, 255, .2)',],
+			        borderColor: ['rgba(0, 0, 255, .7)',],
+			        borderWidth: 2
+			        },
+		          {
+			        label: "Iron Man",
+			        data: [100, 85, 58, 85, 100, 64],
+			        backgroundColor: ['rgba(255, 255, 0, .2)',],
+			        borderColor: ['rgba(255, 255, 0, .7)',],
+			        borderWidth: 2
+		        	},
+		          {
+			        label: "Spider-Man",
+			        data: [90, 55, 67, 75, 74, 85],
+			        backgroundColor: ['rgba(255, 0, 0, .2)',],
+			        borderColor: ['rgba(200, 99, 132, .7)',],
+			        borderWidth: 2
+		        }]
+	        },
+	        options: {
+	        	responsive: true
+	        }
+	        });
+      	
+        </script>
+        <!-- <table>
+          <tr>
+            <td>Intelligence</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <td>Strength</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>67</td>
+          </tr>
+          <tr>
+            <td>Durability</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <td>Power</td>
+            <td>74</td>
+          </tr>
+          <tr>
+            <td>Combat</td>
+            <td>85</td>
+          </tr>  
+        </table>
+         -->
+        <p>Appeared on:</p>
+        <table>
+		  <tr>
+		    <th>Comics</th>
+		    <th>Series</th>
+		    <th>Events</th>
+		  </tr>
+		  <tr>
+		    <td>Spider-Man: 101 Ways to End the Clone Saga (1997) #1</td>
+		    <td>Superior Spider-Man Vol. 2: Otto-matic (2019)</td>
+		    <td>Acts of Vengeance!</td>
+		  </tr>
+		  <tr>
+		    <td>2099 Alpha (2019) #1</td>
+		    <td>2099 Alpha (2019)</td>
+		    <td>Age of Ultron</td>
+		  </tr>
+		  <tr>
+		    <td>A Year of Marvels (Trade Paperback)</td>
+		    <td>A Year of Marvels (2017)</td>
+		    <td>Atlantis Attacks</td>
+		  </tr>
+		  <tr>
+		    <td>A+X (2012) #4</td>
+		    <td>A+X (2012 - 2014)</td>
+		    <td>Avengers VS X-Men</td>
+		  </tr>
+		  <tr>
+		    <td>Absolute Carnage (2019) #1, 2, 5</td>
+		    <td>Absolute Carnage (2019 - Present)</td>
+		    <td>Avengers Disassembled</td>
+		  </tr>
+		  <tr>
+		    <td>Absolute Carnage: Symbiote Spider-Man (2019) #1</td>
+		    <td>Absolute Carnage: Symbiote Spider-Man (2019)</td>
+		    <td>Chaos War</td>
+		  </tr>
+		  <tr>
+		    <td>Actor Presents Spider-Man and the Incredible Hulk (2003) #1</td>
+		    <td>Actor Presents Spider-Man and the Incredible Hulk (2003)</td>
+		    <td>Civil War</td>
+		  </tr>
+		  <tr>
+		    <td>Adventures of Spider-Man (1996) #1-11</td>
+		    <td>Adventures of Spider-Man (1996 - 1997)</td>
+		    <td>Avengers VS X-Men</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Adventures Of Spider-Man: Sinister Intentions (2019)</td>
+		    <td>Dark Reign</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Adventures Of Spider-man: Spectacular Foes (2019)</td>
+		    <td>Days of Future Present</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Age of Heroes (2010)</td>
+		    <td>Enemy of the State</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>AGE OF HEROES TPB (2011)</td>
+		    <td>Evolutionary War</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Age of Ultron (2013)</td>
+		    <td>Fear Itself</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Agents of Atlas: The Complete Collection Vol. 1 (2018)</td>
+		    <td>House of M</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Alias (2001 - 2003)</td>
+		    <td>Inferno</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Alias Omnibus (2006)</td>
+		    <td>Infinity</td>
+		  </tr>	  
+		  <tr>
+		    <td></td>
+		    <td>Alpha Flight (1983 - 1994)</td>
+		    <td>Inhumanity</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Alpha: Big Time (2013)</td>
+		    <td>Initiative</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Amazing Fantasy (1962)</td>
+		    <td>Kraven's Last Hunt</td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>Amazing Fantasy (1995 - 1996)</td>
+		    <td>Maximum Carnage</td>
+		  </tr>
+		 
+		  
+		</table>
+    </div>
+    
+</body>
+</html>
+
