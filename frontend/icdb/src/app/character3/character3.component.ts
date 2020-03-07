@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class Character3Component implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit(): void {
- 
+		
  }
 }
