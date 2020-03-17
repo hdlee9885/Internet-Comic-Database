@@ -16,12 +16,6 @@ import { Issue2Component} from './issue2/issue2.component';
 import { Issue3Component} from './issue3/issue3.component';
 import { AboutComponent} from './about/about.component';
 
-
-
-
-
-
-
 const routes: Routes = [
   { path: 'authors', component: AuthorsComponent },
   { path: 'characters', component: CharactersComponent },
@@ -38,8 +32,6 @@ const routes: Routes = [
   { path: 'issues/issue3', component: Issue3Component},
   { path: 'about', component: AboutComponent},
   { path: '', redirectTo: 'splash', pathMatch: 'full' },
-  
-
 ];
 
 @NgModule({
