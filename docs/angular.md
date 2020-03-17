@@ -93,5 +93,20 @@ Now, in the `src/app/app.module.ts` file, we must import the routing module with
 
 # Data Flow
 
+# Services
+A service is a broad category that defines a value, function, or feature that does something specific and does it well. Typically, a service does things like fetch data from a server, verfiy an account login, or log information. In Angualar, services are *injected* into components as *dependencies*.
+
+## Dependecy Injection
+To mark a feature as a service, you need to use the `@Injectable()` decorator. Additionally, you need to register a provider for the service with the app-wide *injector* (we'll go over how to do that in just a bit). To use a service in a component, you need to import that service into the component and then add it to the component's constructor. For example, a component that needs to use the `HeroService` (an example service on the Angular docs) will have a constructor that looks like this: `constructor(private service: HeroService) { }`.
+
+## Providing Services
+Now we will go over how to register a provider for a service with the app's injector. You register a provider in the metadata of a service (in the `@Injectable()` decorator). Luckily, you can create a service using the CLI with `ng generate service` that will come pre-registered with the root injector. The service's metadata will look like this:
+```
+@Injectable({
+ providedIn: 'root',
+})
+```
+Providing a service at the root level creates a single, shared instance of the service and injects it into any class that asks for it.
+
 # Helpful Definitions
 * Workspace - A collection of Angular projects that are powered by the Angular CLI and are typically located in a single-source version control directory like git.
