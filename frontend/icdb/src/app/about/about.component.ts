@@ -50,9 +50,6 @@ export class AboutComponent implements OnInit {
           case 'hdlee9885':
             this.commits.haosong = contributor.total;
             break;
-          case 'Haosong Li':
-          	this.commits.haosong = contributor.total;
-          	break;
           case 'j-ka11':
             this.commits.josh = contributor.total;
             break;
