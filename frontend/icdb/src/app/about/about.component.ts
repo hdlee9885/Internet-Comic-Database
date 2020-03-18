@@ -1,6 +1,5 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { AboutService } from '../about.service';
 
 @Component({
   selector: 'app-about',
@@ -8,54 +7,92 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./about.component.css']
 })
 
-@Injectable()
 export class AboutComponent implements OnInit {
-  github_json;
-  github_issue;
-  total;
-  author = [];
-  jacob;
-  chris;
-  jerad;
-  william;
-  haosong;
-  josh;
-  issue;
-  numOfIssue;
-  
-  headerDict = {
-	  'Content-Type': 'application/json',
-	  'Accept': 'application/json',
-	  'Access-Control-Allow-Headers': 'Content-Type',	  
-	  'Access-Control-Allow-Origin': '*',  
-	}
-	requestOptions = {                                                                                                                                                                                 
-	  headers: new HttpHeaders(this.headerDict), 
-	};
-  
-  
-  constructor(private http: HttpClient) { 
-  }
+
+  commits = {
+    jacob: 0,
+    chris: 0,
+    jerad: 0,
+    william: 0,
+    haosong: 0,
+    josh: 0
+  };
+
+  issues = {
+    jacob: 0,
+    chris: 0,
+    jerad: 0,
+    william: 0,
+    haosong: 0,
+    josh: 0
+  };
+
+  numIssues = 0;
+
+  statsHandler = {
+    next: data => {
+      let contributor;
+      for (contributor of data) {
+        this.numIssues++;
+        switch (contributor.author.login) {
+          case 'jacobgrimm':
+            this.commits.jacob = contributor.total;
+            break;
+          case 'Minalinnski':
+            this.commits.william = contributor.total;
+            break;
+          case 'chrisjoswin':
+            this.commits.chris = contributor.total;
+            break;
+          case 'JSRobles':
+            this.commits.jerad = contributor.total;
+            break;
+          case 'hdlee9885':
+            this.commits.haosong = contributor.total;
+            break;
+          case 'j-ka11':
+            this.commits.josh = contributor.total;
+            break;
+        }
+      }
+    }
+
+  };
+
+  issuesHandler = {
+    next: data => {
+      let issue;
+      for (issue of data) {
+        switch (issue.user.login) {
+          case 'jacobgrimm':
+            this.issues.jacob++;
+            break;
+          case 'Minalinnski':
+            this.issues.william++;
+            break;
+          case 'chrisjoswin':
+            this.issues.chris++;
+            break;
+          case 'JSRobles':
+            this.issues.jerad++;
+            break;
+          case 'hdlee9885':
+            this.issues.haosong++;
+            break;
+          case 'j-ka11':
+            this.issues.josh++;
+            break;
+        }
+      }
+    }
+  };
+
+  constructor(private aboutService: AboutService) { }
 
   ngOnInit(): void {
-     this.github_json = this.http.get<any>('https://api.github.com/repos/chrisjoswin/EE461L_Project/stats/contributors').subscribe(data => {
-     	this.jacob = data[0];
-     	console.log(this.jacob);
-		this.chris = data[1];
-		this.jerad = data[2];
-		this.william = data[3];
-		this.haosong = data[4];
-		this.josh = data[5];
-		     	
-		     	
-     });
- 	 this.github_issue = this.http.get<any>('https://api.github.com/repos/chrisjoswin/EE461L_Project/issues').subscribe(data => {
- 	 	this.numOfIssue = data[0];
- 	 });
+    this.aboutService.getStats().subscribe(this.statsHandler);
+    this.aboutService.getIssues().subscribe(this.issuesHandler);
   }
-  
-  ngAfterViewChecked(){
-  	console.log(this.github_json);
-  }
-
 }
+
+
