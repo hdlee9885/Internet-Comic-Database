@@ -18,7 +18,16 @@
 	        <a class="nav-link" routerLink="/splash">Home</a>
         </li> -->
         <li class="nav-item">
-	        <a class="nav-link" routerLink="/characters">Go Back</a>
+	        <a class="nav-link" routerLink="/characters">Main</a>
+        </li>
+        <li class="nav-item">
+	        <a class="nav-link" routerLink="/characters/character1">Captain America</a>
+        </li>
+        <li class="nav-item">
+	        <a class="nav-link" routerLink="//characters/character2">Iron Man</a>
+        </li>
+        <li class="nav-item">
+	        <a class="nav-link" routerLink="/characters/character3">Spider Man</a>
         </li>
        
 	    </ul>
@@ -31,52 +40,25 @@
         <p>First Appearance: Amazing Fantasy #15</p>
         <img src="https://i.pinimg.com/originals/d0/a9/da/d0a9dab2cf2db0924d3b39411e2f224b.jpg" style="width:30%">
         <p id="power">Power Stats</p>
- 		<canvas id="radarChart"></canvas>
- 		<!-- <button onclick="myFunction()">Click me</button>
+ 		<div>
+	 		<canvas id="radarChart"></canvas>
+	 		<script>
+	
+	 		</script>
+ 		</div>
+ 		<!-- <button onclick="radar()">Click me</button>
 
-		<p id="demo">yo</p>
+		<p id="demo">yo</p> -->
 		
-		<script>
+		<!-- <script>
 		function myFunction() {
 		  document.getElementById("demo").innerHTML = "Hello World";
 		}
-		</script>
- -->     <script>
+		</script> -->
+	    <!-- <script>
       	//radar
-	        var ctxR = document.getElementById("radarChart").getContext('2d');
-	        var myRadarChart = new Chart(ctxR, {
-	        type: 'radar',
-	        data: {
-		        labels: ["Intelligence", "Strength", "Speed", "Durability", "Power", "Combat"],
-		        datasets: [
-		          {
-			        label: "Captain America",
-			        data: [69, 79, 48, 85, 60, 100],
-			        backgroundColor: ['rgba(0, 0, 255, .2)',],
-			        borderColor: ['rgba(0, 0, 255, .7)',],
-			        borderWidth: 2
-			        },
-		          {
-			        label: "Iron Man",
-			        data: [100, 85, 58, 85, 100, 64],
-			        backgroundColor: ['rgba(255, 255, 0, .2)',],
-			        borderColor: ['rgba(255, 255, 0, .7)',],
-			        borderWidth: 2
-		        	},
-		          {
-			        label: "Spider-Man",
-			        data: [90, 55, 67, 75, 74, 85],
-			        backgroundColor: ['rgba(255, 0, 0, .2)',],
-			        borderColor: ['rgba(200, 99, 132, .7)',],
-			        borderWidth: 2
-		        }]
-	        },
-	        options: {
-	        	responsive: true
-	        }
-	        });
-      	
-        </script>
+	        radar();
+        </script> -->
         <!-- <table>
           <tr>
             <td>Intelligence</td>
