@@ -27,13 +27,14 @@ export class AboutComponent implements OnInit {
     josh: 0
   };
 
+  numCommits = 0;
   numIssues = 0;
 
   statsHandler = {
     next: data => {
       let contributor;
       for (contributor of data) {
-        this.numIssues++;
+        this.numCommits += contributor.total;
         switch (contributor.author.login) {
           case 'jacobgrimm':
             this.commits.jacob = contributor.total;
@@ -63,6 +64,7 @@ export class AboutComponent implements OnInit {
     next: data => {
       let issue;
       for (issue of data) {
+        this.numIssues++;
         switch (issue.user.login) {
           case 'jacobgrimm':
             this.issues.jacob++;
