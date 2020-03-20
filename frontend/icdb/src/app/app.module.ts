@@ -18,6 +18,7 @@ import { Character3Component } from './character3/character3.component';
 import { Issue1Component } from './issue1/issue1.component';
 import { Issue2Component } from './issue2/issue2.component';
 import { Issue3Component } from './issue3/issue3.component';
+import { DeveloperComponent } from './developer/developer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { Issue3Component } from './issue3/issue3.component';
     Character3Component,
     Issue1Component,
     Issue2Component,
-    Issue3Component
+    Issue3Component,
+    DeveloperComponent
   ],
   imports: [
     BrowserModule,

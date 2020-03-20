@@ -92,6 +92,51 @@ Now, in the `src/app/app.module.ts` file, we must import the routing module with
   ```
 
 # Data Flow
+As stated earier, *components* make up the data structure of an Angular application. The HTML *template* associated with a component is Angular's mechanism for displaying a component's data. *Data binding* is the process of displaying data on the template or collecting data from the user. You can also add actual logic to the template (html page) in the form of module directives.
+
+## Different Types of Data Binding
+This subsection goes over the different types of data binding and what they mean.
+
+### Interpolation
+Anytime you see double brackets `{{ }}` in the view, that is *interpolation*. This operator creates a string to display from the property that is in between the brackets. The property is often a simple variable in the component's class. More generally, however, the text in between the brackets is simply an expression that Angular evaluates and then turns into a string. For example, `{{ 1 + 1 }}` will display `2`. You can also invoke methods in the component's class.
+
+### Property Binding
+For this section, it helps to remember that a *property* is the component equivalent of a class variable in Java. Additionally, it helps to think of standard html elements as Angular components, with their attributes being similar to a component's property. For example, a `<img>` element has a `src` attribute in standard html, but it helps to think of `<img>` as a whole component with `src` as a property, or variable, of that component. *Property binding* refers to the process of setting a component's property from the view element, whether that component be an actual Angular component you created or it is simply a standard html tag. We do this in a similar way to interpolation, specifically setting the property to an expression that Angular evaluates and turns into a string. Using our `<img>` example, if we wanted to bind the `src` property to `expression`, we do this: `<img [src]="expression">`. Here, the expression is in quotes instead of double brackets. It is important to remember that you can also set values of components in this way. This can also be used to set styles and such. For example, `[style.width]="width"`.
+
+### Event Binding
+Often times we wish to describe our app's behavior when some event happens, for example what method to call when a button is clicked. This isn't exactly a property, so we need slightly different syntax. Additionally, we are assigning a *statement* rather than an *expression* to the event. For example, `<button (click)="deleteHero()">Delete hero</button>` calls the method `deleteHero()` when the button is clicked. 
+
+### Two-Way Binding
+**The data binding we have gone over so far is all unidirectional, meaning it goes from the component's class to the view or from the view to the class. We will now go over bidirectional dataflow**. Bidirectional is useful for enabling more efficient handling of user interaction. Rather than pushing values and pulling values to the HTML, we could simply declare *bindings* between sources and the view that Angular will be able to handle. Specifically, bidirectional binding does two things:
+1. Set a specific element property
+2. Listens for an element change event
+
+The syntax for two-way binding is `[()]`. To understand why this feature is useful, it is helpful to first develop some motivation. Imagine a situation where a font size is initially set by a property `initSize` in the root component. In this application, imagine another button that changes the font size by changing the value of a different property in a different child component. To implement two-way binding, there are a few things we need to do. First, in the child component we need to create the property `size` that sets the font size and mark it as `@Input()`. We also need to create an `EventEmitter` and mark it with `@Output()`. When the button is clicked that changes the font size property in the child component, it should not only change the value of that property but also call `emit()` on the `EventEmitter`. Now, in the root component view template, we can write:
+```
+<child-component [(size)]="initSize"></child-component>
+<div [style.font-size.px]="initSize">Resizable Text</div>
+```
+Now, the font size is automatically updated on the button click. Of course, this can be done with two one-way data binds, but a single bi-directional data bind is a more seamless implmentation. Lastly, since this intends to increase user interaction functionality, it helps to think of this data flow as **view->class->view**.
+
+Here is a link to the full docs over this information if you are still confused over anything: https://angular.io/guide/template-syntax.
+
+### @Input() and @Output()
+These decorators are mainly used to mark component properties for passing data between parent and child components. Think of `@Input()` as allowing data to flow from the parent to the child and `@Output()` as passing an *Observable* from the child to the parent.
+
+# Services
+A service is a broad category that defines a value, function, or feature that does something specific and does it well. Typically, a service does things like fetch data from a server, verfiy an account login, or log information. In Angualar, services are *injected* into components as *dependencies*.
+
+## Dependecy Injection
+To mark a feature as a service, you need to use the `@Injectable()` decorator. Additionally, you need to register a provider for the service with the app-wide *injector* (we'll go over how to do that in just a bit). To use a service in a component, you need to import that service into the component and then add it to the component's constructor. For example, a component that needs to use the `HeroService` (an example service on the Angular docs) will have a constructor that looks like this: `constructor(private service: HeroService) { }`.
+
+## Providing Services
+Now we will go over how to register a provider for a service with the app's injector. You register a provider in the metadata of a service (in the `@Injectable()` decorator). Luckily, you can create a service using the CLI with `ng generate service` that will come pre-registered with the root injector. The service's metadata will look like this:
+```
+@Injectable({
+ providedIn: 'root',
+})
+```
+Providing a service at the root level creates a single, shared instance of the service and injects it into any class that asks for it.
 
 # Helpful Definitions
 * Workspace - A collection of Angular projects that are powered by the Angular CLI and are typically located in a single-source version control directory like git.
