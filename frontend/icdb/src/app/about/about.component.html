@@ -38,8 +38,7 @@
 	</div>
 
 	<h2 style="text-align:center">Our Team</h2>
-  <app-developer *ngFor="let developer of developers" [name]="developer.name" [photoUrl]="developer.photoUrl" [bio]="developer.bio" [track]="developer.track"
-                 [team]="developer.team" [numCommits]="developer.numCommits" [numIssues]="developer.numIssues" [numTests]="developer.numTests"></app-developer>
+  <app-developer *ngFor="let developer of developers" [info]="developer"></app-developer>
 
 </body>
 </html>
