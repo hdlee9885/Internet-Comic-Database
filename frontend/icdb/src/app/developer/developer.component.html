@@ -1,15 +1,15 @@
 <div class="column">
   <div class="card">
-    <img [src]="photoUrl" style="width:50%;" class="center">
+    <img [src]="info.photoUrl" style="width:50%;" class="center">
     <div class="container">
-      <h3>{{name}}</h3>
-      <p class="title">{{team}}</p>
-      <p>Track: {{track}}</p>
-      <p>Bio: {{bio}}</p>
+      <h3>{{info.name}}</h3>
+      <p class="title">{{info.team}}</p>
+      <p>Track: {{info.track}}</p>
+      <p>Bio: {{info.bio}}</p>
       <p><button class="button">Contact</button></p>
-      <p>Number of Commits: {{numCommits}}</p>
-      <p>Number of Issues: {{numIssues}}</p>
-      <p>Number of Unit Tests: {{numTests}}</p>
+      <p>Number of Commits: {{info.numCommits}}</p>
+      <p>Number of Issues: {{info.numIssues}}</p>
+      <p>Number of Unit Tests: {{info.numTests}}</p>
     </div>
   </div>
 </div>

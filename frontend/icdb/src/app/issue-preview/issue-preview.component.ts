@@ -1,7 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatTableDataSource}  from '@angular/material/table'
-import { MatSort } from '@angular/material/sort';
-import { MatPaginator} from '@angular/material/paginator'
+import { Component, OnInit } from '@angular/core';
 
 
 export interface PeriodicElement {
@@ -24,24 +21,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
 
+
 @Component({
-  selector: 'app-issues',
-  templateUrl: './issues.component.html',
-  styleUrls: ['./issues.component.css']
+  selector: 'app-issue-preview',
+  templateUrl: './issue-preview.component.html',
+  styleUrls: ['./issue-preview.component.css']
 })
-export class IssuesComponent implements OnInit {
+export class IssuePreviewComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource =  new MatTableDataSource(ELEMENT_DATA);
-
-
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
+  dataSource = ELEMENT_DATA;
   constructor() { }
 
-  ngOnInit() {
-    setTimeout(() => this.dataSource.paginator = this.paginator);
-
+  ngOnInit(): void {
   }
 
 }

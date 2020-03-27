@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Developer } from '../developer';
 
 @Component({
   selector: 'app-developer',
@@ -9,14 +10,7 @@ export class DeveloperComponent implements OnInit {
 
   constructor() { }
 
-  @Input() name: string;
-  @Input() photoUrl: string;
-  @Input() bio: string;
-  @Input() track: string;
-  @Input() team: string;
-  @Input() numCommits: number;
-  @Input() numIssues: number;
-  @Input() numTests: number;
+  @Input() info: Developer;
 
   ngOnInit(): void {
   }
