@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource}  from '@angular/material/table'
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator} from '@angular/material/paginator'
+import {Router } from '@angular/router'
 
 
 export interface PeriodicElement {
@@ -39,9 +40,17 @@ export class IssuesComponent implements OnInit {
 
   constructor() { }
 
+
+  
+
   ngOnInit() {
     setTimeout(() => this.dataSource.paginator = this.paginator);
 
   }
 
+onRowClicked(row){
+  console.log("Row clicked:",row);
+  
+}
+ 
 }
