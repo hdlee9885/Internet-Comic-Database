@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
@@ -13,6 +12,8 @@ import { DeveloperComponent } from './developer/developer.component';
 import { AuthorPreviewComponent } from './author-preview/author-preview.component';
 import { IssuePreviewComponent } from './issue-preview/issue-preview.component';
 import { CharacterPreviewComponent } from './character-preview/character-preview.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { CharacterPreviewComponent } from './character-preview/character-preview
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
