@@ -1,9 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatTableDataSource}  from '@angular/material/table'
+import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-import { MatPaginator} from '@angular/material/paginator'
+import { MatPaginator} from '@angular/material/paginator';
 import {Router } from '@angular/router'
-
 
 export interface PeriodicElement {
   name: string;
@@ -34,23 +33,16 @@ export class IssuesComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource =  new MatTableDataSource(ELEMENT_DATA);
 
-
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor() { }
 
-
-  
-
   ngOnInit() {
     setTimeout(() => this.dataSource.paginator = this.paginator);
-
   }
 
-onRowClicked(row){
-  console.log("Row clicked:",row);
-  
-}
- 
+  onRowClicked(row){
+    console.log('Row clicked:', row);
+  }
 }
