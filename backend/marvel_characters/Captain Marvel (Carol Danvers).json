@@ -1,0 +1,138 @@
+{
+    "id": 1010338,
+    "name": "Captain Marvel (Carol Danvers)",
+    "description": "",
+    "modified": "2020-03-11T10:22:08-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/80/5269608c1be7a",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010338",
+    "comics": {
+        "available": 505,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010338/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/58636",
+                "name": "Marvel New Year's Eve Special Infinite Comic (2017) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43505",
+                "name": "A+X (2012) #6"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/56017",
+                "name": "A-Force (2016) #6"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/56018",
+                "name": "A-Force (2016) #7"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/56019",
+                "name": "A-Force (2016) #8"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 175,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010338/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/20606",
+                "name": "A-Force (2016)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/27665",
+                "name": "Absolute Carnage: Captain Marvel (2019)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/6079",
+                "name": "Adam: Legend of the Blue Marvel (2008)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/7524",
+                "name": "Adam: Legend of the Blue Marvel (2008)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 603,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010338/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1191",
+                "name": "Amazing Spider-Man (1999) #533",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/2359",
+                "name": "1 of",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/3411",
+                "name": "1 of 4 - Nimrod",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/3479",
+                "name": "2 of 2 - Spider-Woman",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/4125",
+                "name": "3 of 3 - Titannus War",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 16,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010338/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/310",
+                "name": "Avengers VS X-Men"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+                "name": "Civil War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+                "name": "Dark Reign"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/240",
+                "name": "Days of Future Present"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/248",
+                "name": "Fall of the Mutants"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1010338/captain_marvel_carol_danvers?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Ms._Marvel_(Carol_Danvers)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010338/captain_marvel_carol_danvers?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

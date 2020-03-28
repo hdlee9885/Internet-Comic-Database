@@ -1,0 +1,138 @@
+{
+    "id": 1009718,
+    "name": "Wolverine",
+    "description": "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers.",
+    "modified": "2016-05-02T12:21:44-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009718",
+    "comics": {
+        "available": 2470,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009718/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/41113",
+                "name": "5 Ronin (Hardcover)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/38756",
+                "name": "5 Ronin (2010) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/36162",
+                "name": "5 Ronin (2010) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43488",
+                "name": "A+X (2012) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43501",
+                "name": "A+X (2012) #4"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 663,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009718/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/15276",
+                "name": "5 Ronin (2011)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/12429",
+                "name": "5 Ronin (2010)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/27975",
+                "name": "Acts Of Evil (2020)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/9994",
+                "name": "ACTS OF VENGEANCE CROSSOVERS OMNIBUS (2011)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 3457,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009718/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/477",
+                "name": "Cover #477",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/594",
+                "name": "X-MEN (2004) #164",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/608",
+                "name": "Cover #608",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/614",
+                "name": "X-MEN (2004) #159",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/616",
+                "name": "X-MEN (2004) #157",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 42,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009718/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/227",
+                "name": "Age of Apocalypse"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/314",
+                "name": "Age of Ultron"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+                "name": "Age of X"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/233",
+                "name": "Atlantis Attacks"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009718/wolverine?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Wolverine_(James_Howlett)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009718/wolverine?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}
