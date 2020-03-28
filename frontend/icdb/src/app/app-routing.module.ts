@@ -6,8 +6,14 @@ import { CharactersComponent } from './characters/characters.component';
 import { IssuesComponent } from './issues/issues.component';
 import { SplashComponent} from './splash/splash.component';
 import { AboutComponent} from './about/about.component';
+import { AuthorComponent } from './author/author.component';
+import { CharacterComponent } from './character/character.component';
+import { IssueComponent } from './issue/issue.component';
 
 const routes: Routes = [
+  { path: 'author', component: AuthorComponent },
+  { path: 'character', component: CharacterComponent },
+  { path: 'issue', component: IssueComponent },
   { path: 'authors', component: AuthorsComponent },
   { path: 'characters', component: CharactersComponent },
   { path: 'issues', component: IssuesComponent },

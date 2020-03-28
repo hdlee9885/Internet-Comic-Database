@@ -9,11 +9,11 @@ import { IssuesComponent } from './issues/issues.component';
 import { SplashComponent } from './splash/splash.component';
 import { AboutComponent } from './about/about.component';
 import { DeveloperComponent } from './developer/developer.component';
-import { AuthorPreviewComponent } from './author-preview/author-preview.component';
-import { IssuePreviewComponent } from './issue-preview/issue-preview.component';
-import { CharacterPreviewComponent } from './character-preview/character-preview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { CharacterComponent } from './character/character.component';
+import { AuthorComponent } from './author/author.component';
+import { IssueComponent } from './issue/issue.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +24,9 @@ import { MaterialModule } from './material/material.module';
     SplashComponent,
     AboutComponent,
     DeveloperComponent,
-    AuthorPreviewComponent,
-    IssuePreviewComponent,
-    CharacterPreviewComponent
+    CharacterComponent,
+    AuthorComponent,
+    IssueComponent
   ],
   imports: [
     BrowserModule,

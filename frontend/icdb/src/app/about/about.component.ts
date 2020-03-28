@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutService } from '../about.service';
-import { DeveloperComponent } from '../developer/developer.component';
 import { Developer } from '../developer';
 
 @Component({
