@@ -1,0 +1,138 @@
+{
+    "id": 1009535,
+    "name": "Red Skull",
+    "description": "",
+    "modified": "2016-06-02T12:20:31-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/03/526036550cd37",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009535",
+    "comics": {
+        "available": 179,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009535/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/66978",
+                "name": "Adventures of Captain America (1991) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/66979",
+                "name": "Adventures of Captain America (1991) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/66980",
+                "name": "Adventures of Captain America (1991) #3"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/66981",
+                "name": "Adventures of Captain America (1991) #4"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/24371",
+                "name": "All Winners Comics 70th Anniversary Special (2009) #1"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 88,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009535/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/24227",
+                "name": "Adventures of Captain America (1991 - 1992)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/7534",
+                "name": "All Winners Comics 70th Anniversary Special (2009)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/2114",
+                "name": "All-Winners Comics (1941 - 1947)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/454",
+                "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/14696",
+                "name": "Art of Marvel Movies: The Art of Captain America - The First Avenger (2011 - Present)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 209,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009535/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1500",
+                "name": "Interior #1500",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/3193",
+                "name": "Interior #3193",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/4228",
+                "name": "Interior #4228",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/4230",
+                "name": "2 of 8 - Out of Time",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/4236",
+                "name": "5 of 8 - Out of Time",
+                "type": "interiorStory"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 7,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009535/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/320",
+                "name": "Axis"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+                "name": "Civil War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+                "name": "Fear Itself"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/255",
+                "name": "Initiative"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009535/red_skull?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Red_Skull_%28Johann_Shmidt%29?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009535/red_skull?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

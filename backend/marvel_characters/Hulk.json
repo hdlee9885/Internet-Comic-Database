@@ -1,0 +1,138 @@
+{
+    "id": 1009351,
+    "name": "Hulk",
+    "description": "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets.",
+    "modified": "2020-03-19T14:56:00-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009351",
+    "comics": {
+        "available": 1657,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009351/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/41112",
+                "name": "5 Ronin (Hardcover)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/36365",
+                "name": "5 Ronin (2010) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/38753",
+                "name": "5 Ronin (2010) #2 (BROOKS COVER)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43488",
+                "name": "A+X (2012) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43506",
+                "name": "A+X (2012) #7"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 470,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009351/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/12429",
+                "name": "5 Ronin (2010)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/15276",
+                "name": "5 Ronin (2011)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/27632",
+                "name": "Absolute Carnage: Immortal Hulk (2019)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/458",
+                "name": "Actor Presents Spider-Man and the Incredible Hulk (2003)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 2541,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009351/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/702",
+                "name": "INCREDIBLE HULK (1999) #62",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/703",
+                "name": "Interior #703",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/704",
+                "name": "INCREDIBLE HULK (1999) #63",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/705",
+                "name": "Interior #705",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/706",
+                "name": "INCREDIBLE HULK (1999) #64",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 26,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009351/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+                "name": "Age of X"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/296",
+                "name": "Chaos War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+                "name": "Dark Reign"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/297",
+                "name": "Fall of the Hulks"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009351/hulk?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Hulk_(Bruce_Banner)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009351/hulk?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "id": 1009220,
+    "name": "Captain America",
+    "description": "Vowing to serve his country any way he could, young Steve Rogers took the super soldier serum to become America's one-man army. Fighting for the red, white and blue for over 60 years, Captain America is the living, breathing symbol of freedom and liberty.",
+    "modified": "2020-03-11T10:03:04-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+    "comics": {
+        "available": 2362,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009220/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43488",
+                "name": "A+X (2012) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43501",
+                "name": "A+X (2012) #4"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43508",
+                "name": "A+X (2012) #9"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/17743",
+                "name": "A-Next (1998) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/17744",
+                "name": "A-Next (1998) #3"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 651,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009220/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/3620",
+                "name": "A-Next (1998 - 1999)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/24227",
+                "name": "Adventures of Captain America (1991 - 1992)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/15331",
+                "name": "Age of Apocalypse (2011 - 2013)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/9790",
+                "name": "Age of Heroes (2010)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 3503,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009220/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/670",
+                "name": "X-MEN (2004) #186",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/892",
+                "name": "THOR (1998) #81",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/960",
+                "name": "3 of ?",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1026",
+                "name": "Avengers (1998) #81",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1041",
+                "name": "Avengers (1998) #502",
+                "type": "interiorStory"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 31,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009220/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/314",
+                "name": "Age of Ultron"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+                "name": "Age of X"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/231",
+                "name": "Armor Wars"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/234",
+                "name": "Avengers Disassembled"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009220/captain_america?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Captain_America_(Steve_Rogers)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009220/captain_america?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}
