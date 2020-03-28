@@ -1,0 +1,138 @@
+{
+    "id": 1009215,
+    "name": "Luke Cage",
+    "description": "",
+    "modified": "2017-08-08T14:53:35-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5112d8b6e596c",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009215",
+    "comics": {
+        "available": 381,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009215/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37405",
+                "name": "Age of Ultron (2013) #3"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37406",
+                "name": "Age of Ultron (2013) #4"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37256",
+                "name": "Alias (2001) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37267",
+                "name": "Alias (2001) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37277",
+                "name": "Alias (2001) #3"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 131,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009215/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/17318",
+                "name": "Age of Ultron (2013)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/672",
+                "name": "Alias (2001 - 2003)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/13383",
+                "name": "Alias Omnibus (2006)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/454",
+                "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/15540",
+                "name": "Amazing Spider-Man Annual (2012)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 398,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009215/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1163",
+                "name": "Amazing Spider-Man (1999) #519",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1165",
+                "name": "Amazing Spider-Man (1999) #520",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1169",
+                "name": "Amazing Spider-Man (1999) #522",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1175",
+                "name": "Amazing Spider-Man (1999) #523",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1500",
+                "name": "Interior #1500",
+                "type": "interiorStory"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 15,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009215/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/314",
+                "name": "Age of Ultron"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/310",
+                "name": "Avengers VS X-Men"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/296",
+                "name": "Chaos War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+                "name": "Civil War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+                "name": "Dark Reign"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009215/luke_cage?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Luke_Cage?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009215/luke_cage?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

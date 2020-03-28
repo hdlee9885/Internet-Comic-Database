@@ -1,0 +1,138 @@
+{
+    "id": 1009664,
+    "name": "Thor",
+    "description": "As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he's quite smart and compassionate.  He's self-assured, and he would never, ever stop fighting for a worthwhile cause.",
+    "modified": "2020-03-11T10:18:57-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009664",
+    "comics": {
+        "available": 1758,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009664/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43506",
+                "name": "A+X (2012) #7"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/30090",
+                "name": "Age of Heroes (2010) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/33566",
+                "name": "Age of Heroes (2010) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/30092",
+                "name": "Age of Heroes (2010) #3"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/30093",
+                "name": "Age of Heroes (2010) #4"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 506,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009664/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/9790",
+                "name": "Age of Heroes (2010)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/2116",
+                "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/17650",
+                "name": "Alpha: Big Time (2013)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/454",
+                "name": "Amazing Spider-Man (1999 - 2013)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 2667,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009664/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/876",
+                "name": "THOR (1998) #76",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/877",
+                "name": "Interior #877",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/879",
+                "name": "Interior #879",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/880",
+                "name": "THOR (1998) #77",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/881",
+                "name": "Interior #881",
+                "type": "interiorStory"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 27,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009664/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/233",
+                "name": "Atlantis Attacks"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/234",
+                "name": "Avengers Disassembled"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/310",
+                "name": "Avengers VS X-Men"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/235",
+                "name": "Blood and Thunder"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1009664/thor/featured?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Thor_(Thor_Odinson)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "id": 1009652,
+    "name": "Thanos",
+    "description": "The Mad Titan Thanos, a melancholy, brooding individual, consumed with the concept of death, sought out personal power and increased strength, endowing himself with cybernetic implants until he became more powerful than any of his brethren.",
+    "modified": "2016-05-05T15:35:19-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009652",
+    "comics": {
+        "available": 268,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009652/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/12651",
+                "name": "Alpha Flight (1983) #111"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/5078",
+                "name": "Annihilation (2006) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/5529",
+                "name": "Annihilation (2006) #4"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/3985",
+                "name": "Annihilation: Prologue (2006)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/4108",
+                "name": "Annihilation: Silver Surfer (2006) #1"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 125,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009652/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/2116",
+                "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/3613",
+                "name": "Annihilation (2006 - 2007)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/1077",
+                "name": "Annihilation: Prologue (2006)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/1078",
+                "name": "Annihilation: Silver Surfer (2006)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/1115",
+                "name": "Annihilation: The Nova Corps (2006)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 293,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009652/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/694",
+                "name": "Cover #694",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/695",
+                "name": "Interior #695",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1412",
+                "name": "Cover #1412",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1413",
+                "name": "Interior #1413",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1602",
+                "name": "Cover #1602",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 8,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009652/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/229",
+                "name": "Annihilation"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/235",
+                "name": "Blood and Thunder"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/315",
+                "name": "Infinity"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/29",
+                "name": "Infinity War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/319",
+                "name": "Original Sin"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009652/thanos?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Thanos?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009652/thanos?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "id": 1010802,
+    "name": "Ant-Man (Eric O'Grady)",
+    "description": "",
+    "modified": "2014-03-05T13:20:04-0500",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010802",
+    "comics": {
+        "available": 42,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010802/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/36765",
+                "name": "Ant-Man & the Wasp (2010) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/36764",
+                "name": "Ant-Man & the Wasp (2010) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/36763",
+                "name": "Ant-Man & the Wasp (2010) #3"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37655",
+                "name": "Ant-Man & Wasp: Small World (Trade Paperback)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/21366",
+                "name": "Avengers: The Initiative (2007) #14"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 13,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010802/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/13082",
+                "name": "Ant-Man & the Wasp (2010 - 2011)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/13540",
+                "name": "Ant-Man & Wasp: Small World (2010 - Present)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
+                "name": "Avengers: The Initiative (2007 - 2010)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/14804",
+                "name": "Fear Itself: The Fearless (2011 - 2012)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/11872",
+                "name": "I Am an Avenger (2010 - 2011)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 41,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010802/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/5496",
+                "name": "Irredeemable Ant-Man (2006) #1",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/5498",
+                "name": "Irredeemable Ant-Man (2006) #2",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/5500",
+                "name": "Irredeemable Ant-Man (2006) #3",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/5502",
+                "name": "Irredeemable Ant-Man (2006) #4",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/7767",
+                "name": "Irredeemable Ant-Man (2006) #5",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 7,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010802/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+                "name": "Dark Reign"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+                "name": "Fear Itself"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/319",
+                "name": "Original Sin"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
+                "name": "Secret Invasion"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/309",
+                "name": "Shattered Heroes"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1010802/ant-man_eric_ogrady/featured?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Ant-Man_(Eric_O%27Grady)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010802/ant-man_eric_ogrady?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

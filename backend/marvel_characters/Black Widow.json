@@ -1,0 +1,138 @@
+{
+    "id": 1009189,
+    "name": "Black Widow",
+    "description": "",
+    "modified": "2016-01-04T18:09:26-0500",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/30/50fecad1f395b",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009189",
+    "comics": {
+        "available": 548,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009189/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43495",
+                "name": "A+X (2012) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43509",
+                "name": "A+X (2012) #10"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/24348",
+                "name": "Adam: Legend of the Blue Marvel (Trade Paperback)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/22461",
+                "name": "Adam: Legend of the Blue Marvel (2008) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/23245",
+                "name": "Amazing Adventures (1970) #1"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 208,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009189/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/7524",
+                "name": "Adam: Legend of the Blue Marvel (2008)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/6079",
+                "name": "Adam: Legend of the Blue Marvel (2008)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/17318",
+                "name": "Age of Ultron (2013)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/6666",
+                "name": "Amazing Adventures (1970 - 1976)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 630,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009189/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1060",
+                "name": "Cover #1060",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1066",
+                "name": "Cover #1066",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1068",
+                "name": "\"THE WIDOW,\" PART 4 (OF 4) The blistering climax to the sexy 4-part Black Widow storyline (just in time for a certain blistering",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1092",
+                "name": "2 of 5 - Murdock Papers",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1094",
+                "name": "3 of 5 - Murdock Papers",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 16,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009189/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/314",
+                "name": "Age of Ultron"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/310",
+                "name": "Avengers VS X-Men"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/296",
+                "name": "Chaos War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/248",
+                "name": "Fall of the Mutants"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009189/black_widow?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Black_Widow_(Natasha_Romanova)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009189/black_widow?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "id": 1010677,
+    "name": "Dracula",
+    "description": "",
+    "modified": "2014-02-20T20:49:31-0500",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/03/526955af18612",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010677",
+    "comics": {
+        "available": 67,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010677/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/77449",
+                "name": "Avengers (2018) #32"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/6930",
+                "name": "Avengers Annual (1967) #16"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/65230",
+                "name": "Bloodstone (2001) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/65231",
+                "name": "Bloodstone (2001) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/65233",
+                "name": "Bloodstone (2001) #4"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 42,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010677/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/24229",
+                "name": "Avengers (2018 - Present)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/1988",
+                "name": "Avengers Annual (1967 - 1994)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/23754",
+                "name": "Bloodstone (2001 - 2002)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/23505",
+                "name": "BLOODSTONE & THE LEGION OF MONSTERS TPB (2017)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/4884",
+                "name": "Captain Britain and MI: 13 (2008 - 2009)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 88,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010677/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/3766",
+                "name": "PART 1 (OF 4) 30 years later, comics legends Roy Thomas and Dick Giordano reunite to at last complete their unfinished B&W ink-w",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/3768",
+                "name": "2 of 4 - 4XLS",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/3770",
+                "name": "3 of 4 - 4XLS",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/3772",
+                "name": "4 of 4 - 4XLS",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/17388",
+                "name": "Avengers Annual (1967) #16",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 1,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010677/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+                "name": "Fear Itself"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1010677/dracula?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Dracula?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010677/dracula?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "id": 1009685,
+    "name": "Ultron",
+    "description": "Arguably the greatest and certainly the most horrific creation of scientific genius Dr. Henry Pym, Ultron is a criminally insane rogue sentient robot dedicated to conquest and the extermination of humanity.",
+    "modified": "2013-10-18T17:32:22-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/5261a838e93c0",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009685",
+    "comics": {
+        "available": 116,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009685/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/29317",
+                "name": "ACTS OF VENGEANCE CROSSOVERS OMNIBUS (Hardcover)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/29318",
+                "name": "ACTS OF VENGEANCE CROSSOVERS OMNIBUS (DM Only) (Hardcover)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37405",
+                "name": "Age of Ultron (2013) #3"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37406",
+                "name": "Age of Ultron (2013) #4"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/37407",
+                "name": "Age of Ultron (2013) #5"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 53,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009685/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/9994",
+                "name": "ACTS OF VENGEANCE CROSSOVERS OMNIBUS (2011)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/9995",
+                "name": "ACTS OF VENGEANCE CROSSOVERS OMNIBUS (DM Only) (2011)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/17318",
+                "name": "Age of Ultron (2013)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/3061",
+                "name": "Annihilation: Conquest (2007)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/9085",
+                "name": "Avengers (2010 - 2012)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 129,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009685/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/6263",
+                "name": "Avengers Next (2006) #3",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/6264",
+                "name": "Interior #6264",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/8340",
+                "name": "2 of 6 - Ultron",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/8682",
+                "name": "3 of 6 - Ultron; THE INITIATIVE BANNER",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/12953",
+                "name": "Fantastic Four (1961) #331",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 6,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009685/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/314",
+                "name": "Age of Ultron"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/293",
+                "name": "Annihilation: Conquest"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/255",
+                "name": "Initiative"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/270",
+                "name": "Secret Wars"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009685/ultron?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Ultron?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009685/ultron?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

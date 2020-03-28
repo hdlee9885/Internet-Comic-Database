@@ -1,0 +1,134 @@
+{
+    "id": 1010733,
+    "name": "Star-Lord (Peter Quill)",
+    "description": "Refusing to miss his opportunity, Peter Jason Quill stole a scoutship from Cape Canaveral, returned to Eve, and shot his way to the appointed spot, where his old rival Harrelson, NASA's choice to be Star-Lord, was awaiting selection, where Quill was transported away in his stead, and transformed into Star-Lord.",
+    "modified": "2014-07-14T20:45:53-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/a0/537bc55e8b1f5",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010733",
+    "comics": {
+        "available": 93,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010733/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/62149",
+                "name": "All-New Guardians of the Galaxy Vol. 1: Communication Breakdown (Trade Paperback)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/62150",
+                "name": "All-New Guardians of the Galaxy Vol. 2: Riders in the Sky (Trade Paperback)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/49943",
+                "name": "All-New X-Men (2012) #24 (Keown Variant)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/22433",
+                "name": "ANNIHILATION CLASSIC HC (Hardcover)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/17271",
+                "name": "Annihilation: Conquest (2007) #1"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 36,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010733/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/22776",
+                "name": "All-New Guardians of the Galaxy Vol. 1: Communication Breakdown (2017)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/22777",
+                "name": "All-New Guardians of the Galaxy Vol. 2: Riders in the Sky (2017)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16449",
+                "name": "All-New X-Men (2012 - 2015)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/6056",
+                "name": "ANNIHILATION CLASSIC HC (2008)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/3061",
+                "name": "Annihilation: Conquest (2007)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 136,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010733/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/2444",
+                "name": "Cover #2444",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/20014",
+                "name": "Cover #20014",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/20015",
+                "name": "Planet Story",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/21017",
+                "name": "Cover #21017",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/21018",
+                "name": "The Saga of Star-Lord",
+                "type": "interiorStory"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 4,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1010733/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/293",
+                "name": "Annihilation: Conquest"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/311",
+                "name": "Marvel NOW!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/295",
+                "name": "Realm of Kings"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/294",
+                "name": "The Thanos Imperative"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1010733/star-lord_peter_quill?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Star-Lord_(Peter_Quill)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1010733/star-lord_peter_quill?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

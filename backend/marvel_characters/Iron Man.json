@@ -1,0 +1,138 @@
+{
+    "id": 1009368,
+    "name": "Iron Man",
+    "description": "Wounded, captured and forced to build a weapon by his enemies, billionaire industrialist Tony Stark instead created an advanced suit of armor to save his life and escape captivity. Now with a new outlook on life, Tony uses his money and intelligence to make the world a safer, better place as Iron Man.",
+    "modified": "2016-09-28T12:08:19-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+    "comics": {
+        "available": 2561,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009368/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43495",
+                "name": "A+X (2012) #2"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43506",
+                "name": "A+X (2012) #7"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/24348",
+                "name": "Adam: Legend of the Blue Marvel (Trade Paperback)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/22461",
+                "name": "Adam: Legend of the Blue Marvel (2008) #1"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/22856",
+                "name": "Adam: Legend of the Blue Marvel (2008) #2"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 626,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009368/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/6079",
+                "name": "Adam: Legend of the Blue Marvel (2008)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/7524",
+                "name": "Adam: Legend of the Blue Marvel (2008)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/9790",
+                "name": "Age of Heroes (2010)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/24380",
+                "name": "Age of Innocence: The Rebirth of Iron Man (1996)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 3880,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009368/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/670",
+                "name": "X-MEN (2004) #186",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/892",
+                "name": "THOR (1998) #81",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/960",
+                "name": "3 of ?",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/982",
+                "name": "Interior #982",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/984",
+                "name": "Interior #984",
+                "type": "interiorStory"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 31,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009368/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+                "name": "Acts of Vengeance!"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+                "name": "Age of X"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/231",
+                "name": "Armor Wars"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/233",
+                "name": "Atlantis Attacks"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/234",
+                "name": "Avengers Disassembled"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009368/iron_man?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Iron_Man_(Anthony_Stark)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009368/iron_man?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}

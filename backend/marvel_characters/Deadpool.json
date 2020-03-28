@@ -1,0 +1,138 @@
+{
+    "id": 1009268,
+    "name": "Deadpool",
+    "description": "",
+    "modified": "2020-03-11T10:12:01-0400",
+    "thumbnail": {
+        "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/5261a86cacb99",
+        "extension": "jpg"
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009268",
+    "comics": {
+        "available": 844,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009268/comics",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/41112",
+                "name": "5 Ronin (Hardcover)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/36160",
+                "name": "5 Ronin (2010) #5"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/38751",
+                "name": "5 Ronin (2010) #5 (MCGUINNESS COVER)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/43507",
+                "name": "A+X (2012) #8"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/comics/77396",
+                "name": "Absolute Carnage Vs. Deadpool (2019) #1"
+            }
+        ],
+        "returned": 5
+    },
+    "series": {
+        "available": 236,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009268/series",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/15276",
+                "name": "5 Ronin (2011)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/12429",
+                "name": "5 Ronin (2010)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+                "name": "A+X (2012 - 2014)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/27720",
+                "name": "Absolute Carnage Vs. Deadpool (2019)"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/series/459",
+                "name": "Agent X (2002 - 2004)"
+            }
+        ],
+        "returned": 5
+    },
+    "stories": {
+        "available": 1060,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009268/stories",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1135",
+                "name": "AGENT X (2002) #15",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/1619",
+                "name": "Interior #1619",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/2464",
+                "name": "CABLE & DEADPOOL (2004) #9",
+                "type": "cover"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/2465",
+                "name": "3 of 6 - The Passion of the Cable",
+                "type": "interiorStory"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/stories/2466",
+                "name": "CABLE & DEADPOOL (2004) #2",
+                "type": "cover"
+            }
+        ],
+        "returned": 5
+    },
+    "events": {
+        "available": 15,
+        "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009268/events",
+        "items": [
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/320",
+                "name": "Axis"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+                "name": "Civil War"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+                "name": "Dark Reign"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+                "name": "Fear Itself"
+            },
+            {
+                "resourceURI": "http://gateway.marvel.com/v1/public/events/251",
+                "name": "House of M"
+            }
+        ],
+        "returned": 5
+    },
+    "urls": [
+        {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009268/deadpool?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Deadpool_(Wade_Wilson)?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        },
+        {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009268/deadpool?utm_campaign=apiRef&utm_source=49c2a0e570caabef266bbacc3c046e02"
+        }
+    ]
+}
