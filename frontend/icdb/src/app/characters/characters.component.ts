@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 import { Character } from '../character';
 import { CharacterPage } from '../character-page';
 import { DatabaseService } from '../database.service';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-characters',
@@ -17,7 +19,7 @@ export class CharactersComponent implements OnInit {
   currPage = 1;
   totalPages = 2;
 
-  constructor(private databaseService: DatabaseService) { }
+  constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
   charactersHandler = {
     next: data => {
@@ -36,6 +38,11 @@ export class CharactersComponent implements OnInit {
 
   forwardPage() {
     this.databaseService.getCharacters(this.currPage + 1).subscribe(this.charactersHandler);
+  }
+
+  detailCharacter(row: Character) {
+    this.stateService.setCharacter(row);
+    this.router.navigateByUrl('/character');
   }
 
   ngOnInit(): void {

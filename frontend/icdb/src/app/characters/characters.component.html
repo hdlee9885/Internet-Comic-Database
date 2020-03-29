@@ -61,7 +61,7 @@
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns" (click)="detailCharacter(row)"></mat-row>
     </mat-table>
     <div class="nav-buttons" style="float: right;">
       <button *ngIf="currPage > 1" (click)="backPage()"><</button>
