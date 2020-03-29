@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~9.1.0-next.2",
     "@angular/platform-browser-dynamic": "~9.1.0-next.2",
     "@angular/router": "~9.1.0-next.2",
+    "angular-material-expansion-panel": "^0.7.2",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "ngx-pagination": "^5.0.0",

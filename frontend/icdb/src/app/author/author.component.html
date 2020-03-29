@@ -64,11 +64,13 @@
 
 	<div id="MainCard" style="float:left;">
 		<mat-card>
-			<mat-card-header>
-				<mat-card-title><h1>{{author.name}}</h1></mat-card-title>
+			<div  align="center">
+				<mat-card-title><p>{{author.name}}</p></mat-card-title>
 				<mat-card-subtitle><h2>{{'Aliases: ' +author.aliases}}</h2></mat-card-subtitle>
-			</mat-card-header>
-			<img mat-card-img src={{author.image}} height="300px" width="200px">
+			</div>
+				<div class="box" align="center">
+					<img class="image" mat-card-img src={{author.image}}>
+				</div>
 			<mat-card-content>
 				<br>
 				<p>
@@ -101,7 +103,7 @@
 			<mat-card-title><h1>Description</h1></mat-card-title>
 		  </mat-card-header>
 		  <mat-card-content>
-			<h3>{{author.description}}</h3>
+			<p>{{author.description}}</p>
 		  </mat-card-content>  
 		</mat-card>
 	  </div>
