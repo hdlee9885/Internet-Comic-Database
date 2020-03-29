@@ -66,7 +66,9 @@
 		<mat-card>
 			<div  align="center">
 				<mat-card-title><p>{{author.name}}</p></mat-card-title>
-				<mat-card-subtitle><h2>{{'Aliases: ' +author.aliases}}</h2></mat-card-subtitle>
+				<div *ngIf="author.aliases">
+				  <mat-card-subtitle><h2>{{'Aliases: ' +author.aliases}}</h2></mat-card-subtitle>
+				</div>
 			</div>
 				<div class="box" align="center">
 					<img class="image" mat-card-img src={{author.image}}>
