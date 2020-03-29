@@ -5,7 +5,7 @@
 <!-- CSS Stuff -->
 <body> 
     <h1> Welcome to About Page!</h1>
-    <div>
+    <div id="nav">
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 	  <a class="navbar-brand" href="#">Home</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -31,7 +31,7 @@
     </nav>
 </div>
 
-<div style="float:left;">
+<div id="Card" style="float:left;">
   <mat-card class="example-card" >
     <mat-card-header>
       <mat-card-title>{{character.name}}</mat-card-title>
@@ -39,21 +39,15 @@
       <mat-card-subtitle> {{'Alignment: ' +character.alignment}}</mat-card-subtitle>
       <mat-card-subtitle>{{'First Issue: '+character.first_appeared_in_issue}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-img src={{character.image}} height="200px" width="125px">
+    <img mat-card-img src={{character.image}} height="300px" width="200px">
     <mat-card-content>
-
       <p> {{character.deck}}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
+    
   </mat-card>
 </div>
-<!-- <div>
-  <p>{{character.description}}</p>
-</div> -->
-<div id =" accordion" style="float:right;" >
+
+<div id ="Expansion" style="float:right;" >
 
   <mat-accordion>
     <mat-expansion-panel>
@@ -101,9 +95,20 @@
           Detailed Appearance of Character
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <p>{{character.appearance.eye_color}}</p>
+      <mat-list role="list">
+        <mat-list-item role="listitem">{{'Race: '+character.appearance.race}}</mat-list-item>
+        <mat-list-item role="listitem">{{'Gender: '+character.appearance.gender}}</mat-list-item>
+        <mat-list-item role="listitem">{{'Hair Color: '+character.appearance.hair_color}}</mat-list-item>
+        <mat-list-item role="listitem">{{'Eye Color: '+character.appearance.eye_color}}</mat-list-item>
+        <mat-list-item role="listitem">{{'Height: '+character.appearance.height}}</mat-list-item>
+        <mat-list-item role="listitem">{{'Weight: '+character.appearance.weight}}</mat-list-item>
+      </mat-list>
     </mat-expansion-panel>
   </mat-accordion>
+  
+</div>
+
+<div>
   
 </div>
 
