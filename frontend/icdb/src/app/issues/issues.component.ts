@@ -1,27 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
-import { MatPaginator} from '@angular/material/paginator';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
+import { Issue } from '../issue';
+import { IssuePage } from '../issue-page';
+import { DatabaseService } from '../database.service';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-issues',
@@ -29,19 +12,40 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./issues.component.css']
 })
 export class IssuesComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource =  new MatTableDataSource(ELEMENT_DATA);
+  displayedColumns: string[] = ['Title', 'Cover Date', 'Main Character', 'Series'];
+  dataSource: MatTableDataSource<Issue>;
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  issues: Issue[];
+  currPage = 1;
+  totalPages = 2;
 
-  constructor() { }
+  constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
-  ngOnInit() {
-    setTimeout(() => this.dataSource.paginator = this.paginator);
+  issuesHandler = {
+    next: data => {
+      let issuePage: IssuePage;
+      issuePage = data;
+      this.issues = issuePage.results;
+      this.dataSource = new MatTableDataSource<Issue>(this.issues);
+      this.currPage = issuePage.page_num;
+      this.totalPages = issuePage.pages_total;
+    }
+  };
+
+  backPage() {
+    this.databaseService.getIssues(this.currPage - 1).subscribe(this.issuesHandler);
   }
 
-  onRowClicked(row){
-    console.log('Row clicked:', row);
+  forwardPage() {
+    this.databaseService.getIssues(this.currPage + 1).subscribe(this.issuesHandler);
+  }
+
+  detailIssue(row: Issue){
+    this.stateService.setIssue(row);
+    this.router.navigateByUrl('/issue');
+  }
+
+  ngOnInit() {
+    this.databaseService.getIssues(1).subscribe(this.issuesHandler);
   }
 }

@@ -25,50 +25,53 @@
 			<li class="nav-item ">
 			  <a class="nav-link" routerLink="/about">About</a>
 			</li>
-  
+
 		  </ul>
 	  </div>
     </nav>
     <div style="margin-top:20px">
         <h3>In Issues page, we present three issues of marvel comics.</h3>
-        
+
 	</div>
 	<div  class="mat-elevation-z8">
-		
+
 		<mat-table [dataSource]="dataSource">
 			<!-- Position Column -->
-			<ng-container matColumnDef="position">
-			  <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+			<ng-container matColumnDef="Title">
+			  <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+			  <mat-cell *matCellDef="let issue"> {{issue.name}} </mat-cell>
 			</ng-container>
-		  
-			<!-- Name Column -->
-			<ng-container matColumnDef="name">
-			  <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-			</ng-container>
-		  
-			<!-- Weight Column -->
-			<ng-container matColumnDef="weight">
-			  <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-			</ng-container>
-		  
-			<!-- Symbol Column -->
-			<ng-container matColumnDef="symbol">
-			  <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-			</ng-container>
-		  
-			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-			<mat-row *matRowDef="let row; columns: displayedColumns" (click)="onRowClicked(row)"></mat-row>
-		  </mat-table>
-		   <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons> </mat-paginator> 
-	</div>
-    
 
-  
-  
-  
+			<!-- Name Column -->
+			<ng-container matColumnDef="Cover Date">
+			  <mat-header-cell *matHeaderCellDef> Cover Date </mat-header-cell>
+			  <mat-cell *matCellDef="let issue"> {{issue.cover_date}} </mat-cell>
+			</ng-container>
+
+			<!-- Weight Column -->
+			<ng-container matColumnDef="Main Character">
+			  <mat-header-cell *matHeaderCellDef> Main Character </mat-header-cell>
+			  <mat-cell *matCellDef="let issue"> {{issue.character_credits[0]}} </mat-cell>
+			</ng-container>
+
+			<!-- Symbol Column -->
+			<ng-container matColumnDef="Series">
+			  <mat-header-cell *matHeaderCellDef> Series </mat-header-cell>
+			  <mat-cell *matCellDef="let issue"> {{issue.series}} </mat-cell>
+			</ng-container>
+
+			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+			<mat-row *matRowDef="let row; columns: displayedColumns" (click)="detailIssue(row)"></mat-row>
+		  </mat-table>
+    <div class="nav-buttons" style="float: right;">
+      <button *ngIf="currPage > 1" (click)="backPage()"><</button>
+      <button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+    </div>
+	</div>
+
+
+
+
+
 </body>
 </html>

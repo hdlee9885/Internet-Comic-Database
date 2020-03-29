@@ -1,14 +1,8 @@
-import { Character } from './character';
-import { Author } from './author';
-
 export interface Issue {
-  name: string;
-  mainCharacter: Character;
-  characters: Character[];
+  character_credits: string[];
+  cover_date: string;
   description: string;
-  mainAuthor: Author;
-  authors: Author[];
-  imageUrl: string;
-  coverDate: string;
+  name: string;
+  person_credits: string[];
   series: string;
 }
