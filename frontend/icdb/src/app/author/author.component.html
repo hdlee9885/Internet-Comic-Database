@@ -34,7 +34,9 @@
 		  </form>
 	  </div>
 	</nav>
-	<div class="jumbotron text-center" style="margin-bottom:5; height: 620px">
+
+
+	<!-- <div class="jumbotron text-center" style="margin-bottom:5; height: 620px">
 	  <div class="row">
 	  <div class="col-sm-6">
 	     <div>
@@ -58,7 +60,53 @@
 		</div>	
 		
 	  </div>
-	</div>
+	</div> -->
+
+	<div id="MainCard" style="float:left;">
+		<mat-card>
+			<mat-card-header>
+				<mat-card-title><h1>{{author.name}}</h1></mat-card-title>
+				<mat-card-subtitle><h2>{{'Aliases: ' +author.aliases}}</h2></mat-card-subtitle>
+			</mat-card-header>
+			<img mat-card-img src={{author.image}} height="300px" width="200px">
+			<mat-card-content>
+				<br>
+				<p>
+					{{author.deck}}
+				</p>
+			</mat-card-content>
+		</mat-card>
+	  </div>
+
+
+	  <div id="PersonalDetailCard" style="float:right;">
+		<mat-card class="example-card" >
+		  <mat-card-header>
+			<mat-card-title><h1>Personal Details</h1></mat-card-title>
+		  </mat-card-header>
+		  <mat-card-content>
+			<mat-list role="list">
+				<mat-list-item role="listitem"> {{'Country of Origin: '+author.country}}<mat-divider></mat-divider></mat-list-item>
+				<mat-list-item role="listitem"> {{'Hometown: '+author.hometown}}<mat-divider></mat-divider></mat-list-item>
+				<mat-list-item role="listitem"> {{'Birth: '+author.birth}}<mat-divider></mat-divider></mat-list-item>
+				<mat-list-item role="listitem"> {{'Death: '+author.death}}<mat-divider></mat-divider></mat-list-item>
+			</mat-list>
+		  </mat-card-content>  
+		</mat-card>
+	  </div>
+
+	  <div id="DescriptionCard" style="float:right;">
+		<mat-card class="example-card" >
+		  <mat-card-header>
+			<mat-card-title><h1>Description</h1></mat-card-title>
+		  </mat-card-header>
+		  <mat-card-content>
+			<h3>{{author.description}}</h3>
+		  </mat-card-content>  
+		</mat-card>
+	  </div>
+
+
 	
 	
 
