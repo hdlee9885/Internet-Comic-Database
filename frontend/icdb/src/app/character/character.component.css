@@ -6,11 +6,12 @@
 
 }
 #Card {
+    
     width: 30%;
 }
 #Expansion{
-    width: 68%;
-}
-#nav{
-    width: 99%
+    padding-top:2%;
+    padding-left:2%;
+    width: 70%;
+
 }

@@ -8,3 +8,12 @@ img{
 	height: 400px;
 	margin: auto;
 }
+
+#Card {
+    width: 30%;
+}
+#Expansion{
+	padding-top:2%;
+    padding-left:2%;
+    width: 70%;
+}
