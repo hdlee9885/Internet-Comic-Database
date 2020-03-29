@@ -32,41 +32,40 @@
     <h3>Here, we present some authors that contributed to the world's famous marvel comics.</h3>
     <p>Click on an author to see their full information!</p>
 	</div>
+  <div  class="mat-elevation-z8">
 
-  <!--<div  class="mat-elevation-z8">
-
-    <mat-table [dataSource]="dataSource">-->
+    <mat-table [dataSource]="dataSource">
       <!-- Position Column -->
-      <!--<ng-container matColumnDef="Character">
-        <mat-header-cell *matHeaderCellDef> Character </mat-header-cell>
-        <mat-cell *matCellDef="let character"> {{character.name}} </mat-cell>
-      </ng-container>-->
+      <ng-container matColumnDef="Name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let author"> {{author.name}} </mat-cell>
+      </ng-container>
 
       <!-- Name Column -->
-      <!--<ng-container matColumnDef="Real Name">
-        <mat-header-cell *matHeaderCellDef> Real Name </mat-header-cell>
-        <mat-cell *matCellDef="let character"> {{character.real_name}} </mat-cell>
-      </ng-container>-->
+      <ng-container matColumnDef="Hometown">
+        <mat-header-cell *matHeaderCellDef> Hometown </mat-header-cell>
+        <mat-cell *matCellDef="let author"> {{author.hometown}} </mat-cell>
+      </ng-container>
 
       <!-- Weight Column -->
-      <!--<ng-container matColumnDef="First Appeared In">
-        <mat-header-cell *matHeaderCellDef> First Appeared In </mat-header-cell>
-        <mat-cell *matCellDef="let character"> {{character.first_appeared_in_issue}} </mat-cell>
-      </ng-container>-->
+      <ng-container matColumnDef="Birthdate">
+        <mat-header-cell *matHeaderCellDef> Birthdate </mat-header-cell>
+        <mat-cell *matCellDef="let author"> {{author.birthdate}} </mat-cell>
+      </ng-container>
 
       <!-- Symbol Column -->
-      <!--<ng-container matColumnDef="Created By">
-        <mat-header-cell *matHeaderCellDef> Created By </mat-header-cell>
-        <mat-cell *matCellDef="let character"> {{character.creators[0]}} </mat-cell>
+      <ng-container matColumnDef="Deathdate">
+        <mat-header-cell *matHeaderCellDef> Deathdate </mat-header-cell>
+        <mat-cell *matCellDef="let author"> {{author.deathdate}} </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns" (click)="detailCharacter(row)"></mat-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns" (click)="detailAuthor(row)"></mat-row>
     </mat-table>
     <div class="nav-buttons" style="float: right;">
       <button *ngIf="currPage > 1" (click)="backPage()"><</button>
       <button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
     </div>
-  </div>-->
+  </div>
 </body>
 </html>

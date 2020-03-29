@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CharacterPage } from './character-page';
+import { AuthorPage } from './author-page';
 import { Observable } from 'rxjs';
 
 const allCharactersUrl = 'https://super-phase2-api.appspot.com/characters/';
@@ -18,8 +19,8 @@ export class DatabaseService {
     return this.http.get<CharacterPage>(finalUrl);
   }
 
-  getAuthors(page: number): Observable<any> {
+  getAuthors(page: number): Observable<AuthorPage> {
     let finalUrl = allAuthorsUrl + page;
-    return this.http.get<any>(finalUrl);
+    return this.http.get<AuthorPage>(finalUrl);
   }
 }
