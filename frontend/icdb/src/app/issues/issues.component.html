@@ -64,8 +64,8 @@
 			<mat-row *matRowDef="let row; columns: displayedColumns" (click)="detailIssue(row)"></mat-row>
 		  </mat-table>
     <div class="nav-buttons" style="float: right;">
-      <button *ngIf="currPage > 1" (click)="backPage()"><</button>
-      <button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+      <button mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
+      <button mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
     </div>
 	</div>
 
