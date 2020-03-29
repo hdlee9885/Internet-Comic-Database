@@ -5,4 +5,5 @@ export interface Issue {
   name: string;
   person_credits: string[];
   series: string;
+  image: string;
 }
