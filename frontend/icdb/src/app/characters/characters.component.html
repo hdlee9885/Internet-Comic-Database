@@ -25,22 +25,48 @@
 			<li class="nav-item ">
 			  <a class="nav-link" routerLink="/about">About</a>
 			</li>
-  
-		   
-			  
-		  
-	  
 		  </ul>
 	  </div>
     </nav>
     <div>
-        <h3>Three world's most famous characters will be presented!</h3>
-        <p>Click on the buttons above to explore!</p>
+        <h3>The world's most famous characters are presented here!</h3>
+        <p>Click on a character to see their full information.</p>
     </div>
-    
 
-  
-  
-  
+  <div  class="mat-elevation-z8">
+
+    <mat-table [dataSource]="dataSource">
+      <!-- Position Column -->
+      <ng-container matColumnDef="Name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let character"> {{character.name}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Real Name">
+        <mat-header-cell *matHeaderCellDef> Real Name </mat-header-cell>
+        <mat-cell *matCellDef="let character"> {{character.real_name}} </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="First Appeared In">
+        <mat-header-cell *matHeaderCellDef> First Appeared In </mat-header-cell>
+        <mat-cell *matCellDef="let character"> {{character.first_appeared_in_issue}} </mat-cell>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="Created By">
+        <mat-header-cell *matHeaderCellDef> Created By </mat-header-cell>
+        <mat-cell *matCellDef="let character"> {{character.creators[0]}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+    <div class="nav-buttons" style="float: right;">
+      <button *ngIf="currPage > 1" (click)="backPage()"><</button>
+      <button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+    </div>
+  </div>
 </body>
 </html>

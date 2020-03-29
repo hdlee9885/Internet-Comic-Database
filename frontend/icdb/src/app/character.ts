@@ -1,15 +1,15 @@
-import { Author } from './author';
-import { Issue } from './issue';
+import { Appearance } from './appearance';
 
 export interface Character {
-  name: string;
-  realName: string;
-  aliases: string[];
-  imageUrl: string;
-  firstAppearedIn: Issue;
-  mainAuthor: Author;
-  authors: Author[];
+  aliases: string;
+  alignment: string;
+  api_detail_url: string;
+  appearance: Appearance;
+  creators: string[];
   deck: string;
   description: string;
-  alignment: string;
+  first_appeared_in_issue: string;
+  image: string;
+  name: string;
+  real_name: string;
 }
