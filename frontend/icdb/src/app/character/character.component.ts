@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../character';
 import { StateService } from '../state.service';
+import { MatCard }  from '@angular/material/card'
 
 @Component({
   selector: 'app-character',
