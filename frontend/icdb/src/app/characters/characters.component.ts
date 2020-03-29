@@ -12,7 +12,7 @@ import { StateService } from '../state.service';
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
-  displayedColumns = ['Name', 'Real Name', 'First Appeared In', 'Created By'];
+  displayedColumns = ['Character', 'Real Name', 'First Appeared In', 'Created By'];
   dataSource: MatTableDataSource<Character>;
 
   characters: Character[];

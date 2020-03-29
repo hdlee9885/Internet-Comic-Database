@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../database.service';
 
 @Component({
   selector: 'app-authors',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./authors.component.css']
 })
 export class AuthorsComponent implements OnInit {
-  constructor() { }
+  constructor(private databaseService: DatabaseService) { }
+
+  authorsHandler = {
+    next: data => {
+      console.log(data);
+    }
+  };
 
   ngOnInit(): void {
-    
+    this.databaseService.getAuthors(1).subscribe(this.authorsHandler);
   }
 
 

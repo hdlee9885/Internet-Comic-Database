@@ -1,16 +1,11 @@
-import { Character } from './character';
-import { Issue } from './issue';
-
 export interface Author {
-  name: string;
-  mainCharacter: Character;
-  characters: Character[];
-  mainIssue: Issue;
-  issues: Issue[];
-  description: string;
-  deck: string;
+  aliases: string;
+  birth: string;
   country: string;
-  imageUrl: string;
-  birthDate: string;
-  deathDate: string;
+  death: string;
+  deck: string;
+  description: string;
+  hometown: string;
+  image: string;
+  name: string;
 }
