@@ -33,13 +33,15 @@
 
 <div id="Card" style="float:left;">
   <mat-card class="example-card" >
-    <mat-card-header>
-      <mat-card-title><h1>{{character.name}}</h1></mat-card-title>
+	<div align="center">
+	  <mat-card-title><h1>{{character.name}}</h1></mat-card-title>
       <mat-card-subtitle><h2>{{character.real_name}}</h2></mat-card-subtitle>
       <mat-card-subtitle> {{'Alignment: ' +character.alignment}}</mat-card-subtitle>
       <mat-card-subtitle>{{'First Issue: '+character.first_appeared_in_issue}}</mat-card-subtitle>
-    </mat-card-header>
+    </div>      
+ <div class="box" align="center">
     <img mat-card-img src={{character.image}} height="300px" width="200px">
+  </div>
     <mat-card-content>
       <br>
       <p> {{character.deck}}</p>
@@ -49,8 +51,10 @@
 </div>
 
 <div id ="Expansion" style="float:right;" >
+<button mat-flat-button color="primary" (click)="openAllPanels()"><b>Open Panels</b></button>
+<button mat-flat-button color="primary" (click)="closeAllPanels()"><b>Close Panels</b></button>
 
-  <mat-accordion>
+  <mat-accordion #accordion="matAccordion" [multi]="true">
     <mat-expansion-panel  >
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -91,7 +95,7 @@
       </mat-expansion-panel-header>
       <p>{{character.description}}</p>
     </mat-expansion-panel>
-
+   <div *ngIf="character.appearance">
     <mat-expansion-panel >
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -112,6 +116,8 @@
       </mat-list>
     </mat-card-content>
     </mat-expansion-panel>
+   
+   </div> 
   </mat-accordion>
   
 </div>
