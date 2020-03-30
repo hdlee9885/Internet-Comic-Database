@@ -159,3 +159,77 @@ describe('Detail Page Expansion', () => {
 	    })
 	}
 })
+
+describe('Detail Page Expansion', () => {
+	it('should close all tabs', function() {
+		browser.get('http://localhost:4200/characters');
+	    closeAllTabs();
+	})
+	
+	function closeAllTabs() {
+		bb = true;
+	    browser.sleep(2000).then(function(){
+			element(by.id('characters-row')).click().then(function(){
+				element(by.id('char-openAll')).click().then(function() {
+				    browser.sleep(2000).then(function(){
+					element(by.id('char-close')).click().then(function() {
+						element(by.id('char-close')).click().then(function() {
+						//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+						expect(element(by.id('char-Aliases-description')).isDisplayed()).toBe(false);//.toBe(false);
+						expect(element(by.id('char-Author-description')).isDisplayed()).toBe(false);//.toBe(false);
+						expect(element(by.id('char-Description-description')).isDisplayed()).toBe(false);//.toBe(false);
+					})
+					})
+				})
+				})
+			})
+	    })
+	}
+})
+
+describe('Detail Page Expansion', () => {
+	it('should open specific tab', function() {
+		browser.get('http://localhost:4200/characters');
+		openAliasesTabs();
+		browser.get('http://localhost:4200/characters');
+		openAuthorTabs();
+		browser.get('http://localhost:4200/characters');
+		openDescriptionTabs();
+	})
+	
+	function openAliasesTabs() {
+	    browser.sleep(2000).then(function(){
+			element(by.id('characters-row')).click().then(function(){
+				element(by.id('char-Aliases-expand')).click().then(function() {
+				    browser.sleep(2000).then(function(){
+						expect(element(by.id('char-Aliases-description')).isDisplayed()).toBe(true);//.toBe(false);
+					})
+				})
+			})
+	    })
+	}
+	
+	function openAuthorTabs() {
+		browser.sleep(2000).then(function(){
+			element(by.id('characters-row')).click().then(function(){
+				element(by.id('char-Authors-expand')).click().then(function() {
+				    browser.sleep(2000).then(function(){
+				    	expect(element(by.id('char-Author-description')).isDisplayed()).toBe(true);//.toBe(false);
+				    })
+				})
+			})
+		})
+	}
+	
+	function openDescriptionTabs() {
+		browser.sleep(2000).then(function(){
+			element(by.id('characters-row')).click().then(function(){
+				element(by.id('char-Description-expand')).click().then(function() {
+				    browser.sleep(2000).then(function(){
+				    	expect(element(by.id('char-Description-description')).isDisplayed()).toBe(true);//.toBe(false);
+				    })
+				})
+			})
+		})
+	}
+})
