@@ -1,5 +1,5 @@
 // spec.js
-describe('Protractor Demo', function() {
+describe('ICDB Test', function() {
     it('should return title of web', function() {
       browser.get('http:\\localhost:4200');
       
