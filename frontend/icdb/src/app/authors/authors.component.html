@@ -38,7 +38,7 @@
       <!-- Position Column -->
       <ng-container matColumnDef="Name">
         <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-        <mat-cell *matCellDef="let author"> {{author.name}} </mat-cell>
+        <mat-cell id="authors-name" *matCellDef="let author"> {{author.name}} </mat-cell>
       </ng-container>
 
       <!-- Name Column -->
@@ -60,11 +60,11 @@
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns" (click)="detailAuthor(row)"></mat-row>
+      <mat-row id="authors-row" *matRowDef="let row; columns: displayedColumns" (click)="detailAuthor(row)"></mat-row>
     </mat-table>
     <div class="nav-buttons" style="float: right;">
-      <button mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
-      <button mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+      <button id="authors-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
+      <button id="authors-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
     </div>
   </div>
 </body>
