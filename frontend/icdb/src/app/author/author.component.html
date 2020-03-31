@@ -61,59 +61,105 @@
 		
 	  </div>
 	</div> -->
-
-	<div id="MainCard" style="float:left;">
-		<mat-card>
-			<div  align="center">
-				<mat-card-title><p id="authors-header-name">{{author.name}}</p></mat-card-title>
-				<div *ngIf="author.aliases">
-				  <mat-card-subtitle><h2>{{'Aliases: ' +author.aliases}}</h2></mat-card-subtitle>
-				</div>
+	
+<div id="MainCard" style="float:left;">
+	<mat-card>
+		<div  align="center">
+			<mat-card-title><p id="authors-header-name">{{author.name}}</p></mat-card-title>
+			<div *ngIf="author.aliases">
+			  <mat-card-subtitle><h2>{{'Aliases: ' +author.aliases}}</h2></mat-card-subtitle>
 			</div>
-				<div class="box" align="center">
-					<img class="image" mat-card-img src={{author.image}}>
-				</div>
-			<mat-card-content>
-				<br>
-				<p>
-					{{author.deck}}
-				</p>
-			</mat-card-content>
-		</mat-card>
-	  </div>
+		</div>
+			<div class="box" align="center">
+				<img class="image" mat-card-img src={{author.image}}>
+			</div>
+		<mat-card-content>
+			<br>
+			<p>
+				{{author.deck}}
+			</p>
+		</mat-card-content>
+	</mat-card>
+ </div>
 
 
-	  <div id="PersonalDetailCard" style="float:right;">
-		<mat-card class="example-card" >
-		  <mat-card-header>
-			<mat-card-title><h1>Personal Details</h1></mat-card-title>
-		  </mat-card-header>
-		  <mat-card-content>
-			<mat-list role="list">
-				<mat-list-item role="listitem"> {{'Country of Origin: '+author.country}}<mat-divider></mat-divider></mat-list-item>
-				<mat-list-item role="listitem"> {{'Hometown: '+author.hometown}}<mat-divider></mat-divider></mat-list-item>
-				<mat-list-item role="listitem"> {{'Birth: '+author.birth}}<mat-divider></mat-divider></mat-list-item>
-				<mat-list-item role="listitem"> {{'Death: '+author.death}}<mat-divider></mat-divider></mat-list-item>
-			</mat-list>
-		  </mat-card-content>  
-		</mat-card>
-	  </div>
-
-	  <div id="DescriptionCard" style="float:right;">
-		<mat-card class="example-card" >
-		  <mat-card-header>
-			<mat-card-title><h1>Description</h1></mat-card-title>
-		  </mat-card-header>
-		  <mat-card-content>
-			<p>{{author.description}}</p>
-		  </mat-card-content>  
-		</mat-card>
-	  </div>
+<div id ="Expansion" style="float:right;" >
+<button id="char-openAll" mat-flat-button color="primary" (click)="openAllPanels()"><b>Open Panels</b></button>
+<button id="char-close" mat-flat-button color="primary" (click)="closeAllPanels()"><b>Close Panels</b></button>
 
 
+
+  <mat-accordion #accordion="matAccordion" [multi]="true">
+  
+    <mat-expansion-panel id="author-Characters-expand">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Characters
+        </mat-panel-title>
+        <mat-panel-description>
+          List of Characters Created By the Author
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item id="author-Characters-description" role="listitem"*ngFor="let element of author.characters">{{element}}
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        
+      </mat-list>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel id="author-Description-expand">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Personal Details
+        </mat-panel-title>
+        <mat-panel-description>
+          Detailed Information of the Author
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-card-content>
+      <mat-list role="list">
+        <mat-list-item role="listitem"> {{'Country of Origin: '+author.country}}<mat-divider></mat-divider></mat-list-item>
+		<mat-list-item role="listitem"> {{'Hometown: '+author.hometown}}<mat-divider></mat-divider></mat-list-item>
+		<mat-list-item role="listitem"> {{'Birth: '+author.birth}}<mat-divider></mat-divider></mat-list-item>
+		<mat-list-item role="listitem"> {{'Death: '+author.death}}<mat-divider></mat-divider></mat-list-item>
+	  </mat-list>
+    </mat-card-content>
+    </mat-expansion-panel>
+
+  <mat-expansion-panel id="author-Description-expand">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Description
+        </mat-panel-title>
+        <mat-panel-description>
+          Detailed Description of Author
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p id="author-Description-description">{{author.description}}</p>
+    </mat-expansion-panel>
+    
+    <mat-expansion-panel id="author-Issues-expand">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Issues
+        </mat-panel-title>
+        <mat-panel-description>
+          List of Issues Affliated By the Author
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-list-item id="author-Issues-description" role="listitem"*ngFor="let element of author.issues;">{{element}}
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        
+      </mat-list>
+    </mat-expansion-panel>
+   
+  </mat-accordion>
+  
+</div>
 	
-	
-
 </body>
 </html>
 

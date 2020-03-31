@@ -55,9 +55,9 @@
 			</ng-container>
 
 			<!-- Symbol Column -->
-			<ng-container matColumnDef="Series">
-			  <mat-header-cell *matHeaderCellDef> Series </mat-header-cell>
-			  <mat-cell *matCellDef="let issue"> {{issue.series}} </mat-cell>
+			<ng-container matColumnDef="Author">
+			  <mat-header-cell *matHeaderCellDef> Authors Affliated </mat-header-cell>
+			  <mat-cell *matCellDef="let issue"> {{issue.person_credits[0]}} </mat-cell>
 			</ng-container>
 
 			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
