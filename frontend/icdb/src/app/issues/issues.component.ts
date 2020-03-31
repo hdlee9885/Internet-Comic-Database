@@ -12,7 +12,7 @@ import { StateService } from '../state.service';
   styleUrls: ['./issues.component.css']
 })
 export class IssuesComponent implements OnInit {
-  displayedColumns: string[] = ['Title', 'Cover Date', 'Main Character', 'Series'];
+  displayedColumns: string[] = ['Title', 'Cover Date', 'Main Character', 'Author'];
   dataSource: MatTableDataSource<Issue>;
 
   issues: Issue[];
