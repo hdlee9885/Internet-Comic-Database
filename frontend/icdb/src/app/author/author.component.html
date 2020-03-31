@@ -65,7 +65,7 @@
 	<div id="MainCard" style="float:left;">
 		<mat-card>
 			<div  align="center">
-				<mat-card-title><p>{{author.name}}</p></mat-card-title>
+				<mat-card-title><p id="authors-header-name">{{author.name}}</p></mat-card-title>
 				<div *ngIf="author.aliases">
 				  <mat-card-subtitle><h2>{{'Aliases: ' +author.aliases}}</h2></mat-card-subtitle>
 				</div>
