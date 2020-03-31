@@ -14,11 +14,11 @@ export class AboutService {
 
   constructor(private http: HttpClient) { }
 
-  getStats(): Observable<Stats> {
-    return this.http.get<Stats>(statsUrl);
+  getStats(): Observable<Stats[]> {
+    return this.http.get<Stats[]>(statsUrl);
   }
 
-  getIssues(): Observable<Issues> {
-    return this.http.get<Issues>(issuesUrl);
+  getIssues(): Observable<Issues[]> {
+    return this.http.get<Issues[]>(issuesUrl);
   }
 }
