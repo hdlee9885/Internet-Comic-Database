@@ -5,7 +5,7 @@ import { Issues } from './issues';
 import { Observable } from 'rxjs';
 
 const statsUrl = 'https://api.github.com/repos/chrisjoswin/EE461L_Project/stats/contributors';
-const issuesUrl = 'https://api.github.com/repos/chrisjoswin/EE461L_Project/issues';
+const issuesUrl = 'https://api.github.com/repos/chrisjoswin/EE461L_Project/issues?state=all';
 
 @Injectable({
   providedIn: 'root'

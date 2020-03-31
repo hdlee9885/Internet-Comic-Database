@@ -7,3 +7,8 @@ export interface Issue {
   series: string;
   image: string;
 }
+
+export interface SingleIssue {
+  response: string;
+  results: Issue;
+}

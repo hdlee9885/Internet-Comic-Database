@@ -1,5 +1,5 @@
 
 export interface ListingPage {
-  response: string;
-  results: string[];
+  Response: string;
+  Result: string[];
 }

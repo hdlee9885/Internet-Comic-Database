@@ -21,7 +21,7 @@ export class IssueComponent implements OnInit {
 
   captPlanet = <Character> {
     aliases: "Test" ,
-  alignment:"good", 
+  alignment:"good",
   api_detail_url: "hi",
   appearance: null,
   creators: ['Apple', 'Orange', 'Banana'],
@@ -38,9 +38,9 @@ export class IssueComponent implements OnInit {
   clickableCharacters: string[] =["Captain Planet"];
   clickableAuthors: string[];
   fullListCharacters:Character[] =[ this.captPlanet];
-   
 
-   fruits: string[] = ['Apple', 'Orange', 'Banana'];  
+
+   fruits: string[] = ['Apple', 'Orange', 'Banana'];
 
 
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
@@ -48,7 +48,7 @@ export class IssueComponent implements OnInit {
     next: data => {
       let listingPage: ListingPage;
       listingPage = data;
-      this.authorsList = listingPage.results;
+      this.authorsList = listingPage.Result;
     }
   };
 
@@ -56,8 +56,8 @@ export class IssueComponent implements OnInit {
     next: data => {
       let listingPage: ListingPage;
       listingPage = data;
-      this.charactersList = listingPage.results;
-      
+      this.charactersList = listingPage.Result;
+
     }
   };
 
@@ -76,14 +76,14 @@ export class IssueComponent implements OnInit {
 
   ngOnInit(): void {
     this.issue = this.stateService.getIssue();
-    this.databaseService.getlistAuthors().subscribe(this.issueAuthorsHandler);
-    this.databaseService.getlistCharacters().subscribe(this.issueCharactersHandler);
+    this.databaseService.getAuthorNames().subscribe(this.issueAuthorsHandler);
+    this.databaseService.getCharacterNames().subscribe(this.issueCharactersHandler);
     this.databaseService.getCharacters(1).subscribe(this.issueFullCharactersHandler);
     this.databaseService.getCharacters(2).subscribe(this.issueFullCharactersHandler);
     this.databaseService.getCharacters(3).subscribe(this.issueFullCharactersHandler);
     this.databaseService.getCharacters(4).subscribe(this.issueFullCharactersHandler);
-    
-    
+
+
   }
 
   closeAllPanels(){
@@ -92,7 +92,7 @@ export class IssueComponent implements OnInit {
 	openAllPanels(){
     this.Accordion.openAll();
   }
-  
+
   generateCharacterLinks(){
     for(let character of this.issue.character_credits){
       if(this.charactersList.includes(character)){
@@ -114,7 +114,7 @@ export class IssueComponent implements OnInit {
         this.router.navigateByUrl('/character');
        }
       }
-    }  
+    }
    else
      {
      alert(element + " does not have a detailed page");
