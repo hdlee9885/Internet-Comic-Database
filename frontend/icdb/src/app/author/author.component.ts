@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Author } from '../author';
 import { StateService } from '../state.service';
+import { DatabaseService } from '../database.service';
+
 
 @Component({
   selector: 'app-author',
