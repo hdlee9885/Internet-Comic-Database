@@ -23,6 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'icdb'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
+    app.ngOnInit();
     expect(app.title).toEqual('icdb');
   });
 });

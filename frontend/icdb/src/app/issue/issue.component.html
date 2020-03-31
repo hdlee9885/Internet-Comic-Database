@@ -47,36 +47,36 @@
 		     	<br>
 		     	<p align="left">{{issue.name}} is issued on {{issue.cover_date}} in {{issue.series}}</p>
 	     	</div>
-	     	
+
 	     </div>
 	  </div>
 	  	<div class="col-sm-6">
 			<div>
 			   <p align="left">{{issue.description}}</p>
 			</div>
-		</div>	
-		
+		</div>
+
 	  </div>
 	</div> -->
-	
+
 
 	 <div id="Card" style="float:left;">
 		<mat-card class="example-card" >
 		  <div align="center">
 			<mat-card-title> <h1 id="issue-header-name" >{{issue.name}}</h1></mat-card-title>
 			<mat-card-subtitle><h3>{{'Issue Series: '+ issue.series}}</h3></mat-card-subtitle>
-		  </div>  
+		  </div>
 		  <div class="box" align="center">
 		     <img class="image" mat-card-img src={{issue.image}} >
   		  </div>
 		  <mat-card-content>
 			<br>
-			<p> {{'Cover Date: '+issue.cover_date}}</p>
+			<p> {{'Cover Date: '+ issue.cover_date}}</p>
 		  </mat-card-content>
-		  
+
 		</mat-card>
 	  </div>
-	  
+
 	  <div id ="Expansion" style="float:right;" >
 	    <button id="issues-openAll" mat-flat-button color="primary" (click)="openAllPanels()"><b>Open Panels</b></button>
 		<button  id="issues-closeAll" mat-flat-button color="primary" (click)="closeAllPanels()"><b>Close Panels</b></button>
@@ -104,13 +104,13 @@
 				  </mat-panel-description>
 				</mat-expansion-panel-header>
 				<mat-list role="list">
-					<mat-list-item role="listitem"*ngFor="let element of issue.character_credits;">{{element}}
+					<mat-list-item role="listitem" *ngFor="let element of issue.character_credits;">{{element}}
 						<mat-divider></mat-divider>
 					</mat-list-item>
-					
+
 				</mat-list>
 			  </mat-expansion-panel>
-	  
+
 
 		  <mat-expansion-panel id="issue-author-panel">
 			<mat-expansion-panel-header  >
@@ -122,7 +122,7 @@
 			  </mat-panel-description>
 			</mat-expansion-panel-header>
 			<mat-list role="list">
-				<mat-list-item role="listitem"*ngFor="let element of issue.person_credits;">{{element}}
+				<mat-list-item role="listitem" *ngFor="let element of issue.person_credits;">{{element}}
 					<mat-divider></mat-divider>
 				</mat-list-item>
 			</mat-list>
@@ -130,7 +130,7 @@
 
 
 
-	  
+
 		  <!-- <mat-expansion-panel >
 			<mat-expansion-panel-header>
 			  <mat-panel-title>
@@ -150,9 +150,9 @@
 			</mat-list>
 		  </mat-expansion-panel> -->
 		</mat-accordion>
-		
+
 	  </div>
-	
+
 
 </body>
 </html>

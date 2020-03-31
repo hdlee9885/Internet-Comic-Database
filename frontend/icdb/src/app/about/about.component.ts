@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutService } from '../about.service';
 import { Developer } from '../developer';
+import { Stats } from '../stats';
+import { Issues } from '../issues';
 
 @Component({
   selector: 'app-about',
@@ -27,7 +29,7 @@ export class AboutComponent implements OnInit {
 
   statsHandler = {
     next: data => {
-      let contributor;
+      let contributor: Stats;
       for (contributor of data) {
         this.numCommits += contributor.total;
         switch (contributor.author.login) {
@@ -57,9 +59,11 @@ export class AboutComponent implements OnInit {
 
   issuesHandler = {
     next: data => {
-      let issue;
+      let issue: Issues;
+      console.log(data.length);
       for (issue of data) {
         this.numIssues++;
+        console.log(issue.user.login);
         switch (issue.user.login) {
           case 'jacobgrimm':
             this.developers[3].numIssues++;
@@ -77,7 +81,7 @@ export class AboutComponent implements OnInit {
             this.developers[2].numIssues++;
             break;
           case 'j-ka11':
-            this.developers[0].numIssues++;
+            this.developers[1].numIssues++;
             break;
         }
       }
