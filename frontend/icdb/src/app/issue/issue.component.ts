@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 import {ListingPage} from '../listing-page'
 import { generate } from 'rxjs';
 import { IssuesComponent } from '../issues/issues.component';
-import { Character } from '../character';
+import { Character, SingleCharacter } from '../character';
+import { Author, SingleAuthor } from '../author';
 import { CharacterPage } from '../character-page';
 @Component({
   selector: 'app-issue',
@@ -17,73 +18,57 @@ import { CharacterPage } from '../character-page';
 })
 export class IssueComponent implements OnInit {
 
+  panelOpenState = false;
   @ViewChild('accordion', {static:true}) Accordion: MatAccordion;
 
-  captPlanet = <Character> {
-    aliases: "Test" ,
-  alignment:"good",
-  api_detail_url: "hi",
-  appearance: null,
-  creators: ['Apple', 'Orange', 'Banana'],
-  deck: "hello",
-  description: "tall",
-  first_appeared_in_issue: "firstone",
-  image: "inamge",
-  name: "Captain Planet",
-  real_name: "Captain"
-}
+  
   issue: Issue;
-  charactersList: string[];
-  authorsList: string[];
-  clickableCharacters: string[] =["Captain Planet"];
-  clickableAuthors: string[];
-  fullListCharacters:Character[] =[ this.captPlanet];
-
-
-   fruits: string[] = ['Apple', 'Orange', 'Banana'];
-
+  availAuthors: string[];
+  availCharacters: string[];
 
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
-  issueAuthorsHandler = {
+  availAuthorsHandler = {
     next: data => {
-      let listingPage: ListingPage;
-      listingPage = data;
-      this.authorsList = listingPage.Result;
+      let authorNames: ListingPage;
+      authorNames = data;
+      this.availAuthors = authorNames.Result;
+      console.log(this.availAuthors);
     }
   };
 
-  issueCharactersHandler = {
+  availCharactersHandler = {
     next: data => {
-      let listingPage: ListingPage;
-      listingPage = data;
-      this.charactersList = listingPage.Result;
-
+      let characterNames: ListingPage;
+      characterNames = data;
+      this.availCharacters = characterNames.Result;
+      console.log(this.availCharacters);
     }
   };
 
-  issueFullCharactersHandler={
+
+  detailAuthorHandler = {
     next: data => {
-      let characterPage: CharacterPage;
-      characterPage = data;
-      for(let character of characterPage.results)
-      this.fullListCharacters.push(character);
-      this.generateCharacterLinks();
-  }
-};
+      let singleAuthor: SingleAuthor = data;
+      let author: Author = singleAuthor.results;
+      this.stateService.setAuthor(author);
+      this.router.navigateByUrl('/author');
+    }
+  };
 
-
+  detailCharacterHandler = {
+    next: data => {
+      let singleCharacter: SingleCharacter = data;
+      let character: Character = singleCharacter.results;
+      this.stateService.setCharacter(character);
+      this.router.navigateByUrl('/character');
+    }
+  };
 
 
   ngOnInit(): void {
     this.issue = this.stateService.getIssue();
-    this.databaseService.getAuthorNames().subscribe(this.issueAuthorsHandler);
-    this.databaseService.getCharacterNames().subscribe(this.issueCharactersHandler);
-    this.databaseService.getCharacters(1).subscribe(this.issueFullCharactersHandler);
-    this.databaseService.getCharacters(2).subscribe(this.issueFullCharactersHandler);
-    this.databaseService.getCharacters(3).subscribe(this.issueFullCharactersHandler);
-    this.databaseService.getCharacters(4).subscribe(this.issueFullCharactersHandler);
-
-
+    this.databaseService.getAuthorNames().subscribe(this.availAuthorsHandler);
+    this.databaseService.getCharacterNames().subscribe(this.availCharactersHandler);
   }
 
   closeAllPanels(){
@@ -93,33 +78,32 @@ export class IssueComponent implements OnInit {
     this.Accordion.openAll();
   }
 
-  generateCharacterLinks(){
-    for(let character of this.issue.character_credits){
-      if(this.charactersList.includes(character)){
-          this.clickableCharacters.push(character);
-      }
+  detailAuthor(author: string){
+    let finalAuthor = this.formatCreator(author);
+    console.log(finalAuthor);
+    if(this.availAuthors.indexOf(finalAuthor) != -1){
+      this.databaseService.getSingleAuthor(finalAuthor).subscribe(this.detailAuthorHandler);
+    }else{
+      alert('Unfortunately, we do not have any data on the comic author ' + finalAuthor + '. :(');
+    }
+  }
+
+  formatCreator(creator: string):string{
+    var index =creator.indexOf(":");
+
+      let correctAuthorString=creator.substring(0,index);
+
+     return correctAuthorString;
+
+
+  }
+
+  detailCharacter(character: string){
+    if(this.availCharacters.indexOf(character) != -1){
+      this.databaseService.getSingleCharacter(character).subscribe(this.detailCharacterHandler);
+    }else{
+      alert('Unfortunately, we do not have any data on the character ' + character + '. :(');
     }
 
   }
-  generateAuthorLinks(authorName){
-
-  }
-
-  navCharacterClick(element){
-   if(this.clickableCharacters.includes(element)){
-     //pull character from database
-     for(var character of this.fullListCharacters){
-       if((character.name)===element){
-        this.stateService.setCharacter(character);
-        this.router.navigateByUrl('/character');
-       }
-      }
-    }
-   else
-     {
-     alert(element + " does not have a detailed page");
-     }
-
-   }
-
 }

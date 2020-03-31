@@ -104,7 +104,7 @@
 				  </mat-panel-description>
 				</mat-expansion-panel-header>
 				<mat-list role="list">
-					<mat-list-item role="listitem" *ngFor="let element of issue.character_credits;" (click)="navCharacterClick(element)">{{element}}
+					<mat-list-item role="listitem" *ngFor="let element of issue.character_credits;" (click)="detailCharacter(element)">{{element}}
 						<mat-divider></mat-divider>
 					</mat-list-item>
 				</mat-list>
@@ -121,7 +121,7 @@
 			  </mat-panel-description>
 			</mat-expansion-panel-header>
 			<mat-list role="list">
-				<mat-list-item role="listitem" *ngFor="let element of issue.person_credits;" >{{element}}
+				<mat-list-item role="listitem" *ngFor="let element of issue.person_credits;" (click)="detailAuthor(element)" >{{element}}
 					<mat-divider></mat-divider>
 				</mat-list-item>
 			</mat-list>
