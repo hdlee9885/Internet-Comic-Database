@@ -16,12 +16,12 @@ export class AboutComponent implements OnInit {
 
   developers: Developer[] = [
     // tslint:disable-next-line:max-line-length
-    {name: 'Christopher Erattuparambil', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Frontend Team', numIssues: 0, numCommits: 0, numTests: 0},
-    {name: 'Josh Kall', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Frontend Team', numIssues: 0, numCommits: 0, numTests: 0},
-    {name: 'Haosong Li', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Frontend Team', numIssues: 0, numCommits: 0, numTests: 0},
-    {name: 'Jacob Grimm', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Backend Team', numIssues: 0, numCommits: 0, numTests: 0},
-    {name: 'Jerad Robles', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Backend Team', numIssues: 0, numCommits: 0, numTests: 0},
-    {name: 'William Gu', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Backend Team', numIssues: 0, numCommits: 0, numTests: 0},
+    {name: 'Christopher Erattuparambil', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Frontend Team', numIssues: 0, numCommits: 0, numTests: 15},
+    {name: 'Josh Kall', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Frontend Team', numIssues: 0, numCommits: 0, numTests: 29},
+    {name: 'Haosong Li', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Frontend Team', numIssues: 0, numCommits: 0, numTests: 15},
+    {name: 'Jacob Grimm', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Backend Team', numIssues: 0, numCommits: 0, numTests: 5},
+    {name: 'Jerad Robles', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Backend Team', numIssues: 0, numCommits: 0, numTests: 5},
+    {name: 'William Gu', photoUrl: this.blankPhoto, bio: '', track: '', team: 'Backend Team', numIssues: 0, numCommits: 0, numTests: 6},
   ];
 
   numCommits = 0;
