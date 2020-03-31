@@ -14,6 +14,7 @@ import { MaterialModule } from './material/material.module';
 import { CharacterComponent } from './character/character.component';
 import { AuthorComponent } from './author/author.component';
 import { IssueComponent } from './issue/issue.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { IssueComponent } from './issue/issue.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

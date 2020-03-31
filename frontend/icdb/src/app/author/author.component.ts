@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 })
 export class AuthorComponent implements OnInit {
 
+  panelOpenState = false;
   @ViewChild('accordion', {static:true}) Accordion: MatAccordion;
 
   author: Author;
