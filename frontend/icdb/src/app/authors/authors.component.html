@@ -48,15 +48,15 @@
       </ng-container>
 
       <!-- Weight Column -->
-      <ng-container matColumnDef="Birthdate">
-        <mat-header-cell *matHeaderCellDef> Birthdate </mat-header-cell>
-        <mat-cell *matCellDef="let author"> {{author.birthdate}} </mat-cell>
+      <ng-container matColumnDef="Characters">
+        <mat-header-cell *matHeaderCellDef> Charater Affiated </mat-header-cell>
+        <mat-cell *matCellDef="let author"> {{author.characters[0]}} </mat-cell>
       </ng-container>
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="Deathdate">
-        <mat-header-cell *matHeaderCellDef> Deathdate </mat-header-cell>
-        <mat-cell *matCellDef="let author"> {{author.deathdate}} </mat-cell>
+      <ng-container matColumnDef="Issues">
+        <mat-header-cell *matHeaderCellDef> Issue Affiliated </mat-header-cell>
+        <mat-cell *matCellDef="let author"> {{author.issues[0]}} </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

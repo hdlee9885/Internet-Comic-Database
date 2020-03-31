@@ -12,7 +12,7 @@ import { StateService } from '../state.service';
   styleUrls: ['./authors.component.css']
 })
 export class AuthorsComponent implements OnInit {
-  displayedColumns = ['Name', 'Hometown', 'Birthdate', 'Deathdate'];
+  displayedColumns = ['Name', 'Hometown', 'Characters', 'Issues'];
   dataSource: MatTableDataSource<Author>;
 
   authors: Author[];

@@ -9,24 +9,24 @@ describe('ICDB Test', function () {
     });
 });
 
-// describe('Issues Home Page', () => {
-// 	it('should nav to issues preview page', function() {
-// 		browser.get('http:\\localhost:4200');
-// 		navigateToIssuesPage();
-// 	});
+describe('Issues Home Page', () => {
+	it('should nav to issues preview page', function() {
+		browser.get('http:\\localhost:4200');
+		navigateToIssuesPage();
+	});
 
-// 	function navigateToIssuesPage(){
-// 	  	actualUrl = 'http://localhost:4200/issues';
-// 	    element(by.id('issues-nav')).click().then(function(){ // first find list-home a tag and than click 
-// 	        browser.sleep(2000).then(function(){
-// 	          browser.getCurrentUrl().then(function(actualUrl){ // promise
-// 	            expect(actualUrl.indexOf('issues') !== -1).toBeTruthy(); // check the current url is list
-// 	          });
-// 	        });
+	function navigateToIssuesPage(){
+	  	actualUrl = 'http://localhost:4200/issues';
+	    element(by.id('issues-nav')).click().then(function(){ // first find list-home a tag and than click 
+	        browser.sleep(2000).then(function(){
+	          browser.getCurrentUrl().then(function(actualUrl){ // promise
+	            expect(actualUrl.indexOf('issues') !== -1).toBeTruthy(); // check the current url is list
+	          });
+	        });
 
-// 	    });
-// 	  }
-// });
+	    });
+	  }
+});
 describe('Issues Detailed Page', () => {
     it('should nav to issues detail page', function () {
         browser.get('http://localhost:4200/issues');
