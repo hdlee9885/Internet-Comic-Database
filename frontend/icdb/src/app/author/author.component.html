@@ -84,8 +84,8 @@
 
 
 <div id ="Expansion" style="float:right;" >
-<button id="char-openAll" mat-flat-button color="primary" (click)="openAllPanels()"><b>Open Panels</b></button>
-<button id="char-close" mat-flat-button color="primary" (click)="closeAllPanels()"><b>Close Panels</b></button>
+<button id="authors-openAll" mat-flat-button color="primary" (click)="openAllPanels()"><b>Open Panels</b></button>
+<button id="authors-closeAll" mat-flat-button color="primary" (click)="closeAllPanels()"><b>Close Panels</b></button>
 
 
 
@@ -96,7 +96,7 @@
         <mat-panel-title>
           Characters
         </mat-panel-title>
-        <mat-panel-description>
+        <mat-panel-description id="author-char-desc">
           List of Characters Created By the Author
         </mat-panel-description>
       </mat-expansion-panel-header>
@@ -108,12 +108,12 @@
       </mat-list>
     </mat-expansion-panel>
   
-    <mat-expansion-panel id="author-Description-expand">
+    <mat-expansion-panel id="author-info-expand">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Personal Details
         </mat-panel-title>
-        <mat-panel-description>
+        <mat-panel-description id="author-info-desc">
           Detailed Information of the Author
         </mat-panel-description>
       </mat-expansion-panel-header>
@@ -132,7 +132,7 @@
         <mat-panel-title>
           Description
         </mat-panel-title>
-        <mat-panel-description>
+        <mat-panel-description id="author-desc-desc">
           Detailed Description of Author
         </mat-panel-description>
       </mat-expansion-panel-header>
@@ -144,7 +144,7 @@
         <mat-panel-title>
           Issues
         </mat-panel-title>
-        <mat-panel-description>
+        <mat-panel-description id="author-issue-desc">
           List of Issues Affliated By the Author
         </mat-panel-description>
       </mat-expansion-panel-header>
