@@ -17,6 +17,9 @@ import { DatabaseService } from '../database.service';
 })
 export class CharacterComponent implements OnInit {
 
+
+  panelIssueOpenState=false;
+  panelAuthorOpenState =false;
   @ViewChild('accordion',{static:true}) Accordion: MatAccordion;
 
   character: Character;

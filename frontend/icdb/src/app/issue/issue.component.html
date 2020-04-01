@@ -94,13 +94,13 @@
 				<p >{{issue.description}}</p>
 			  </mat-expansion-panel>
 
-			<mat-expansion-panel id="issue-char-panel" >
+			<mat-expansion-panel id="issue-char-panel" (opened)="panelCharOpenState = true" (closed)="panelCharOpenState = false" >
 				<mat-expansion-panel-header >
 				  <mat-panel-title id="issue-char-title">
 					Characters
 				  </mat-panel-title>
 				  <mat-panel-description id="issue-char-desc">
-					List of Characters that appear in this Issue
+					{{panelCharOpenState ? 'Click On a Character to Learn More' : 'List of Characters Affiliated'}}
 				  </mat-panel-description>
 				</mat-expansion-panel-header>
 				<mat-list role="list">
@@ -111,13 +111,13 @@
 			  </mat-expansion-panel>
 
 
-		  <mat-expansion-panel id="issue-author-panel">
+		  <mat-expansion-panel id="issue-author-panel" (opened)="panelAuthorOpenState = true" (closed)="panelAuthorOpenState = false">
 			<mat-expansion-panel-header  >
 			  <mat-panel-title>
 				Authors
 			  </mat-panel-title>
 			  <mat-panel-description id="issue-author-desc">
-				List of Authors that Contributed to this Issue
+				{{panelAuthorOpenState ? 'Click On an Author to Learn More' : 'List of Authors that Contributed'}}
 			  </mat-panel-description>
 			</mat-expansion-panel-header>
 			<mat-list role="list">
@@ -128,26 +128,6 @@
 		  </mat-expansion-panel>
 
 
-
-
-		  <!-- <mat-expansion-panel >
-			<mat-expansion-panel-header>
-			  <mat-panel-title>
-				Appearance
-			  </mat-panel-title>
-			  <mat-panel-description>
-				Detailed Appearance of Character
-			  </mat-panel-description>
-			</mat-expansion-panel-header>
-			<mat-list role="list">
-			  <mat-list-item role="listitem">{{'Race: '+character.appearance.race}}</mat-list-item>
-			  <mat-list-item role="listitem">{{'Gender: '+character.appearance.gender}}</mat-list-item>
-			  <mat-list-item role="listitem">{{'Hair Color: '+character.appearance.hair_color}}</mat-list-item>
-			  <mat-list-item role="listitem">{{'Eye Color: '+character.appearance.eye_color}}</mat-list-item>
-			  <mat-list-item role="listitem">{{'Height: '+character.appearance.height}}</mat-list-item>
-			  <mat-list-item role="listitem">{{'Weight: '+character.appearance.weight}}</mat-list-item>
-			</mat-list>
-		  </mat-expansion-panel> -->
 		</mat-accordion>
 
 	  </div>
