@@ -27,8 +27,8 @@ export class CharacterComponent implements OnInit {
   availIssues: string[];
   availAuthors: string[];
 
-  constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router ) { 
-   
+  constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router ) {
+
   }
 
 
@@ -45,7 +45,6 @@ export class CharacterComponent implements OnInit {
       let authorNames: ListingPage;
       authorNames = data;
       this.availAuthors = authorNames.Result;
-      console.log(this.availAuthors);
     }
   };
 
@@ -72,9 +71,12 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
     this.character = this.stateService.getCharacter();
+    if(this.character == undefined) {
+      this.router.navigateByUrl('/characters');
+    }
     this.databaseService.getIssueNames().subscribe(this.availIssuesHandler);
     this.databaseService.getAuthorNames().subscribe(this.availAuthorsHandler);
-    
+
   }
 
   closeAllPanels(){
@@ -117,11 +119,11 @@ export class CharacterComponent implements OnInit {
 
   formatRelatedIssues(){
     if(this.character.issues.includes(";")||this.character.issues.includes("/")){
-      var splitted = this.character.issues[0].split("; ", 3); 
+      var splitted = this.character.issues[0].split("; ", 3);
       this.character.first_appeared_in_issue=splitted[0];
       this.character.issues=splitted;
       console.log(splitted)
     }
-    
+
   }
 }

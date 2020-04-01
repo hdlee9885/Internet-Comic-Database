@@ -23,7 +23,7 @@ export class IssueComponent implements OnInit {
 
   panelCharOpenState=false;
   panelAuthorOpenState =false;
-  
+
   issue: Issue;
   availAuthors: string[];
   availCharacters: string[];
@@ -69,6 +69,9 @@ export class IssueComponent implements OnInit {
 
   ngOnInit(): void {
     this.issue = this.stateService.getIssue();
+    if(this.issue == undefined){
+      this.router.navigateByUrl('/issues');
+    }
     this.databaseService.getAuthorNames().subscribe(this.availAuthorsHandler);
     this.databaseService.getCharacterNames().subscribe(this.availCharactersHandler);
   }

@@ -64,6 +64,9 @@ export class AuthorComponent implements OnInit {
 
   ngOnInit(): void {
     this.author = this.stateService.getAuthor();
+    if(this.author == undefined){
+      this.router.navigateByUrl('/authors');
+    }
     this.databaseService.getIssueNames().subscribe(this.availIssuesHandler);
     this.databaseService.getCharacterNames().subscribe(this.availCharactersHandler);
   }
