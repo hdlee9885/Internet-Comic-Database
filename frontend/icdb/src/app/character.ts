@@ -10,6 +10,7 @@ export interface Character {
   description: string;
   first_appeared_in_issue: string;
   image: string;
+  issues: string[];
   name: string;
   real_name: string;
 }

@@ -15,3 +15,10 @@
     width: 70%;
 
 }
+#charPhoto{
+    padding-top: 2%;
+}
+#firstIssueButton{
+    max-width: 400px;
+    white-space: pre-wrap;
+}
