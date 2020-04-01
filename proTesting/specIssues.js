@@ -199,3 +199,67 @@ describe('Detail Page Expansion One by One', () => {
         })
     }
 })
+
+describe('Detail Page Linkage', () => {
+	it('should link to character page', function() {
+		browser.get('http://localhost:4200/issues');
+	    linkCharacters();
+    })
+	
+	function linkCharacters() {
+		b = false;
+		actualUrl = 'http://localhost:4200/character';
+	    browser.sleep(2000).then(function(){
+//	    	var more = element(by.id('issue-table'));
+//	    	browser.wait(protractor.ExpectedConditions.presenceOf(more), 10000);
+			element(by.id('issues-row')).click().then(function(){
+			    browser.sleep(2000).then(function(){
+				element(by.id('issue-char-panel')).click().then(function() {
+					element(by.id('issue-Characters-description')).click().then(function() {
+						var EC = protractor.ExpectedConditions;
+						// Waits for an alert pops up.
+						if (EC.alertIsPresent() || browser.getCurrentUrl()===actualUrl) {
+							b = true;
+						} else {
+							b = false;
+						}
+					//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+					expect(b).toBe(true);//.toBe(false);
+					})	
+				})
+				})
+			})
+	    })
+    }
+})
+
+describe('Detail Page Linkage', () => {
+	it('should link to author page', function() {
+		browser.get('http://localhost:4200/issues');
+	    linkAuthors();
+    })
+	
+	function linkAuthors() {
+		b = false;
+		actualUrl = 'http://localhost:4200/author';
+	    browser.sleep(2000).then(function(){
+			element(by.id('issues-row')).click().then(function(){
+			    browser.sleep(2000).then(function(){
+				element(by.id('issue-author-panel')).click().then(function() {
+					element(by.id('issue-Authors-description')).click().then(function() {
+						var EC = protractor.ExpectedConditions;
+						// Waits for an alert pops up.
+						if (EC.alertIsPresent() || browser.getCurrentUrl()===actualUrl) {
+							b = true;
+						} else {
+							b = false;
+						}
+					//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+					expect(b).toBe(true);//.toBe(false);
+					})
+				})
+				})
+			})
+	    })
+    }
+})

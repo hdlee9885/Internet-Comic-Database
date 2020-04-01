@@ -31,11 +31,11 @@ describe('Navbar', () => {
       expect(text).toEqual('Characters');
     });
 
-    element(by.id('issue-nav')).getText().then(function(text){ // Promise
+    element(by.id('issues-nav')).getText().then(function(text){ // Promise
       expect(text).toEqual('Issues');
     });
     
-    element(by.id('author-nav')).getText().then(function(text){ // Promise
+    element(by.id('authors-nav')).getText().then(function(text){ // Promise
         expect(text).toEqual('Authors');
       });
     
@@ -167,17 +167,28 @@ describe('Detail Page Expansion', () => {
 	})
 	
 	function closeAllTabs() {
-		bb = true;
+		bb = false;
 	    browser.sleep(2000).then(function(){
 			element(by.id('characters-row')).click().then(function(){
 				element(by.id('char-openAll')).click().then(function() {
 				    browser.sleep(2000).then(function(){
 					element(by.id('char-close')).click().then(function() {
 						element(by.id('char-close')).click().then(function() {
+							if(element(by.id('char-Aliases-description')).isDisplayed() && 
+									   element(by.id('char-Author-description')).isDisplayed() && 
+									   element(by.id('char-Description-description')).isDisplayed()){
+										   b = false;
+									   }
+									   else {
+										   b = true;
+									   }
+							//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+							expect(b).toBe(false);//.toBe(false);
+							
 						//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
-						expect(element(by.id('char-Aliases-description')).isDisplayed()).toBe(false);//.toBe(false);
-						expect(element(by.id('char-Author-description')).isDisplayed()).toBe(false);//.toBe(false);
-						expect(element(by.id('char-Description-description')).isDisplayed()).toBe(false);//.toBe(false);
+//						expect(element(by.id('char-Aliases-description')).isDisplayed()).toBe(false);//.toBe(false);
+//						expect(element(by.id('char-Author-description')).isDisplayed()).toBe(false);//.toBe(false);
+//						expect(element(by.id('char-Description-description')).isDisplayed()).toBe(false);//.toBe(false);
 					})
 					})
 				})
@@ -232,4 +243,92 @@ describe('Detail Page Expansion', () => {
 			})
 		})
 	}
+})
+
+describe('Detail Page Linkage', () => {
+	it('should link to issue page', function() {
+		browser.get('http://localhost:4200/characters');
+	    linkCharacters();
+    })
+	
+	function linkCharacters() {
+		b = false;
+		actualUrl = 'http://localhost:4200/issue';
+	    browser.sleep(2000).then(function(){
+//	    	var more = element(by.id('issue-table'));
+//	    	browser.wait(protractor.ExpectedConditions.presenceOf(more), 10000);
+			element(by.id('characters-row')).click().then(function(){
+			    browser.sleep(2000).then(function(){
+				element(by.id('char-Issues-expand')).click().then(function() {
+					element(by.id('char-Issue-description')).click().then(function() {
+						var EC = protractor.ExpectedConditions;
+						// Waits for an alert pops up.
+						if (EC.alertIsPresent() || browser.getCurrentUrl()===actualUrl) {
+							b = true;
+						} else {
+							b = false;
+						}
+					//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+					expect(b).toBe(true);//.toBe(false);
+					})	
+				})
+				})
+			})
+	    })
+    }
+})
+
+describe('Detail Page Linkage', () => {
+	it('should link to author page', function() {
+		browser.get('http://localhost:4200/characters');
+	    linkAuthors();
+    })
+	
+	function linkAuthors() {
+		b = false;
+		actualUrl = 'http://localhost:4200/author';
+	    browser.sleep(2000).then(function(){
+			element(by.id('characters-row')).click().then(function(){
+			    browser.sleep(2000).then(function(){
+				element(by.id('char-Authors-expand')).click().then(function() {
+					element(by.id('char-Author-description')).click().then(function() {
+						var EC = protractor.ExpectedConditions;
+						// Waits for an alert pops up.
+						if (EC.alertIsPresent() || browser.getCurrentUrl()===actualUrl) {
+							b = true;
+						} else {
+							b = false;
+						}
+					//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+					expect(b).toBe(true);//.toBe(false);
+					})
+				})
+				})
+			})
+	    })
+    }
+})
+
+describe('Detail Page Button', () => {
+	it('should show issue page', function() {
+		browser.get('http://localhost:4200/characters');
+	    linkButton();
+    })
+	
+	function linkButton() {
+		b = false;
+		actualUrl = 'http://localhost:4200/issue';
+	    browser.sleep(2000).then(function(){
+			element(by.id('characters-row')).click().then(function(){
+			    browser.sleep(2000).then(function(){
+				element(by.id('firstIssueButton')).click().then(function() {
+					browser.getCurrentUrl().then(function(actualUrl){ // promise
+			            expect(actualUrl.indexOf('issue') !== -1).toBeTruthy(); // c
+					//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+						})
+					})
+				})
+			})
+	    })
+    }
 })
