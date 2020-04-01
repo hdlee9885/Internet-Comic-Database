@@ -14,6 +14,8 @@ describe('AuthorComponent', () => {
     death: '',
     deck: '',
     description: '',
+    characters: undefined,
+    issues: undefined,
     hometown: '',
     image: '',
     name: 'Dan Abnett'

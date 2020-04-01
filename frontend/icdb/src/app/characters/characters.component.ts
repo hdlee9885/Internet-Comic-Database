@@ -46,6 +46,7 @@ export class CharactersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('hello');
     this.databaseService.getCharacters(1).subscribe(this.charactersHandler);
   }
 

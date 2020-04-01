@@ -203,3 +203,61 @@ describe('Detail Page Expansion One by One', () => {
         })
     }
 })
+
+describe('Detail Page Linkage', () => {
+	it('should link to character page', function() {
+		browser.get('http://localhost:4200/authors');
+	    linkCharacters();
+    })
+	
+	function linkCharacters() {
+		b = false;
+		actualUrl = 'http://localhost:4200/character';
+	    browser.sleep(2000).then(function(){
+			element(by.id('authors-row')).click().then(function(){
+				element(by.id('author-Characters-expand')).click().then(function() {
+					element(by.id('author-Characters-description')).click().then(function() {
+						var EC = protractor.ExpectedConditions;
+						// Waits for an alert pops up.
+						if (EC.alertIsPresent() || browser.getCurrentUrl()===actualUrl) {
+							b = true;
+						} else {
+							b = false;
+						}
+					//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+					expect(b).toBe(true);//.toBe(false);
+					})
+				})
+			})
+	    })
+    }
+})
+
+describe('Detail Page Linkage', () => {
+	it('should link to issue page', function() {
+		browser.get('http://localhost:4200/authors');
+	    linkIssues();
+    })
+	
+	function linkIssues() {
+		b = false;
+		actualUrl = 'http://localhost:4200/issue';
+	    browser.sleep(2000).then(function(){
+			element(by.id('authors-row')).click().then(function(){
+				element(by.id('author-Issues-expand')).click().then(function() {
+					element(by.id('author-Issues-description')).click().then(function() {
+						var EC = protractor.ExpectedConditions;
+						// Waits for an alert pops up.
+						if (EC.alertIsPresent() || browser.getCurrentUrl()===actualUrl) {
+							b = true;
+						} else {
+							b = false;
+						}
+					//expect(element.all(by.css('mat-expansion-panel'))).isPresent().toBeTruthy();
+					expect(b).toBe(true);//.toBe(false);
+					})
+				})
+			})
+	    })
+    }
+})

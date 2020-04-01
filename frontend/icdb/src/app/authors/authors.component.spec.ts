@@ -22,6 +22,8 @@ describe('AuthorsComponent', () => {
       death: '',
       deck: '',
       description: '',
+      characters: undefined,
+      issues: undefined,
       hometown: '',
       image: '',
       name: 'Andy Lanning'
@@ -35,6 +37,8 @@ describe('AuthorsComponent', () => {
       death: '',
       deck: '',
       description: '',
+      characters: undefined,
+      issues: undefined,
       hometown: '',
       image: '',
       name: 'Stan Lee'

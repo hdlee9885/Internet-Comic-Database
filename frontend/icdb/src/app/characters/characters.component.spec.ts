@@ -24,6 +24,7 @@ describe('CharactersComponent', () => {
       deck: '',
       description: '',
       first_appeared_in_issue: '',
+      issues: undefined,
       image: '',
       name: 'Spider-Man',
       real_name: 'Peter Parker'
@@ -39,6 +40,7 @@ describe('CharactersComponent', () => {
       deck: '',
       description: '',
       first_appeared_in_issue: '',
+      issues: undefined,
       image: '',
       name: 'Batman',
       real_name: 'Bruce Wayne'

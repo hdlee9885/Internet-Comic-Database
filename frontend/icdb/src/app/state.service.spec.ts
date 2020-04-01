@@ -25,6 +25,7 @@ describe('StateService', () => {
     deck: '',
     description: '',
     first_appeared_in_issue: '',
+    issues: undefined,
     image: '',
     name: 'Spider-Man-Test',
     real_name: ''
@@ -43,6 +44,8 @@ describe('StateService', () => {
     death: '',
     deck: '',
     description: '',
+    characters: undefined,
+    issues: undefined,
     hometown: '',
     image: '',
     name: 'Stan-Lee-Test'
