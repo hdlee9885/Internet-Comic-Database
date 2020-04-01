@@ -91,13 +91,13 @@
 
   <mat-accordion #accordion="matAccordion" [multi]="true">
 
-    <mat-expansion-panel id="author-Characters-expand" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel id="author-Characters-expand" (opened)="panelCharOpenState = true" (closed)="panelCharOpenState = false">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Characters
         </mat-panel-title>
         <mat-panel-description id="author-char-desc" >
-			{{panelOpenState ? 'Click On a Character to Learn More' : 'List of Characters Affiliated'}}
+			{{panelCharOpenState ? 'Click On a Character to Learn More' : 'List of Characters Affiliated'}}
         </mat-panel-description>
       </mat-expansion-panel-header>
       <mat-list role="list">
@@ -140,13 +140,13 @@
       <p id="author-Description-description">{{author.description}}</p>
     </mat-expansion-panel>
 
-    <mat-expansion-panel id="author-Issues-expand">
+    <mat-expansion-panel id="author-Issues-expand" (opened)="panelIssueOpenState = true" (closed)="panelIssueOpenState = false">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Issues
         </mat-panel-title>
         <mat-panel-description id="author-issue-desc">
-          List of Issues Affliated By the Author
+			{{panelIssueOpenState ? 'Click On an Issue to Learn More' : 'List of Issues Affiliated'}}
         </mat-panel-description>
       </mat-expansion-panel-header>
       <mat-list role="list">

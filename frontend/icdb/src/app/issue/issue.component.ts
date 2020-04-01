@@ -21,6 +21,8 @@ export class IssueComponent implements OnInit {
   panelOpenState = false;
   @ViewChild('accordion', {static:true}) Accordion: MatAccordion;
 
+  panelCharOpenState=false;
+  panelAuthorOpenState =false;
   
   issue: Issue;
   availAuthors: string[];

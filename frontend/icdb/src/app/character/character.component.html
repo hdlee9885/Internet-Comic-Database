@@ -67,13 +67,13 @@
       <p id="char-Aliases-description"> {{character.aliases}}</p>
     </mat-expansion-panel>
 
-    <mat-expansion-panel id="char-Authors-expand">
+    <mat-expansion-panel id="char-Authors-expand" (opened)="panelAuthorOpenState = true" (closed)="panelAuthorOpenState = false">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Authors
         </mat-panel-title>
         <mat-panel-description>
-          List of Authors that Contributed to this Character
+          {{panelAuthorOpenState ? 'Click On an Author to Learn More' : 'List of Authors Affiliated'}}
         </mat-panel-description>
       </mat-expansion-panel-header>
       <mat-list role="list">
@@ -85,14 +85,13 @@
     </mat-expansion-panel>
 
 
-    <mat-expansion-panel id="char-Issues-expand">
+    <mat-expansion-panel id="char-Issues-expand" (opened)="panelIssueOpenState = true" (closed)="panelIssueOpenState = false">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Issues
         </mat-panel-title>
         <mat-panel-description>
-          List of Issues that Contributed to this Character
-        </mat-panel-description>
+          {{panelIssueOpenState ? 'Click On an Issue to Learn More' : 'List of Issues Affiliated'}}        </mat-panel-description>
       </mat-expansion-panel-header>
       <mat-list role="list">
         <mat-list-item id="char-Issue-description" role="listitem"*ngFor="let element of character.issues;" (click)="detailIssue(element)">{{element}}
