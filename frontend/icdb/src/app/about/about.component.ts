@@ -29,61 +29,66 @@ export class AboutComponent implements OnInit {
 
   statsHandler = {
     next: data => {
-      let contributor: Stats;
-      for (contributor of data) {
-        this.numCommits += contributor.total;
-        switch (contributor.author.login) {
-          case 'jacobgrimm':
-            this.developers[3].numCommits = contributor.total;
-            break;
-          case 'Minalinnski':
-            this.developers[5].numCommits = contributor.total;
-            break;
-          case 'chrisjoswin':
-            this.developers[0].numCommits = contributor.total;
-            break;
-          case 'JSRobles':
-            this.developers[4].numCommits = contributor.total;
-            break;
-          case 'hdlee9885':
-            this.developers[2].numCommits = contributor.total;
-            break;
-          case 'j-ka11':
-            this.developers[1].numCommits = contributor.total;
-            break;
+      if(data.length > 0) {
+        let contributor: Stats;
+        for (contributor of data) {
+          this.numCommits += contributor.total;
+          switch (contributor.author.login) {
+            case 'jacobgrimm':
+              this.developers[3].numCommits = contributor.total;
+              break;
+            case 'Minalinnski':
+              this.developers[5].numCommits = contributor.total;
+              break;
+            case 'chrisjoswin':
+              this.developers[0].numCommits = contributor.total;
+              break;
+            case 'JSRobles':
+              this.developers[4].numCommits = contributor.total;
+              break;
+            case 'hdlee9885':
+              this.developers[2].numCommits = contributor.total;
+              break;
+            case 'j-ka11':
+              this.developers[1].numCommits = contributor.total;
+              break;
+          }
         }
+      }else{
+        this.aboutService.getStats().subscribe(this.statsHandler);
       }
     }
-
   };
 
   issuesHandler = {
     next: data => {
-      let issue: Issues;
-      console.log(data.length);
-      for (issue of data) {
-        this.numIssues++;
-        console.log(issue.user.login);
-        switch (issue.user.login) {
-          case 'jacobgrimm':
-            this.developers[3].numIssues++;
-            break;
-          case 'Minalinnski':
-            this.developers[5].numIssues++;
-            break;
-          case 'chrisjoswin':
-            this.developers[0].numIssues++;
-            break;
-          case 'JSRobles':
-            this.developers[4].numIssues++;
-            break;
-          case 'hdlee9885':
-            this.developers[2].numIssues++;
-            break;
-          case 'j-ka11':
-            this.developers[1].numIssues++;
-            break;
+      if(data.length > 0) {
+        let issue: Issues;
+        for (issue of data) {
+          this.numIssues++;
+          switch (issue.user.login) {
+            case 'jacobgrimm':
+              this.developers[3].numIssues++;
+              break;
+            case 'Minalinnski':
+              this.developers[5].numIssues++;
+              break;
+            case 'chrisjoswin':
+              this.developers[0].numIssues++;
+              break;
+            case 'JSRobles':
+              this.developers[4].numIssues++;
+              break;
+            case 'hdlee9885':
+              this.developers[2].numIssues++;
+              break;
+            case 'j-ka11':
+              this.developers[1].numIssues++;
+              break;
+          }
         }
+      }else{
+        this.aboutService.getIssues().subscribe(this.issuesHandler);
       }
     }
   };
