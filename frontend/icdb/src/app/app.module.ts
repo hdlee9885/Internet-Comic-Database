@@ -14,7 +14,7 @@ import { MaterialModule } from './material/material.module';
 import { CharacterComponent } from './character/character.component';
 import { AuthorComponent } from './author/author.component';
 import { IssueComponent } from './issue/issue.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+//import { HashLocationStrategy, LocationStrategy } from '@angular/common';{provide: LocationStrategy, useClass: HashLocationStrategy}
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
