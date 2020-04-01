@@ -32,7 +32,7 @@ Haosong Li      | hl27346   | hdlee9885
 Name            |Esitmated (hrs)  | Actual (hrs)
 -------------   |  -------------|-------------
 Jacob Grimm     |  15| 16
-Jerad Robles    |  15 15
+Jerad Robles    |  15| 15
 William Gu      |  14| 15
 Christopher Erattuparambil    |16 	   |15
 Josh Kall |  15| 16
