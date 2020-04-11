@@ -27,11 +27,14 @@
 			</li>
 		  </ul>
 	  </div>
+	  <div>
+		<form class="form-inline">
+		  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
   </nav>
-  <div>
-    <h3 style="margin-top:30px">Here, we present some authors that contributed to the world's famous marvel comics.</h3>
-    <p>Click on an author to see their full information!</p>
-  </div>
+  
   
   <!-- <div  class="mat-elevation-z8">
 
@@ -69,7 +72,31 @@
     </div>
   </div> -->
 
+  <div id="authors-under-Nav-Div" class ="Row">
+
+	<div id="authorsFilterSet" class="Column">
+		  <form class="form-inline">
+			<input class="form-control mr-sm-2" type="filter" placeholder="Filter Authors" aria-label="Filter">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
+		  </form>
+	</div>
+
+
+	<div id="authorsCaption"class="Column">
+	  <p>The world's most famous comic Authors are presented here!<br>
+	  Click on an author to see their full information.</p>
+	 </div>
+
+	<div id="sortAuthorsButtons"class="Column">
+	  <br>
+	  <button id="authors-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
+	  <button id="authors-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button> 
+	</div>
+
+  </div>
+
   <div> 
+    
 		<mat-grid-list cols="3" rowHeight="3:1">
 		  <mat-grid-tile *ngFor="let author of authors" (click)="detailAuthor(author)">
 		   

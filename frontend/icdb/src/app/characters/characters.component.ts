@@ -55,4 +55,10 @@ export class CharactersComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  SortAZ(){
+    
+  }
+  SortZA(){
+
+  }
 }

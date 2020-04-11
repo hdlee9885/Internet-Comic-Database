@@ -26,12 +26,41 @@
 			  <a class="nav-link" routerLink="/about">About</a>
 			</li>
 		  </ul>
+    </div>
+    <div>
+		  <form class="form-inline">
+		    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		  </form>
 	  </div>
     </nav>
-    <div>
-        <h3 style="margin-top:30px">The world's most famous characters are presented here!</h3>
-        <p>Click on a character to see their full information.</p>
+
+    <div id="chars-under-Nav-Div" class ="Row">
+
+    <div id="charsFilterSet" class="Column">
+		  <form class="form-inline">
+		    <input class="form-control mr-sm-2" type="filter" placeholder="Filter" aria-label="Filter">
+		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
+		  </form>
     </div>
+
+
+    <div id="charsCaption"class="Column">
+      <p>The world's most famous characters are presented here!<br>
+      Click on a character to see their full information.</p>
+     </div>
+
+    <div id="sortCharactersButtons"class="Column">
+      <br>
+      <button id="chars-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
+      <button id="chars-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button> 
+    </div>
+
+   
+  </div>
+    
+    
+
 
    
    
@@ -72,7 +101,8 @@
       <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
     </div> -->
  
-    <div> 
+   
+    <div>
     <mat-grid-list cols="3" rowHeight="3:1">
       <mat-grid-tile *ngFor="let character of characters" (click)="detailCharacter(character)">
        

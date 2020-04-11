@@ -27,12 +27,15 @@
 			</li>
 
 		  </ul>
+		  <div>
+			<form class="form-inline">
+			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
 	  </div>
     </nav>
-    <div style="margin-top:30px">
-        <h3>In Issues page, we present three issues of marvel comics.</h3>
-
-	</div>
+    
 	<!-- <div  class="mat-elevation-z8">
 
 		<mat-table id="issue-table" [dataSource]="dataSource">
@@ -69,6 +72,30 @@
     </div>
 	</div> -->
 
+
+	<div id="issues-under-Nav-Div" class ="Row">
+
+		<div id="issuesFilterSet" class="Column">
+			  <form class="form-inline">
+				<input class="form-control mr-sm-2" type="filter" placeholder="Filter Issues" aria-label="Filter">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
+			  </form>
+		</div>
+	
+	
+		<div id="issuesCaption"class="Column">
+		  <p>The world's most famous Issues are presented here!<br>
+		  Click on an issue to see their full information.</p>
+		 </div>
+	
+		<div id="sortIssuesButtons"class="Column">
+		  <br>
+		  <button id="issues-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
+		  <button id="issues-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button> 
+		</div>
+	
+	   
+	  </div>
 	<div> 
 		<mat-grid-list cols="3" rowHeight="3:1">
 		  <mat-grid-tile *ngFor="let issue of issues" (click)="detailIssue(issue)">

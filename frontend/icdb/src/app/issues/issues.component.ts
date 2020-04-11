@@ -48,4 +48,12 @@ export class IssuesComponent implements OnInit {
   ngOnInit() {
     this.databaseService.getIssues(1).subscribe(this.issuesHandler);
   }
+
+
+  SortAZ(){
+
+  }
+  SortZA(){
+
+  }
 }

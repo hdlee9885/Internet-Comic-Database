@@ -48,5 +48,13 @@ export class AuthorsComponent implements OnInit {
   ngOnInit(): void {
     this.databaseService.getAuthors(1).subscribe(this.authorsHandler);
   }
+
+
+  SortAZ(){
+
+  }
+  SortZA(){
+
+  }
 }
 

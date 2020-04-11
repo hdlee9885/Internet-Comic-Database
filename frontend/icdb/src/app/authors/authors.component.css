@@ -4,3 +4,22 @@ mat-grid-tile {
 mat-grid-tile:hover {
     background-color: lightcoral;
   }
+
+
+  .Row
+  {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-spacing: 10px;
+  }
+  .Column
+  {
+      display: table-cell;
+  
+  }
+
+  #sortAuthorsButtons{
+    float:right;
+   
+  }
