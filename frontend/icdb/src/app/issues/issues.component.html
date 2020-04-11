@@ -33,28 +33,28 @@
         <h3>In Issues page, we present three issues of marvel comics.</h3>
 
 	</div>
-	<div  class="mat-elevation-z8">
+	<!-- <div  class="mat-elevation-z8">
 
 		<mat-table id="issue-table" [dataSource]="dataSource">
-			<!-- Position Column -->
+			
 			<ng-container matColumnDef="Title">
 			  <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
 			  <mat-cell id="issues-name" *matCellDef="let issue"> {{issue.name}} </mat-cell>
 			</ng-container>
 
-			<!-- Name Column -->
+			
 			<ng-container matColumnDef="Cover Date">
 			  <mat-header-cell *matHeaderCellDef> Cover Date </mat-header-cell>
 			  <mat-cell *matCellDef="let issue"> {{issue.cover_date}} </mat-cell>
 			</ng-container>
 
-			<!-- Weight Column -->
+			
 			<ng-container matColumnDef="Main Character">
 			  <mat-header-cell *matHeaderCellDef> Main Character </mat-header-cell>
 			  <mat-cell *matCellDef="let issue"> {{issue.character_credits[0]}} </mat-cell>
 			</ng-container>
 
-			<!-- Symbol Column -->
+		
 			<ng-container matColumnDef="Author">
 			  <mat-header-cell *matHeaderCellDef> Authors Affliated </mat-header-cell>
 			  <mat-cell *matCellDef="let issue"> {{issue.person_credits[0]}} </mat-cell>
@@ -67,8 +67,28 @@
       <button id="issues-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
       <button id="issues-fwdbutton"mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
     </div>
-	</div>
+	</div> -->
 
+	<div> 
+		<mat-grid-list cols="3" rowHeight="3:1">
+		  <mat-grid-tile *ngFor="let issue of issues" (click)="detailIssue(issue)">
+		   
+		  
+			  <p>{{issue.name}}<br>
+				Cover Date: {{issue.cover_date}}<br>
+			   Main Character: {{issue.character_credits[0]}}<br>
+			   Author: {{issue.person_credits[0]}}
+			  </p>
+				 
+			
+		</mat-grid-tile>
+		</mat-grid-list>
+	
+	  </div>
+		<div class="nav-buttons" style="float: right;">
+		  <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
+		  <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+		</div>
 
 
 

@@ -5,3 +5,10 @@ table {
     background-color: rgba(0, 0, 0, .05);
     cursor: pointer;
   }
+
+  mat-grid-tile {
+    background: lightblue;
+  }
+mat-grid-tile:hover {
+    background-color: lightcoral;
+  }

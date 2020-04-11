@@ -5,6 +5,10 @@ import {MatPaginatorModule} from '@angular/material/paginator'
 import { MatCardModule } from '@angular/material/card'
 import { MatListModule }  from '@angular/material/list'
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 
 
 
@@ -15,7 +19,10 @@ const MaterialComponents=[
   MatPaginatorModule,
   MatCardModule,
   MatListModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatGridListModule
+
 
   //NgModule
 

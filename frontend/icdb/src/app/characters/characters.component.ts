@@ -50,4 +50,9 @@ export class CharactersComponent implements OnInit {
     this.databaseService.getCharacters(1).subscribe(this.charactersHandler);
   }
 
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
 }

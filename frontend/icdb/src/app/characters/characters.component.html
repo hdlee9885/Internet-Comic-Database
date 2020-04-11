@@ -33,28 +33,32 @@
         <p>Click on a character to see their full information.</p>
     </div>
 
-  <div  class="mat-elevation-z8">
+   
+   
 
-    <mat-table [dataSource]="dataSource">
-      <!-- Position Column -->
+
+    
+
+    <!-- <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+     
       <ng-container matColumnDef="Character">
         <mat-header-cell *matHeaderCellDef> Character </mat-header-cell>
         <mat-cell id="char-name" *matCellDef="let character"> {{character.name}} </mat-cell>
       </ng-container>
 
-      <!-- Name Column -->
+    
       <ng-container matColumnDef="Real Name">
         <mat-header-cell *matHeaderCellDef> Real Name </mat-header-cell>
         <mat-cell *matCellDef="let character"> {{character.real_name}} </mat-cell>
       </ng-container>
 
-      <!-- Weight Column -->
+    
       <ng-container matColumnDef="First Appeared In">
         <mat-header-cell *matHeaderCellDef> First Appeared In </mat-header-cell>
         <mat-cell *matCellDef="let character"> {{character.first_appeared_in_issue}} </mat-cell>
       </ng-container>
 
-      <!-- Symbol Column -->
+      
       <ng-container matColumnDef="Created By">
         <mat-header-cell *matHeaderCellDef> Created By </mat-header-cell>
         <mat-cell *matCellDef="let character"> {{character.creators[0]}} </mat-cell>
@@ -66,7 +70,29 @@
     <div class="nav-buttons" style="float: right;">
       <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
       <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
-    </div>
+    </div> -->
+ 
+    <div> 
+    <mat-grid-list cols="3" rowHeight="3:1">
+      <mat-grid-tile *ngFor="let character of characters" (click)="detailCharacter(character)">
+       
+      
+          <p>{{character.name}}<br>
+            Real Name: {{character.real_name}}<br>
+           First Issue: {{character.first_appeared_in_issue}}<br>
+           Author: {{character.creators[0]}}
+          </p>
+             
+        
+    </mat-grid-tile>
+    </mat-grid-list>
+
   </div>
+    <div class="nav-buttons" style="float: right;">
+      <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
+      <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+    </div>
+
+  
 </body>
 </html>
