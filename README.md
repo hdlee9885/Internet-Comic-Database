@@ -31,10 +31,10 @@ Haosong Li      | hl27346   | hdlee9885
 ----------------------------------------------
 Name            |Esitmated (hrs)  | Actual (hrs)
 -------------   |  -------------|-------------
-Jacob Grimm     |  6| 7
-Jerad Robles    |  6| 6
-William Gu      |  6| 6
-Christopher Erattuparambil    |6 	   |7
-Josh Kall |  6| 6
-Haosong Li      |6   | 6
+Jacob Grimm     |  15| 16
+Jerad Robles    |  15| 15
+William Gu      |  14| 15
+Christopher Erattuparambil    |16 	   |15
+Josh Kall |  15| 16
+Haosong Li      |14   | 16
 
