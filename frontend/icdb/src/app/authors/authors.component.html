@@ -27,19 +27,14 @@
 			</li>
 		  </ul>
 	  </div>
-	  <div>
-		<form class="form-inline">
-		  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-		  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
-	</div>
+	  <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
   </nav>
-  
-  
+
+
   <!-- <div  class="mat-elevation-z8">
 
     <mat-table [dataSource]="dataSource">
-     
+
       <ng-container matColumnDef="Name">
         <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
         <mat-cell id="authors-name" *matCellDef="let author"> {{author.name}} </mat-cell>
@@ -51,13 +46,13 @@
         <mat-cell *matCellDef="let author"> {{author.hometown}} </mat-cell>
       </ng-container>
 
-      
+
       <ng-container matColumnDef="Characters">
         <mat-header-cell *matHeaderCellDef> Charater Affiated </mat-header-cell>
         <mat-cell *matCellDef="let author"> {{author.characters[0]}} </mat-cell>
       </ng-container>
 
-      
+
       <ng-container matColumnDef="Issues">
         <mat-header-cell *matHeaderCellDef> Issue Affiliated </mat-header-cell>
         <mat-cell *matCellDef="let author"> {{author.issues[0]}} </mat-cell>
@@ -90,27 +85,27 @@
 	<div id="sortAuthorsButtons"class="Column">
 	  <br>
 	  <button id="authors-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
-	  <button id="authors-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button> 
+	  <button id="authors-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button>
 	</div>
 
   </div>
 
-  <div> 
-    
+  <div>
+
 		<mat-grid-list cols="3" rowHeight="3:1">
 		  <mat-grid-tile *ngFor="let author of authors" (click)="detailAuthor(author)">
-		   
-		  
+
+
 			  <p>{{author.name}}<br>
 				Hometown: {{author.hometown}}<br>
 			   Character Affiliated: {{author.characters[0]}}<br>
 			  Issue: {{author.issues[0]}}
 			  </p>
-				 
-			
+
+
 		</mat-grid-tile>
 		</mat-grid-list>
-	
+
 	  </div>
 		<div class="nav-buttons" style="float: right;">
 		  <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>

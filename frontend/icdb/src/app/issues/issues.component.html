@@ -27,37 +27,32 @@
 			</li>
 
 		  </ul>
-		  <div>
-			<form class="form-inline">
-			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			</form>
-		</div>
+		  <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
 	  </div>
     </nav>
-    
+
 	<!-- <div  class="mat-elevation-z8">
 
 		<mat-table id="issue-table" [dataSource]="dataSource">
-			
+
 			<ng-container matColumnDef="Title">
 			  <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
 			  <mat-cell id="issues-name" *matCellDef="let issue"> {{issue.name}} </mat-cell>
 			</ng-container>
 
-			
+
 			<ng-container matColumnDef="Cover Date">
 			  <mat-header-cell *matHeaderCellDef> Cover Date </mat-header-cell>
 			  <mat-cell *matCellDef="let issue"> {{issue.cover_date}} </mat-cell>
 			</ng-container>
 
-			
+
 			<ng-container matColumnDef="Main Character">
 			  <mat-header-cell *matHeaderCellDef> Main Character </mat-header-cell>
 			  <mat-cell *matCellDef="let issue"> {{issue.character_credits[0]}} </mat-cell>
 			</ng-container>
 
-		
+
 			<ng-container matColumnDef="Author">
 			  <mat-header-cell *matHeaderCellDef> Authors Affliated </mat-header-cell>
 			  <mat-cell *matCellDef="let issue"> {{issue.person_credits[0]}} </mat-cell>
@@ -81,36 +76,36 @@
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
 			  </form>
 		</div>
-	
-	
+
+
 		<div id="issuesCaption"class="Column">
 		  <p>The world's most famous Issues are presented here!<br>
 		  Click on an issue to see their full information.</p>
 		 </div>
-	
+
 		<div id="sortIssuesButtons"class="Column">
 		  <br>
 		  <button id="issues-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
-		  <button id="issues-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button> 
+		  <button id="issues-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button>
 		</div>
-	
-	   
+
+
 	  </div>
-	<div> 
+	<div>
 		<mat-grid-list cols="3" rowHeight="3:1">
 		  <mat-grid-tile *ngFor="let issue of issues" (click)="detailIssue(issue)">
-		   
-		  
+
+
 			  <p>{{issue.name}}<br>
 				Cover Date: {{issue.cover_date}}<br>
 			   Main Character: {{issue.character_credits[0]}}<br>
 			   Author: {{issue.person_credits[0]}}
 			  </p>
-				 
-			
+
+
 		</mat-grid-tile>
 		</mat-grid-list>
-	
+
 	  </div>
 		<div class="nav-buttons" style="float: right;">
 		  <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>

@@ -19,6 +19,8 @@ export class CharactersComponent implements OnInit {
   currPage = 1;
   totalPages = 2;
 
+  searchModel = 'characters';
+
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
   charactersHandler = {
@@ -46,8 +48,11 @@ export class CharactersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('hello');
     this.databaseService.getCharacters(1).subscribe(this.charactersHandler);
+  }
+
+  search(value: string) {
+
   }
 
   applyFilter(event: Event) {
@@ -56,7 +61,7 @@ export class CharactersComponent implements OnInit {
   }
 
   SortAZ(){
-    
+
   }
   SortZA(){
 

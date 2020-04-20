@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class SplashComponent implements OnInit {
 
-
+  searchType = 'all';
 
   constructor(private stateService: StateService, private databaseService: DatabaseService, private router: Router) { }
 
@@ -26,8 +26,12 @@ export class SplashComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  search(value: string) {
+    console.log(value);
+  }
 
-  carouselClick(character:string){
+
+  carouselClick(character: string) {
         this.databaseService.getSingleCharacter(character).subscribe(this.detailCharacterHandler);
     }
   }
