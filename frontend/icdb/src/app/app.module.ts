@@ -16,6 +16,7 @@ import { AuthorComponent } from './author/author.component';
 import { IssueComponent } from './issue/issue.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     CharacterComponent,
     AuthorComponent,
     IssueComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

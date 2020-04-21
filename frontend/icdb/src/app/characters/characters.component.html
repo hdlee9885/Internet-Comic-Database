@@ -9,7 +9,7 @@
 	  <a class="navbar-brand" href="#">Home</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
 	    aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarCollapse">
 	    <ul class="navbar-nav mr-auto">
@@ -28,22 +28,16 @@
 		  </ul>
     </div>
     <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
-    </nav>
+  </nav>
 
-    <div id="chars-under-Nav-Div" class ="Row">
+  <div id="chars-under-Nav-Div" class ="Row">
 
-    <div id="charsFilterSet" class="Column">
-		  <form class="form-inline">
-		    <input class="form-control mr-sm-2" type="filter" placeholder="Filter" aria-label="Filter">
-		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
-		  </form>
-    </div>
-
+    <app-filter></app-filter>
 
     <div id="charsCaption"class="Column">
       <p>The world's most famous characters are presented here!<br>
       Click on a character to see their full information.</p>
-     </div>
+    </div>
 
     <div id="sortCharactersButtons"class="Column">
       <br>
@@ -97,7 +91,7 @@
     </div> -->
 
 
-    <div>
+  <div>
     <mat-grid-list cols="3" rowHeight="3:1">
       <mat-grid-tile *ngFor="let character of characters" (click)="detailCharacter(character)">
 
@@ -113,10 +107,10 @@
     </mat-grid-list>
 
   </div>
-    <div class="nav-buttons" style="float: right;">
-      <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
-      <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
-    </div>
+  <div class="nav-buttons" style="float: right;">
+    <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
+    <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+  </div>
 
 
 </body>
