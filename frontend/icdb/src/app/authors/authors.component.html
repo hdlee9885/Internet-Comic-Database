@@ -92,16 +92,16 @@
 
   <div>
 
-		<mat-grid-list cols="3" rowHeight="3:1">
+		<mat-grid-list cols="3" rowHeight="2:1" gutterSize="7px">
 		  <mat-grid-tile *ngFor="let author of authors" (click)="detailAuthor(author)">
-
-
-			  <p>{{author.name}}<br>
-				Hometown: {{author.hometown}}<br>
-			   Character Affiliated: {{author.characters[0]}}<br>
-			  Issue: {{author.issues[0]}}
+			<div class="author-card">
+			
+			  <h3><strong>{{author.name}}</strong></h3>
+			  <p><strong>Hometown</strong>: {{author.hometown}}<br>
+			    <strong>Character Affiliated</strong>: {{author.characters[0]}}<br>
+			    <strong>Issue</strong>: {{author.issues[0]}}
 			  </p>
-
+			</div>
 
 		</mat-grid-tile>
 		</mat-grid-list>

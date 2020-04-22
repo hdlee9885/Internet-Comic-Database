@@ -23,3 +23,8 @@ mat-grid-tile:hover {
     float:right;
    
   }
+  
+  .author-card {
+   width: 300px;
+   height: auto;
+}

@@ -21,3 +21,8 @@ mat-grid-tile:hover {
     float:right;
    
   }
+  
+  .character-card{
+    width: 300px;
+    height: auto;
+  }

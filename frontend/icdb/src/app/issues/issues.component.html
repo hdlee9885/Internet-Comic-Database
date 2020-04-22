@@ -92,18 +92,18 @@
 
 	  </div>
 	<div>
-		<mat-grid-list cols="3" rowHeight="3:1">
+		<mat-grid-list cols="3" rowHeight="2:1">
 		  <mat-grid-tile *ngFor="let issue of issues" (click)="detailIssue(issue)">
 
-
-			  <p>{{issue.name}}<br>
-				Cover Date: {{issue.cover_date}}<br>
-			   Main Character: {{issue.character_credits[0]}}<br>
-			   Author: {{issue.person_credits[0]}}
+			<div class="issue-card">
+			  <h3><strong>{{issue.name}}</strong></h3>
+			  <p><strong>Cover Date</strong>: {{issue.cover_date}}<br>
+			    <strong>Main Character</strong>: {{issue.character_credits[0]}}<br>
+			    <strong>Author</strong>: {{issue.person_credits[0]}}
 			  </p>
+			</div>
 
-
-		</mat-grid-tile>
+		 </mat-grid-tile>
 		</mat-grid-list>
 
 	  </div>
