@@ -1,4 +1,6 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -12,7 +14,7 @@ export class SearchBarComponent implements OnInit {
 
   searchValue = '';
 
-  constructor() { }
+  constructor(private stateService: StateService,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +22,9 @@ export class SearchBarComponent implements OnInit {
   search(value: string): void {
     this.searched.emit(value);
     this.searchValue = null;
+    this.stateService.setKeyword(value);
+    this.router.navigateByUrl('/search-page');
+    
   }
 
 }

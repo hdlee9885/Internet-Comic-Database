@@ -52,7 +52,7 @@ export class CharactersComponent implements OnInit {
   }
 
   search(value: string) {
-
+      this.router.navigateByUrl('/search-bar');
   }
 
   applyFilter(event: Event) {

@@ -9,6 +9,8 @@ import { AboutComponent} from './about/about.component';
 import { AuthorComponent } from './author/author.component';
 import { CharacterComponent } from './character/character.component';
 import { IssueComponent } from './issue/issue.component';
+import { SearchPageComponent } from './search-page/search-page.component';
+
 
 const routes: Routes = [
   { path: 'author', component: AuthorComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'splash', component: SplashComponent},
   { path: 'about', component: AboutComponent},
   { path: '', redirectTo: 'splash', pathMatch: 'full' },
+  { path: 'search-page', component: SearchPageComponent}
+
 ];
 
 @NgModule({

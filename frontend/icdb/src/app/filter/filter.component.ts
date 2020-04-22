@@ -19,6 +19,8 @@ export class FilterComponent implements OnInit {
     this.filters.push(filter);
     this.applyingFilters = true;
     //need to actually filter the data
+    //database call
+    
   }
 
 }
