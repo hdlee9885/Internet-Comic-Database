@@ -43,12 +43,12 @@ export class SearchPageComponent implements OnInit {
 
   }
 
-  backPage() {
-    this.databaseService.getSearchResults(this.currPage - 1).subscribe(this.searchHandler);
-  }
+  // backPage() {
+  //   this.databaseService.getSearchResults(this.currPage - 1).subscribe(this.searchHandler);
+  // }
 
-  forwardPage() {
-    this.databaseService.getSearchResults(this.currPage + 1).subscribe(this.searchHandler);
-  }
+  // forwardPage() {
+  //   this.databaseService.getSearchResults(this.currPage + 1).subscribe(this.searchHandler);
+  // }
 
 }
