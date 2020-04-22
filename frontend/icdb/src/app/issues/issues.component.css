@@ -31,3 +31,8 @@ mat-grid-tile:hover {
     float:right;
    
   }
+  
+.issue-card {
+   width: 300px;
+   height: auto;
+}
