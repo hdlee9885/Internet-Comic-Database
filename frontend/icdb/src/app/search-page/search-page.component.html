@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS Stuff -->
+<body>
+  <div>
+    <h1> Welcome to About Page!</h1>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/characters">Characters</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/issues">Issues</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/authors">Authors</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        </ul>
+      </div>
+      <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
+    </nav>
+  </div>
+	
+
+  <div id="searchingTerm">
+    Search Term : {{keyword}}</div>
+
+
+
+
+
+    <!-- <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="Character">
+        <mat-header-cell *matHeaderCellDef> Character </mat-header-cell>
+        <mat-cell id="char-name" *matCellDef="let character"> {{character.name}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Real Name">
+        <mat-header-cell *matHeaderCellDef> Real Name </mat-header-cell>
+        <mat-cell *matCellDef="let character"> {{character.real_name}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="First Appeared In">
+        <mat-header-cell *matHeaderCellDef> First Appeared In </mat-header-cell>
+        <mat-cell *matCellDef="let character"> {{character.first_appeared_in_issue}} </mat-cell>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Created By">
+        <mat-header-cell *matHeaderCellDef> Created By </mat-header-cell>
+        <mat-cell *matCellDef="let character"> {{character.creators[0]}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row id="characters-row" *matRowDef="let row; columns: displayedColumns" (click)="detailCharacter(row)"></mat-row>
+    </mat-table>
+    <div class="nav-buttons" style="float: right;">
+      <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
+      <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+    </div> -->
+
+
+  <div>
+    <!-- <mat-grid-list cols="3" rowHeight="3:1">
+      <mat-grid-tile *ngFor="let character of characters" (click)="detailCharacter(character)">
+
+
+          <p>{{character.name}}<br>
+            Real Name: {{character.real_name}}<br>
+           First Issue: {{character.first_appeared_in_issue}}<br>
+           Author: {{character.creators[0]}}
+          </p>
+
+
+    </mat-grid-tile>
+    </mat-grid-list> -->
+
+  </div>
+  <!-- <div class="nav-buttons" style="float: right;">
+    <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
+    <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+  </div> -->
+
+
+</body>
+</html>

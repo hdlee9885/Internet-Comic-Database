@@ -14,7 +14,10 @@ import { MaterialModule } from './material/material.module';
 import { CharacterComponent } from './character/character.component';
 import { AuthorComponent } from './author/author.component';
 import { IssueComponent } from './issue/issue.component';
-//import { HashLocationStrategy, LocationStrategy } from '@angular/common';{provide: LocationStrategy, useClass: HashLocationStrategy}
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FilterComponent } from './filter/filter.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { IssueComponent } from './issue/issue.component';
     DeveloperComponent,
     CharacterComponent,
     AuthorComponent,
-    IssueComponent
+    IssueComponent,
+    SearchBarComponent,
+    FilterComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,7 @@ import { IssueComponent } from './issue/issue.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

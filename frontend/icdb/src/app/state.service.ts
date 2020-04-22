@@ -11,6 +11,7 @@ export class StateService {
   currAuthor: Author;
   currCharacter: Character;
   currIssue: Issue;
+  currKeyword: string;
 
   constructor() { }
 
@@ -33,5 +34,13 @@ export class StateService {
   }
   getIssue(): Issue {
     return this.currIssue;
+  }
+  
+  setKeyword(keyword: string){
+      this.currKeyword=keyword;
+  }
+
+  getKeyword(): string{
+      return this.currKeyword;
   }
 }

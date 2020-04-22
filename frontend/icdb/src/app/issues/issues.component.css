@@ -5,3 +5,34 @@ table {
     background-color: rgba(0, 0, 0, .05);
     cursor: pointer;
   }
+
+  mat-grid-tile {
+    background: lightblue;
+  }
+mat-grid-tile:hover {
+    background-color: #c6e2f0;
+  }
+
+
+  .Row
+  {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-spacing: 10px;
+  }
+  .Column
+  {
+      display: table-cell;
+  
+  }
+
+  #sortIssuesButtons{
+    float:right;
+   
+  }
+  
+.issue-card {
+   width: 300px;
+   height: auto;
+}

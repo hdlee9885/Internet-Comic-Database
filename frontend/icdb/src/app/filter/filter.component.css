@@ -1,0 +1,25 @@
+.filter-wrapper {
+  margin-top: 1px;
+}
+
+.apply-filter-column {
+  float: left;
+}
+
+.current-filters-column {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.filter-item {
+  display: inline-block;
+}
+
+.filter-delete-button {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.delete-button {
+  text-align: center;
+}

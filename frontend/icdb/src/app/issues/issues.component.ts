@@ -19,6 +19,8 @@ export class IssuesComponent implements OnInit {
   currPage = 1;
   totalPages = 2;
 
+  searchModel = 'issues';
+
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
   issuesHandler = {
@@ -47,5 +49,16 @@ export class IssuesComponent implements OnInit {
 
   ngOnInit() {
     this.databaseService.getIssues(1).subscribe(this.issuesHandler);
+  }
+
+  search(value: string) {
+
+  }
+
+  SortAZ(){
+
+  }
+  SortZA(){
+
   }
 }

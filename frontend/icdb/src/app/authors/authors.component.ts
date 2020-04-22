@@ -19,6 +19,8 @@ export class AuthorsComponent implements OnInit {
   currPage = 1;
   totalPages = 2;
 
+  searchModel = 'authors';
+
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
   authorsHandler = {
@@ -47,6 +49,17 @@ export class AuthorsComponent implements OnInit {
 
   ngOnInit(): void {
     this.databaseService.getAuthors(1).subscribe(this.authorsHandler);
+  }
+
+  search(value: string) {
+
+  }
+
+  SortAZ(){
+
+  }
+  SortZA(){
+
   }
 }
 

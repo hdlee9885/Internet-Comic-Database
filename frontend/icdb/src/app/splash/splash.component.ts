@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../database.service';
+import { StateService } from '../state.service';
+import { Character, SingleCharacter } from '../character';
 
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.component.html',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashComponent implements OnInit {
 
-  constructor() { }
+  searchType = 'all';
 
+  constructor(private stateService: StateService, private databaseService: DatabaseService, private router: Router) { }
+
+  detailCharacterHandler = {
+    next: data => {
+      let singleCharacter: SingleCharacter = data;
+      let character: Character = singleCharacter.results;
+      this.stateService.setCharacter(character);
+      this.router.navigateByUrl('/character');
+    }
+  };
   ngOnInit(): void {
   }
 
-}
+  search(value: string) {
+    console.log(value);
+  }
+
+
+  carouselClick(character: string) {
+        this.databaseService.getSingleCharacter(character).subscribe(this.detailCharacterHandler);
+    }
+  }

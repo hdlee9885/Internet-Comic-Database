@@ -27,12 +27,7 @@
 		  </li>
 	    </ul>
 	  </div>
-	  <div>
-		  <form class="form-inline">
-		    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-		    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		  </form>
-	  </div>
+	  <app-search-bar (searched)="search($event)" [model]="searchType"></app-search-bar>
 	</nav>
 	<div class="jumbotron text-center" style="margin-bottom:5; height: 620px">
 	  <div class="row">
@@ -49,8 +44,8 @@
 	    </div>
 	  </div>
 	</div>
-	
-	
+
+
 	<!-- carousel -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 	  	<ol class="carousel-indicators">
@@ -62,22 +57,25 @@
 	    	<div class="carousel-item active">
 	      	<img class="d-block w-100" src="https://i.annihil.us/u/prod/marvel/i/mg/6/b0/5a85e7930cd17/clean.jpg" alt="Captain America">
 		      	<div class="carousel-caption d-none d-md-block">
-	    			<h5 style="background-color:black;">Captain America</h5>
+					<!-- <h5 style="background-color:black;" (click)="carouselClick('Captain America-X')">Captain America </h5> -->
+					<button mat-raised-button color="warn" (click)="carouselClick('Captain America-X')">Captain America</button>
 	    			<p style="background-color:black;">Adventures of Captain America (1991) #2</p>
 		    	</div>
 		    </div>
 	    <div class="carousel-item">
 	     	<img class="d-block w-100" src="https://i.annihil.us/u/prod/marvel/i/mg/d/80/574371c927322/clean.jpg" alt="Spider-Man">
 				<div class="carousel-caption d-none d-md-block">
-	    			<h5 style="background-color:black;">Spider Man</h5>
+					<!-- <h5 style="background-color:black;"  (click)="carouselClick('Spider-Man')">Spider Man</h5> -->
+					<button mat-raised-button color="warn" (click)="carouselClick('Spider-Man')">Spider-Man</button>
 	    			<p style="background-color:black;">The Amazing Spider-Man (2015) #13</p>
 		    	</div>
-				    
+
 	    </div>
 	    <div class="carousel-item">
 	      	<img class="d-block w-100" src="https://i.annihil.us/u/prod/marvel/i/mg/2/a0/5cd4668dcedcb/clean.jpg" alt="Iron Man">
 	    		<div class="carousel-caption d-none d-md-block">
-	    			<h5 style="background-color:black;">Iron Man</h5>
+					<!-- <h5 style="background-color:black;"(click)="carouselClick('Iron-Man')">Iron Man</h5> -->
+					<button mat-raised-button color="warn" (click)="carouselClick('Iron-Man')">Iron-Man</button>
 	    			<p style="background-color:black;">Marvel Tales: Iron Man (2019) #1</p>
 		    	</div>
 	    </div>
