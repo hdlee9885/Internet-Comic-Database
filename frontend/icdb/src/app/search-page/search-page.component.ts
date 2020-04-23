@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
-import { Character } from '../character';
-import { CharacterPage } from '../character-page';
 import { DatabaseService } from '../database.service';
 import { StateService } from '../state.service';
+import { Search } from '../search';
+import { SearchResults } from '../search-results';
+import { Issue, SingleIssue } from '../issue';
+import { Author, SingleAuthor } from '../author';
+import { Character, SingleCharacter } from '../character';
+
 
 @Component({
   selector: 'app-search-page',
@@ -15,40 +19,88 @@ export class SearchPageComponent implements OnInit {
 
   keyword:string;
   searchModel = 'search-page';
+  dataSource: MatTableDataSource<Search>;
   currPage = 1;
   totalPages = 2;
-
+  searchList: Search[];
+  
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
 
-  // searchHandler = {
-  //   next: data => {
-  //     let authorPage: AuthorPage;
-  //     authorPage = data;
-  //     this.authors = authorPage.results;
-  //     this.dataSource = new MatTableDataSource<Author>(this.authors);
-  //     this.currPage = authorPage.page_num;
-  //     this.totalPages = authorPage.pages_total;
-  //   }
- // };
+  searchHandler = {
+    next: data => {
+      let searchResults: SearchResults;
+      searchResults = data;
+      this.searchList = searchResults.results;
+      this.dataSource = new MatTableDataSource<Search>(this.searchList);
+      this.currPage = searchResults.page_num;
+      this.totalPages = searchResults.pages_total;
+    }
+ };
+ detailIssueHandler = {
+  next: data => {
+    let singleIssue: SingleIssue = data;
+    let issue: Issue = singleIssue.results;
+    this.stateService.setIssue(issue);
+    this.router.navigateByUrl('/issue');
+  }
+};
+
+detailAuthorHandler = {
+  next: data => {
+    let singleAuthor: SingleAuthor = data;
+    let author: Author = singleAuthor.results;
+    this.stateService.setAuthor(author);
+    this.router.navigateByUrl('/author');
+  }
+};
+detailCharacterHandler = {
+  next: data => {
+    let singleCharacter: SingleCharacter = data;
+    let character: Character = singleCharacter.results;
+    this.stateService.setCharacter(character);
+    this.router.navigateByUrl('/character');
+  }
+};
 
   ngOnInit(): void {
     this.keyword = this.stateService.getKeyword();
-    if(this.keyword == undefined) {
-      this.router.navigateByUrl('/characters');
+    this.databaseService.getSearchTerm(this.keyword,1).subscribe(this.searchHandler);
+  }
+
+  search(value: Search) {
+    if(value.type=='issue'){
+      this.detailIssue(value.name);
     }
+    if(value.type=='character'){
+      this.detailCharacter(value.name);
+    }
+    if(value.type=='author'){
+      this.detailAuthor(value.name);
+    }
+
+
   }
 
-  search(value: string) {
 
+detailIssue(issue: string){
+      this.databaseService.getSingleIssue(issue).subscribe(this.detailIssueHandler);
+    
   }
 
-  // backPage() {
-  //   this.databaseService.getSearchResults(this.currPage - 1).subscribe(this.searchHandler);
-  // }
+  detailAuthor(author: string){
+      this.databaseService.getSingleAuthor(author).subscribe(this.detailAuthorHandler);
+    }
 
-  // forwardPage() {
-  //   this.databaseService.getSearchResults(this.currPage + 1).subscribe(this.searchHandler);
-  // }
+    detailCharacter(character: string){
+        this.databaseService.getSingleCharacter(character).subscribe(this.detailCharacterHandler);
+    }
+  backPage() {
+    this.databaseService.getSearchTerm(this.keyword, this.currPage - 1).subscribe(this.searchHandler);
+  }
+ 
+  forwardPage() {
+    this.databaseService.getSearchTerm(this.keyword, this.currPage + 1).subscribe(this.searchHandler);
+  }
 
 }

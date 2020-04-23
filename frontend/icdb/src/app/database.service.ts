@@ -8,6 +8,7 @@ import { ListingPage } from './listing-page';
 import { SingleCharacter } from './character';
 import { SingleAuthor } from './author';
 import { SingleIssue } from './issue';
+import {  SearchResults } from './search-results';
 
 const fullyDetailedCharactersUrl = 'https://super-phase2-api.appspot.com/characters/';
 const fullyDetailedAuthorsUrl = 'https://super-phase2-api.appspot.com/authors/';
@@ -20,6 +21,7 @@ const nameOnlyIssuesUrl =  'https://super-phase2-api.appspot.com/listIssues';
 const singleCharacterUrl = 'https://super-phase2-api.appspot.com/character/';
 const singleAuthorUrl = 'https://super-phase2-api.appspot.com/author/';
 const singleIssueUrl = 'https://super-phase2-api.appspot.com/issue/';
+const searchTermUrl =  'https://super-phase2-api.appspot.com/search/';
 
 @Injectable({
   providedIn: 'root'
@@ -61,6 +63,11 @@ export class DatabaseService {
   }
   getSingleIssue(issue: string): Observable<SingleIssue> {
     let finalUrl = singleIssueUrl + issue;
+    return this.http.get<any>(finalUrl);
+  }
+
+  getSearchTerm(keyword: string,currpage: number): Observable<SearchResults> {
+    let finalUrl = searchTermUrl + keyword+'/'+currpage;
     return this.http.get<any>(finalUrl);
   }
 
