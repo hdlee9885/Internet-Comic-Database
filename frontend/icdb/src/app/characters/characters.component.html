@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- CSS Stuff -->
 <body>
-	<h1> Welcome to About Page!</h1>
+	<h6>Welcome to Characters Page!</h6>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 	  <a class="navbar-brand" href="#">Home</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -29,14 +29,19 @@
     </div>
     <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
   </nav>
+  
+  <div style="margin-top: 58px;text-align:center">
+  	<h3>The world's most famous characters are presented here!<br>
+      Click on a character to see their full information.</h3>
+    <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:skyblue; width:60%; text-align:center; margin: 0 auto">
+  </div>
 
   <div id="chars-under-Nav-Div" class ="Row">
 
     <app-filter></app-filter>
 
-    <div id="charsCaption"class="Column">
-      <p>The world's most famous characters are presented here!<br>
-      Click on a character to see their full information.</p>
+    <div id="charsCaption"class="Column" style="padding: 20px">
+      <p> </p>
     </div>
 
     <div id="sortCharactersButtons"class="Column">

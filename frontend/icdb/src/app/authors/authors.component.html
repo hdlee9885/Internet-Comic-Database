@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- CSS Stuff -->
 <body>
-	<h1> Welcome to Author Page!</h1>
+	<h6> Welcome to Author Page!</h6>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 	  <a class="navbar-brand" href="#">Home</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -28,7 +28,7 @@
 		  </ul>
 	  </div>
 	  <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
-  </nav>
+    </nav>
 
 
   <!-- <div  class="mat-elevation-z8">
@@ -67,6 +67,12 @@
     </div>
   </div> -->
 
+  <div style="margin-top: 58px;text-align:center">
+  	<h3>The world's most famous comic Authors are presented here!<br>
+	  Click on an author to see their full information.</h3>
+    <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:skyblue; width:60%; text-align:center; margin: 0 auto">
+  </div>
+
   <div id="authors-under-Nav-Div" class ="Row">
 
 	<div id="authorsFilterSet" class="Column">
@@ -78,8 +84,7 @@
 
 
 	<div id="authorsCaption"class="Column">
-	  <p>The world's most famous comic Authors are presented here!<br>
-	  Click on an author to see their full information.</p>
+	  <p></p>
 	 </div>
 
 	<div id="sortAuthorsButtons"class="Column">

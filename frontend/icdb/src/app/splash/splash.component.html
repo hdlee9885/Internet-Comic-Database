@@ -29,7 +29,19 @@
 	  </div>
 	  <app-search-bar (searched)="search($event)" [model]="searchType"></app-search-bar>
 	</nav>
-	<div class="jumbotron text-center" style="margin-bottom:5; height: 620px">
+
+	
+	<div>
+		<video autoplay muted loop id="myVideo">
+			<source src="../../assets/video/Intro.mp4" type="video/mp4">
+		</video>		
+		<div class="video">
+			<h1>Welcome to Internet Comic Database (ICDb)!</h1>
+			<p>Click on the navbar button to start looking up your desired comics!</p>	
+		</div>
+	</div>
+	
+<!-- 	<div class="jumbotron text-center" style="margin-bottom:5; height: 620px">
 	  <div class="row">
 		<div class="col-sm-6">
 			<div style="margin-top:375px">
@@ -43,7 +55,7 @@
 	      <br>
 	    </div>
 	  </div>
-	</div>
+	</div> -->
 
 
 	<!-- carousel -->
