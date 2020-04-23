@@ -6,6 +6,7 @@
 #carouselExampleIndicators{
 	margin: 0 auto;
 	width: 450px;
+	background-color: Grey;
 }
 
 h3{
@@ -35,5 +36,32 @@ h3{
 	color: #f1f1f1;
 	width: 100%;
 	padding: 20px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 } 
+
+.down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+i {
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+}
+
+.footer{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+.footer-bottom {
+	text-align: center;
+	background-color: DimGrey;
+}
 
