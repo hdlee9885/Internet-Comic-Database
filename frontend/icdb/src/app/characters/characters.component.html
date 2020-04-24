@@ -38,7 +38,7 @@
 
   <div id="chars-under-Nav-Div" class ="Row">
 
-    <app-filter></app-filter>
+    <app-filter (filtered)="applyFilter($event)"></app-filter>
 
     <div id="charsCaption" class="Column" style="padding: 20px">
       <p> </p>

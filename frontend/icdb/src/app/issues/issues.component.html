@@ -75,12 +75,7 @@
 
 	<div id="issues-under-Nav-Div" class ="Row">
 
-		<div id="issuesFilterSet" class="Column">
-			  <form class="form-inline">
-				<input class="form-control mr-sm-2" type="filter" placeholder="Filter Issues" aria-label="Filter">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
-			  </form>
-		</div>
+    <app-filter (filtered)="applyFilter($event)"></app-filter>
 
 
 		<div id="issuesCaption"class="Column">

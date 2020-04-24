@@ -21,6 +21,8 @@ export class AuthorsComponent implements OnInit {
 
   searchModel = 'authors';
 
+  filter = '';
+
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
   authorsHandler = {
@@ -35,11 +37,11 @@ export class AuthorsComponent implements OnInit {
   };
 
   backPage() {
-    this.databaseService.getAuthors(this.currPage - 1).subscribe(this.authorsHandler);
+    this.databaseService.getAuthors(this.currPage - 1, this.filter).subscribe(this.authorsHandler);
   }
 
   forwardPage() {
-    this.databaseService.getAuthors(this.currPage + 1).subscribe(this.authorsHandler);
+    this.databaseService.getAuthors(this.currPage + 1, this.filter).subscribe(this.authorsHandler);
   }
 
   detailAuthor(row: Author) {
@@ -48,11 +50,16 @@ export class AuthorsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.databaseService.getAuthors(1).subscribe(this.authorsHandler);
+    this.databaseService.getAuthors(1, this.filter).subscribe(this.authorsHandler);
   }
 
   search(value: string) {
 
+  }
+
+  applyFilter(filter: string) {
+    this.filter = filter;
+    this.databaseService.getAuthors(this.currPage, filter);
   }
 
   SortAZ(){

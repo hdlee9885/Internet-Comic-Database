@@ -75,12 +75,7 @@
 
   <div id="authors-under-Nav-Div" class ="Row">
 
-	<div id="authorsFilterSet" class="Column">
-		  <form class="form-inline">
-			<input class="form-control mr-sm-2" type="filter" placeholder="Filter Authors" aria-label="Filter">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
-		  </form>
-	</div>
+    <app-filter (filtered)="applyFilter($event)"></app-filter>
 
 
 	<div id="authorsCaption"class="Column">
@@ -100,7 +95,7 @@
 		<mat-grid-list cols="3" rowHeight="2:1" gutterSize="3px">
 		  <mat-grid-tile *ngFor="let author of authors" (click)="detailAuthor(author)">
 			<div class="author-card">
-			
+
 			  <h3><strong>{{author.name}}</strong></h3>
 			  <p><strong>Hometown</strong>: {{author.hometown}}<br>
 			    <strong>Character Affiliated</strong>: {{author.characters[0]}}<br>

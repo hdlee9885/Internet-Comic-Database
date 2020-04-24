@@ -21,6 +21,8 @@ export class IssuesComponent implements OnInit {
 
   searchModel = 'issues';
 
+  filter = '';
+
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
   issuesHandler = {
@@ -35,11 +37,11 @@ export class IssuesComponent implements OnInit {
   };
 
   backPage() {
-    this.databaseService.getIssues(this.currPage - 1).subscribe(this.issuesHandler);
+    this.databaseService.getIssues(this.currPage - 1, this.filter).subscribe(this.issuesHandler);
   }
 
   forwardPage() {
-    this.databaseService.getIssues(this.currPage + 1).subscribe(this.issuesHandler);
+    this.databaseService.getIssues(this.currPage + 1, this.filter).subscribe(this.issuesHandler);
   }
 
   detailIssue(row: Issue){
@@ -48,11 +50,16 @@ export class IssuesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.databaseService.getIssues(1).subscribe(this.issuesHandler);
+    this.databaseService.getIssues(1, this.filter).subscribe(this.issuesHandler);
   }
 
   search(value: string) {
 
+  }
+
+  applyFilter(filter: string) {
+    this.filter = filter;
+    this.databaseService.getIssues(this.currPage, filter);
   }
 
   SortAZ(){

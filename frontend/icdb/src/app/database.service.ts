@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CharacterPage } from './character-page';
 import { AuthorPage } from './author-page';
 import { IssuePage } from './issue-page';
@@ -20,7 +20,7 @@ const nameOnlyIssuesUrl =  'https://super-phase2-api.appspot.com/listIssues';
 
 const singleCharacterUrl = 'https://super-phase2-api.appspot.com/character/';
 const singleAuthorUrl = 'https://super-phase2-api.appspot.com/author/';
-const singleIssueUrl = 'https://super-phase2-api.appspot.com/issue/'
+const singleIssueUrl = 'https://super-phase2-api.appspot.com/issue/';
 
 const searchTermUrl =  'https://super-phase2-api.appspot.com/search/';
 
@@ -31,17 +31,47 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) { }
 
-  getCharacters(page: number): Observable<CharacterPage> {
+  getCharacters(page: number, filter: string): Observable<CharacterPage> {
     let finalUrl = fullyDetailedCharactersUrl + page;
-    return this.http.get<CharacterPage>(finalUrl);
+    if (filter == '') {
+      return this.http.get<CharacterPage>(finalUrl);
+    } else {
+      let headers = new HttpHeaders({
+        'filter': filter
+      });
+      let filterOptions = {
+        headers: headers
+      };
+      return this.http.get<CharacterPage>(finalUrl, filterOptions);
+    }
   }
-  getAuthors(page: number): Observable<AuthorPage> {
+  getAuthors(page: number, filter: string): Observable<AuthorPage> {
     let finalUrl = fullyDetailedAuthorsUrl + page;
-    return this.http.get<AuthorPage>(finalUrl);
+    if (filter == '') {
+      return this.http.get<AuthorPage>(finalUrl);
+    } else {
+      let headers = new HttpHeaders({
+        'filter': filter
+      });
+      let filterOptions = {
+        headers: headers
+      };
+      return this.http.get<AuthorPage>(finalUrl, filterOptions);
+    }
   }
-  getIssues(page: number): Observable<IssuePage> {
+  getIssues(page: number, filter: string): Observable<IssuePage> {
     let finalUrl = fullyDetailedIssuesUrl + page;
-    return this.http.get<IssuePage>(finalUrl);
+    if (filter == '') {
+      return this.http.get<IssuePage>(finalUrl);
+    } else {
+      let headers = new HttpHeaders({
+        'filter': filter
+      });
+      let filterOptions = {
+        headers: headers
+      };
+      return this.http.get<IssuePage>(finalUrl, filterOptions);
+    }
   }
 
   getCharacterNames(): Observable<ListingPage> {

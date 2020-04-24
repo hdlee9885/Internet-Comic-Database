@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterComponent implements OnInit {
 
-  applyingFilters = false;
-  filters = [];
+  applyingFilter = false;
+  filter = '';
+  filterValue = '';
+
+  @Output() filtered = new EventEmitter();
 
   constructor() { }
 
@@ -16,11 +19,15 @@ export class FilterComponent implements OnInit {
   }
 
   addFilter(filter: string) {
-    this.filters.push(filter);
-    this.applyingFilters = true;
-    //need to actually filter the data
-    //database call
-    
+    this.filter = filter;
+    this.applyingFilter = true;
+    this.filtered.emit(filter);
+  }
+
+  deleteFilter() {
+    this.filterValue = null;
+    this.applyingFilter = false;
+    this.filtered.emit('');
   }
 
 }
