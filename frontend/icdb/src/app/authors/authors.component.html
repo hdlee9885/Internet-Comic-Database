@@ -73,8 +73,22 @@
 	  Click on an author to see their full information.</h3>
     <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:skyblue; width:60%; text-align:center; margin: 0 auto">
   </div>
+  
+  <br>
+  <div class="row"> 
+  	<div class="filter">
+  	    <app-filter (filtered)="applyFilter($event)"></app-filter>
+  	</div>
+  	<div class="sorting">
+	  	<div id="sortAuthorsButtons" class="Column">
+	      <button id="chars-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
+	      <button id="chars-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button>
+	    </div>
+  	</div>
+  </div>
+  <br>
 
-  <div id="authors-under-Nav-Div" class ="Row">
+  <!-- <div id="authors-under-Nav-Div" class ="Row">
 
     <app-filter (filtered)="applyFilter($event)"></app-filter>
 
@@ -89,7 +103,7 @@
 	  <button id="authors-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button>
 	</div>
 
-  </div>
+  </div> -->
 
   <div>
 
@@ -109,8 +123,8 @@
 
 	  </div>
 		<div class="nav-buttons" style="float: right;">
-		  <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
-		  <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+		  <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()">&laquo; Previous</button>
+		  <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">Next &raquo;</button>
 		</div>
 
 </body>

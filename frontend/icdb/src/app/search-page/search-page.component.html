@@ -36,7 +36,7 @@
 
 
   <div id="searchingTerm" class="content-wrap">
-  	<h2 id="search-title">You searched: {{keyword}}</h2>
+  	<h2 id="search-title">You searched: <span style="color:DimGrey">{{keyword}}</span></h2>
     <div id="search-bg">
         <div class="separator">
         	<h2 class="search-results" style="margin: 0">Search Results</h2>
@@ -101,8 +101,8 @@
 
   </div>
   <div class="nav-buttons" style="float: right;">
-    <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
-    <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+    <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()">&laquo; Previous</button>
+    <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">Next &raquo;</button>
   </div>
 
 

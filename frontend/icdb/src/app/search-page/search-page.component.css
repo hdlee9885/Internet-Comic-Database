@@ -70,17 +70,22 @@ mat-grid-tile:hover {
     display: flex;
     align-items: center;
     text-align: center;
-}
-.separator::before, .separator::after {
+  }
+  .separator::before, .separator::after {
     content: '';
     flex: 1;
     border-bottom: 1px solid #000;
-}
-.separator::before {
-    margin-right: .75em;
-}
-.separator::after {
-    margin-left: .75em;
-}
+  }
+	.separator::before {
+	    margin-right: .75em;
+	}
+	.separator::after {
+	    margin-left: .75em;
+	}
   
+  
+   .left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+   }
   

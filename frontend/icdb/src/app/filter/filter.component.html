@@ -6,14 +6,16 @@
     </form>
   </div>
   <div class="current-filters-column" *ngIf="applyingFilter">
-    <p>Current Filter:</p>
-    <div class="filter-row" >
+    <p class="fliter-line">Current Filter: <span style="color: DimGrey">{{filter}}</span></p>
+    <span><button class="delete-button" color="primary" mat-raised-button (click)="deleteFilter()">Remove</button></span>
+    
+    <!-- <div class="filter-row" >
       <div class="filter-item">
         <p>{{filter}}</p>
       </div>
       <div class="filter-delete-button">
         <button class="delete-button" color="primary" mat-raised-button (click)="deleteFilter()">Remove</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
