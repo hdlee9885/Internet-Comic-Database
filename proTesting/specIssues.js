@@ -16,7 +16,7 @@ describe('Issues Home Page', () => {
 	});
 
 	function navigateToIssuesPage(){
-	  	actualUrl = 'http://localhost:4200/issues';
+	  	actualUrl = 'http://localhost:4200/#/issues';
 	    element(by.id('issues-nav')).click().then(function(){ // first find list-home a tag and than click 
 	        browser.sleep(2000).then(function(){
 	          browser.getCurrentUrl().then(function(actualUrl){ // promise
@@ -29,12 +29,12 @@ describe('Issues Home Page', () => {
 });
 describe('Issues Detailed Page', () => {
     it('should nav to issues detail page', function () {
-        browser.get('http://localhost:4200/issues');
+        browser.get('http://localhost:4200/#/issues');
         navigateToIssueDetailedPage();
     });
 
     function navigateToIssueDetailedPage() {
-        actualUrl = 'http://localhost:4200/issue';
+        actualUrl = 'http://localhost:4200/#/issue';
         const issuesList = element.all(by.id('issues-row'));
         const issuesCount = issuesList.count();
         for (var i = 0; i < issuesCount; i++) {
@@ -52,12 +52,12 @@ describe('Issues Detailed Page', () => {
 
 describe('Preview Page Forward and Backward', () => {
     it('should nav to next page and test new issues', function () {
-        browser.get('http://localhost:4200/issues');
+        browser.get('http://localhost:4200/#/issues');
         forwardToNextIssues();
     });
 
     it('should nav to previous page and test older issues', function () {
-        browser.get('http://localhost:4200/issues');
+        browser.get('http://localhost:4200/#/issues');
         backwardToPreviousIssues();
     });
 
@@ -95,12 +95,12 @@ describe('Preview Page Forward and Backward', () => {
 
 describe('Detail Page Expansion', () => {
 	it('should open all tabs', function() {
-		browser.get('http://localhost:4200/issues');
+		browser.get('http://localhost:4200/#/issues');
 	    openAllTabs();
     })
     
     it('should close all tabs', function() {
-		browser.get('http://localhost:4200/issues');
+		browser.get('http://localhost:4200/#/issues');
 	    closeAllTabs();
     })
 
@@ -152,18 +152,18 @@ describe('Detail Page Expansion', () => {
 
 describe('Detail Page Expansion One by One', () => {
 	it('should open the Description Tab', function() {
-		browser.get('http://localhost:4200/issues');
+		browser.get('http://localhost:4200/#/issues');
 	    openDescriptionTab();
     })
 
     
     it('should open the Characters Tab', function() {
-		browser.get('http://localhost:4200/issues');
+		browser.get('http://localhost:4200/#/issues');
 	    openCharactersTab();
     })
 
     it('should open the Authors Tab', function() {
-		browser.get('http://localhost:4200/issues');
+		browser.get('http://localhost:4200/#/issues');
 	    openAuthorsTab();
     })
 
@@ -202,13 +202,13 @@ describe('Detail Page Expansion One by One', () => {
 
 describe('Detail Page Linkage', () => {
 	it('should link to character page', function() {
-		browser.get('http://localhost:4200/issues');
+		browser.get('http://localhost:4200/#/issues');
 	    linkCharacters();
     })
 	
 	function linkCharacters() {
 		b = false;
-		actualUrl = 'http://localhost:4200/character';
+		actualUrl = 'http://localhost:4200/#/character';
 	    browser.sleep(2000).then(function(){
 //	    	var more = element(by.id('issue-table'));
 //	    	browser.wait(protractor.ExpectedConditions.presenceOf(more), 10000);
@@ -235,13 +235,13 @@ describe('Detail Page Linkage', () => {
 
 describe('Detail Page Linkage', () => {
 	it('should link to author page', function() {
-		browser.get('http://localhost:4200/issues');
+		browser.get('http://localhost:4200/#/issues');
 	    linkAuthors();
     })
 	
 	function linkAuthors() {
 		b = false;
-		actualUrl = 'http://localhost:4200/author';
+		actualUrl = 'http://localhost:4200/#/author';
 	    browser.sleep(2000).then(function(){
 			element(by.id('issues-row')).click().then(function(){
 			    browser.sleep(2000).then(function(){
@@ -262,4 +262,38 @@ describe('Detail Page Linkage', () => {
 			})
 	    })
     }
+})
+
+describe('Issues Page can Search', () => {
+	it('should show search page', function() {
+		browser.get('http://localhost:4200/#/issues');
+		linkSearch();
+	})
+	
+	function linkSearch() {
+		element(by.id('search-input')).sendKeys('man').then(function() {
+			element(by.id('search-button')).click().then(function() {
+				browser.getCurrentUrl().then(function(actualUrl){ // promise
+		            expect(actualUrl.indexOf('search-page') !== -1).toBeTruthy();
+				})
+			})
+		});
+	}
+})
+
+describe('Issue Detail Page can Search', () => {
+	it('should show search page', function() {
+		browser.get('http://localhost:4200/#/issue');
+		linkSearch();
+	})
+	
+	function linkSearch() {
+		element(by.id('search-input')).sendKeys('iron').then(function() {
+			element(by.id('search-button')).click().then(function() {
+				browser.getCurrentUrl().then(function(actualUrl){ // promise
+		            expect(actualUrl.indexOf('search-page') !== -1).toBeTruthy();
+				})
+			})
+		});
+	}
 })

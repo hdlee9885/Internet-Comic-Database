@@ -54,7 +54,7 @@ export class AuthorsComponent implements OnInit {
   }
 
   search(value: string) {
-
+	this.router.navigateByUrl('search-page');
   }
 
   applyFilter(filter: string) {

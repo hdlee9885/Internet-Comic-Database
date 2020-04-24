@@ -27,6 +27,7 @@ export class SplashComponent implements OnInit {
   }
 
   search(value: string) {
+  	this.router.navigateByUrl('/search-page');
     console.log(value);
   }
 
