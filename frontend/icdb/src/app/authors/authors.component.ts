@@ -59,7 +59,7 @@ export class AuthorsComponent implements OnInit {
 
   applyFilter(filter: string) {
     this.filter = filter;
-    this.databaseService.getAuthors(this.currPage, filter);
+    this.databaseService.getAuthors(this.currPage, filter).subscribe(this.authorsHandler);
   }
 
   SortAZ(){

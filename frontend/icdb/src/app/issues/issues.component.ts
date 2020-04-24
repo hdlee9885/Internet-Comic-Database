@@ -59,7 +59,7 @@ export class IssuesComponent implements OnInit {
 
   applyFilter(filter: string) {
     this.filter = filter;
-    this.databaseService.getIssues(this.currPage, filter);
+    this.databaseService.getIssues(this.currPage, filter).subscribe(this.issuesHandler);
   }
 
   SortAZ(){
