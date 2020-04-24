@@ -20,7 +20,8 @@ const nameOnlyIssuesUrl =  'https://super-phase2-api.appspot.com/listIssues';
 
 const singleCharacterUrl = 'https://super-phase2-api.appspot.com/character/';
 const singleAuthorUrl = 'https://super-phase2-api.appspot.com/author/';
-const singleIssueUrl = 'https://super-phase2-api.appspot.com/issue/';
+const singleIssueUrl = 'https://super-phase2-api.appspot.com/issue/'
+
 const searchTermUrl =  'https://super-phase2-api.appspot.com/search/';
 
 @Injectable({
@@ -55,20 +56,20 @@ export class DatabaseService {
 
   getSingleCharacter(character: string): Observable<SingleCharacter> {
     let finalUrl = singleCharacterUrl + character;
-    return this.http.get<any>(finalUrl);
+    return this.http.get<SingleCharacter>(finalUrl);
   }
   getSingleAuthor(author: string): Observable<SingleAuthor> {
     let finalUrl = singleAuthorUrl + author;
-    return this.http.get<any>(finalUrl);
+    return this.http.get<SingleAuthor>(finalUrl);
   }
   getSingleIssue(issue: string): Observable<SingleIssue> {
     let finalUrl = singleIssueUrl + issue;
-    return this.http.get<any>(finalUrl);
+    return this.http.get<SingleIssue>(finalUrl);
   }
 
-  getSearchTerm(keyword: string,currpage: number): Observable<SearchResults> {
+  getSearchTerm(keyword: string, currpage: number): Observable<SearchResults> {
     let finalUrl = searchTermUrl + keyword+'/'+currpage;
-    return this.http.get<any>(finalUrl);
+    return this.http.get<SearchResults>(finalUrl);
   }
 
 }

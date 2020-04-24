@@ -23,7 +23,7 @@ export class SearchPageComponent implements OnInit {
   currPage = 1;
   totalPages = 2;
   searchList: Search[];
-  
+
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
 
@@ -36,69 +36,72 @@ export class SearchPageComponent implements OnInit {
       this.currPage = searchResults.page_num;
       this.totalPages = searchResults.pages_total;
     }
- };
- detailIssueHandler = {
-  next: data => {
-    let singleIssue: SingleIssue = data;
-    let issue: Issue = singleIssue.results;
-    this.stateService.setIssue(issue);
-    this.router.navigateByUrl('/issue');
-  }
-};
+  };
 
-detailAuthorHandler = {
-  next: data => {
-    let singleAuthor: SingleAuthor = data;
-    let author: Author = singleAuthor.results;
-    this.stateService.setAuthor(author);
-    this.router.navigateByUrl('/author');
-  }
-};
-detailCharacterHandler = {
-  next: data => {
-    let singleCharacter: SingleCharacter = data;
-    let character: Character = singleCharacter.results;
-    this.stateService.setCharacter(character);
-    this.router.navigateByUrl('/character');
-  }
-};
+  detailIssueHandler = {
+    next: data => {
+      let singleIssue: SingleIssue = data;
+      let issue: Issue = singleIssue.results;
+      this.stateService.setIssue(issue);
+      this.router.navigateByUrl('/issue');
+    }
+  };
+
+  detailAuthorHandler = {
+    next: data => {
+      let singleAuthor: SingleAuthor = data;
+      let author: Author = singleAuthor.results;
+      this.stateService.setAuthor(author);
+      this.router.navigateByUrl('/author');
+    }
+  };
+
+  detailCharacterHandler = {
+    next: data => {
+      let singleCharacter: SingleCharacter = data;
+      let character: Character = singleCharacter.results;
+      this.stateService.setCharacter(character);
+      this.router.navigateByUrl('/character');
+    }
+  };
 
   ngOnInit(): void {
     this.keyword = this.stateService.getKeyword();
     this.databaseService.getSearchTerm(this.keyword,1).subscribe(this.searchHandler);
   }
 
-  search(value: Search) {
-    if(value.type=='issue'){
-      this.detailIssue(value.name);
-    }
-    if(value.type=='character'){
-      this.detailCharacter(value.name);
-    }
-    if(value.type=='author'){
-      this.detailAuthor(value.name);
-    }
-
-
+  search(value: string) {
+    this.databaseService.getSearchTerm(value, 1).subscribe(this.searchHandler);
   }
 
-
-detailIssue(issue: string){
-      this.databaseService.getSingleIssue(issue).subscribe(this.detailIssueHandler);
-    
+  detailIssue(issue: string){
+    this.databaseService.getSingleIssue(issue).subscribe(this.detailIssueHandler);
   }
 
   detailAuthor(author: string){
-      this.databaseService.getSingleAuthor(author).subscribe(this.detailAuthorHandler);
-    }
+    this.databaseService.getSingleAuthor(author).subscribe(this.detailAuthorHandler);
+  }
 
-    detailCharacter(character: string){
-        this.databaseService.getSingleCharacter(character).subscribe(this.detailCharacterHandler);
+  detailCharacter(character: string){
+    this.databaseService.getSingleCharacter(character).subscribe(this.detailCharacterHandler);
+  }
+
+  detailResult(result: Search) {
+    if(result.type == 'issue') {
+      this.detailIssue(result.name);
     }
+    if(result.type == 'author') {
+      this.detailAuthor(result.name);
+    }
+    if(result.type == 'character') {
+      this.detailCharacter(result.name);
+    }
+  }
+
   backPage() {
     this.databaseService.getSearchTerm(this.keyword, this.currPage - 1).subscribe(this.searchHandler);
   }
- 
+
   forwardPage() {
     this.databaseService.getSearchTerm(this.keyword, this.currPage + 1).subscribe(this.searchHandler);
   }

@@ -29,7 +29,7 @@
     </div>
     <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
   </nav>
-  
+
   <div style="margin-top: 58px;text-align:center">
   	<h3>The world's most famous characters are presented here!<br>
       Click on a character to see their full information.</h3>
@@ -40,11 +40,11 @@
 
     <app-filter></app-filter>
 
-    <div id="charsCaption"class="Column" style="padding: 20px">
+    <div id="charsCaption" class="Column" style="padding: 20px">
       <p> </p>
     </div>
 
-    <div id="sortCharactersButtons"class="Column">
+    <div id="sortCharactersButtons" class="Column">
       <br>
       <button id="chars-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
       <button id="chars-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button>

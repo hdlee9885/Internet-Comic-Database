@@ -31,7 +31,7 @@
       <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
     </nav>
   </div>
-	
+
 
   <div id="searchingTerm">
     Search Term : {{keyword}}</div>
@@ -76,7 +76,7 @@
 
   <div>
     <mat-grid-list cols="3" rowHeight="3:1">
-      <mat-grid-tile *ngFor="let search_term of searchList"(click)="search(search_term)" >
+      <mat-grid-tile *ngFor="let search_term of searchList" (click)="detailResult(search_term)" >
 
         <div class="search-card">
 
@@ -90,10 +90,10 @@
     </mat-grid-list>
 
   </div>
-  <!-- <div class="nav-buttons" style="float: right;">
+  <div class="nav-buttons" style="float: right;">
     <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
     <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
-  </div> -->
+  </div>
 
 
 </body>
