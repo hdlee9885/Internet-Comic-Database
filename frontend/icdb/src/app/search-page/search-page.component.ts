@@ -68,7 +68,7 @@ detailCharacterHandler = {
     this.databaseService.getSearchTerm(this.keyword,1).subscribe(this.searchHandler);
   }
 
-  search(value: Search) {
+  searchTerm(value: Search) {
     if(value.type=='issue'){
       this.detailIssue(value.name);
     }
@@ -101,6 +101,10 @@ detailIssue(issue: string){
  
   forwardPage() {
     this.databaseService.getSearchTerm(this.keyword, this.currPage + 1).subscribe(this.searchHandler);
+  }
+
+  search(value: string) {
+    
   }
 
 }

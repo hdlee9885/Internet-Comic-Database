@@ -23,7 +23,7 @@ export class IssueComponent implements OnInit {
 
   panelCharOpenState=false;
   panelAuthorOpenState =false;
-
+  searchModel="issue-search-nav"
   issue: Issue;
   availAuthors: string[];
   availCharacters: string[];
@@ -110,5 +110,8 @@ export class IssueComponent implements OnInit {
       alert('Unfortunately, we do not have any data on the character ' + character + '. :(');
     }
 
+  }
+  search(value: string) {
+    this.router.navigateByUrl('/search-bar');
   }
 }
