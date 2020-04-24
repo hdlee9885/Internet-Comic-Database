@@ -1,19 +1,21 @@
 <div class="filter-wrapper">
   <div class="apply-filter-column">
-    <form class="form-inline">
-      <input #filterArea class="form-control mr-sm-2" type="filter" placeholder="Filter" aria-label="Filter">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="addFilter(filterArea.value)">Filter</button>
+    <form class="form-inline"(submit)="addFilter(filterArea.value,$event)">
+      <input #filterArea class="form-control mr-sm-2" type="filter" placeholder="Filter" [value]="filterValue" aria-label="Filter">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
     </form>
   </div>
-  <div class="current-filters-column" *ngIf="applyingFilters">
-    <p>Current Filters:</p>
-    <div class="filter-row" *ngFor="let filter of filters">
+  <div class="current-filters-column" *ngIf="applyingFilter">
+    <p class="fliter-line">Current Filter: <span style="color: DimGrey">{{filter}}</span></p>
+    <span><button class="delete-button" color="primary" mat-raised-button (click)="deleteFilter()">Remove</button></span>
+    
+    <!-- <div class="filter-row" >
       <div class="filter-item">
         <p>{{filter}}</p>
       </div>
       <div class="filter-delete-button">
-        <button class="delete-button" color="primary" mat-raised-button>X</button>
+        <button class="delete-button" color="primary" mat-raised-button (click)="deleteFilter()">Remove</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

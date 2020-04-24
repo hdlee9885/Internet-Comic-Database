@@ -1,6 +1,6 @@
 <div>
-  <form class="form-inline">
-    <input #inputArea class="form-control mr-sm-2" type="search" placeholder="Search" [value]="searchValue" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="search(inputArea.value)">Search</button>
+  <form class="form-inline" (submit)="search($event, inputArea.value)">
+    <input id="search-input" #inputArea class="form-control mr-sm-2" type="search" placeholder="Search" [value]="searchValue" aria-label="Search">
+    <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="search($event, inputArea.value)">Search</button>
   </form>
 </div>

@@ -2,11 +2,12 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 <!-- CSS Stuff -->
 <body>
 	<h1> Welcome to Splash Page!</h1>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-	  <a id="home-nav" class="navbar-brand" href="#">Comic Book DB</a>
+	  <a id="home-nav" class="navbar-brand" href="#" style="font-family:'Audiowide'">Comic Book DB</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
 	    aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -29,7 +30,20 @@
 	  </div>
 	  <app-search-bar (searched)="search($event)" [model]="searchType"></app-search-bar>
 	</nav>
-	<div class="jumbotron text-center" style="margin-bottom:5; height: 620px">
+
+	
+	<div>
+		<video autoplay muted loop id="myVideo">
+			<source src="../../assets/video/Intro.mp4" type="video/mp4">
+		</video>		
+		<div class="video">
+			<p style="font-size: 26px">Welcome to Internet Comic Database (ICDb)!<p>
+			<p>Click on the navbar button to start looking up your desired comics!</p>
+			<p style="text-align:center"><i class="down"></i></p>	
+		</div>
+	</div>
+	
+<!-- 	<div class="jumbotron text-center" style="margin-bottom:5; height: 620px">
 	  <div class="row">
 		<div class="col-sm-6">
 			<div style="margin-top:375px">
@@ -43,7 +57,7 @@
 	      <br>
 	    </div>
 	  </div>
-	</div>
+	</div> -->
 
 
 	<!-- carousel -->
@@ -88,7 +102,12 @@
 	    		<span class="carousel-control-next-icon" aria-hidden="true"></span>
 	    		<span class="sr-only">Next</span>
 	  		</a>
-</div>
+	</div>
+	
+	<div class="footer-bottom">
+		&copy; Comic Book DB | Designed by E E 461L Team		
+	
+	</div>
 
 </body>
 </html>

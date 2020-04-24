@@ -21,7 +21,7 @@ export class AuthorComponent implements OnInit {
   @ViewChild('accordion', {static:true}) Accordion: MatAccordion;
 
   author: Author;
-
+  searchModel="author-detail-search-bar";
   availIssues: string[];
   availCharacters: string[];
 
@@ -95,4 +95,7 @@ export class AuthorComponent implements OnInit {
 
   }
 
+  search(value: string) {
+    this.router.navigateByUrl('/search-page');
+  }
 }

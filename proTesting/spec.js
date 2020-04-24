@@ -53,7 +53,7 @@ describe('Character Home Page', () => {
 	});
 	
 	function navigateToCharactersPage(){
-	  	actualUrl = 'http://localhost:4200/characters';
+	  	actualUrl = 'http://localhost:4200/#/characters';
 	    element(by.id('char-nav')).click().then(function(){ // first find list-home a tag and than click 
 	        browser.sleep(2000).then(function(){
 	          browser.getCurrentUrl().then(function(actualUrl){ // promise
@@ -67,12 +67,12 @@ describe('Character Home Page', () => {
 
 describe('Character Detailed Page', () => {
 	it('should nav to character detail page', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 		navigateToCharacterDetailedPage();
 	});
 	
 	function navigateToCharacterDetailedPage() {
-		actualUrl = 'http://localhost:4200/character';
+		actualUrl = 'http://localhost:4200/#/character';
 		element(by.id('characters-row')).click().then(function(){
 			browser.sleep(2000).then(function(){
 	          browser.getCurrentUrl().then(function(actualUrl){ // promise
@@ -85,7 +85,7 @@ describe('Character Detailed Page', () => {
 	}
 	
 	it('should match the specific character', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 		compareDetailCharacter();
 	});
 	function compareDetailCharacter() {
@@ -99,12 +99,12 @@ describe('Character Detailed Page', () => {
 
 describe('Preview Page Forward and Backward', () => {
 	it('should nav to next page', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 		forwardToNextCharacters();
 	});
 	
 	it('should nav to previous page', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 		backwardToPreviousCharacters();
 	});
 	
@@ -134,7 +134,7 @@ describe('Preview Page Forward and Backward', () => {
 
 describe('Detail Page Expansion', () => {
 	it('should open all tabs', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 	    openAllTabs();
 	})
 	
@@ -162,7 +162,7 @@ describe('Detail Page Expansion', () => {
 
 describe('Detail Page Expansion', () => {
 	it('should close all tabs', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 	    closeAllTabs();
 	})
 	
@@ -200,11 +200,11 @@ describe('Detail Page Expansion', () => {
 
 describe('Detail Page Expansion', () => {
 	it('should open specific tab', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 		openAliasesTabs();
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 		openAuthorTabs();
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 		openDescriptionTabs();
 	})
 	
@@ -247,13 +247,13 @@ describe('Detail Page Expansion', () => {
 
 describe('Detail Page Linkage', () => {
 	it('should link to issue page', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 	    linkCharacters();
     })
 	
 	function linkCharacters() {
 		b = false;
-		actualUrl = 'http://localhost:4200/issue';
+		actualUrl = 'http://localhost:4200/#/issue';
 	    browser.sleep(2000).then(function(){
 //	    	var more = element(by.id('issue-table'));
 //	    	browser.wait(protractor.ExpectedConditions.presenceOf(more), 10000);
@@ -280,13 +280,13 @@ describe('Detail Page Linkage', () => {
 
 describe('Detail Page Linkage', () => {
 	it('should link to author page', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 	    linkAuthors();
     })
 	
 	function linkAuthors() {
 		b = false;
-		actualUrl = 'http://localhost:4200/author';
+		actualUrl = 'http://localhost:4200/#/author';
 	    browser.sleep(2000).then(function(){
 			element(by.id('characters-row')).click().then(function(){
 			    browser.sleep(2000).then(function(){
@@ -311,13 +311,13 @@ describe('Detail Page Linkage', () => {
 
 describe('Detail Page Button', () => {
 	it('should show issue page', function() {
-		browser.get('http://localhost:4200/characters');
+		browser.get('http://localhost:4200/#/characters');
 	    linkButton();
     })
 	
 	function linkButton() {
 		b = false;
-		actualUrl = 'http://localhost:4200/issue';
+		actualUrl = 'http://localhost:4200/#/issue';
 	    browser.sleep(2000).then(function(){
 			element(by.id('characters-row')).click().then(function(){
 			    browser.sleep(2000).then(function(){
@@ -331,4 +331,38 @@ describe('Detail Page Button', () => {
 			})
 	    })
     }
+})
+
+describe('Characters Page can Search', () => {
+	it('should show search page', function() {
+		browser.get('http://localhost:4200/#/characters');
+		linkSearch();
+	})
+	
+	function linkSearch() {
+		element(by.id('search-input')).sendKeys('man').then(function() {
+			element(by.id('search-button')).click().then(function() {
+				browser.getCurrentUrl().then(function(actualUrl){ // promise
+		            expect(actualUrl.indexOf('search-page') !== -1).toBeTruthy();
+				})
+			})
+		});
+	}
+})
+
+describe('Character Page can Search', () => {
+	it('should show search page', function() {
+		browser.get('http://localhost:4200/#/character');
+		linkSearch();
+	})
+	
+	function linkSearch() {
+		element(by.id('search-input')).sendKeys('iron').then(function() {
+			element(by.id('search-button')).click().then(function() {
+				browser.getCurrentUrl().then(function(actualUrl){ // promise
+		            expect(actualUrl.indexOf('search-page') !== -1).toBeTruthy();
+				})
+			})
+		});
+	}
 })

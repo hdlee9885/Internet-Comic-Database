@@ -27,4 +27,19 @@ mat-grid-tile:hover {
   .author-card {
    width: 300px;
    height: auto;
-}
+  }
+
+  .filter {
+    width: 60%;
+    float: left;
+  }
+  
+  .sorting {
+  	width: 40%;
+  	float: left;  	
+  }
+  
+  .row {
+  	margin-left: 10px;
+  	margin-right: 10px;
+  }

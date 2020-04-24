@@ -18,6 +18,7 @@ import { DatabaseService } from '../database.service';
 export class CharacterComponent implements OnInit {
 
 
+  searchModel="character-search-nav"
   panelIssueOpenState=false;
   panelAuthorOpenState =false;
   @ViewChild('accordion',{static:true}) Accordion: MatAccordion;
@@ -126,4 +127,8 @@ export class CharacterComponent implements OnInit {
     }
 
   }
+
+  search(value: string) {
+    this.router.navigateByUrl('/search-page');
+}
 }
