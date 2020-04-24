@@ -24,7 +24,6 @@ export class SearchBarComponent implements OnInit {
     this.searchValue = null;
     this.stateService.setKeyword(value);
     this.router.navigateByUrl('/search-page');
-    
   }
 
 }
