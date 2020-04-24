@@ -60,15 +60,15 @@ export class IssuesComponent implements OnInit {
 
   applyFilter(filter: string) {
     this.filter = filter;
-    this.databaseService.getIssues(this.currPage, filter,'').subscribe(this.issuesHandler);
+    this.databaseService.getIssues(this.currPage, filter,this.sortA).subscribe(this.issuesHandler);
   }
 
   SortAZ(){
-     this.sortA='true';
+     this.sortA='True';
     this.databaseService.getIssues(this.currPage,this.filter,this.sortA).subscribe(this.issuesHandler);
   }
   SortZA(){
-    this.sortA='false';
+    this.sortA='False';
     this.databaseService.getIssues(this.currPage,this.filter,this.sortA).subscribe(this.issuesHandler);
   }
 }

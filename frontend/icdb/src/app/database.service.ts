@@ -65,11 +65,11 @@ export class DatabaseService {
     if(filter!=''){
       headers=headers.append('filter',filter);
     }
-    if(sortA=='true'){
-      headers=headers.append('sort', true.toString());
+    if(sortA=='True'){
+      headers=headers.append('sort', 'True');
     }
-    if(sortA=='false'){
-      headers=headers.append('sort', false.toString());
+    if(sortA=='False'){
+      headers=headers.append('sort', 'False');
     }
     let filterOptions = {
       headers: headers
