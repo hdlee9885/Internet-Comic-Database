@@ -18,7 +18,8 @@ export class FilterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addFilter(filter: string) {
+  addFilter(filter: string,event) {
+    event.preventDefault();
     this.filter = filter;
     this.applyingFilter = true;
     this.filtered.emit(filter);

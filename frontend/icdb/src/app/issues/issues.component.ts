@@ -64,11 +64,11 @@ export class IssuesComponent implements OnInit {
   }
 
   SortAZ(){
-     this.sortA='True';
+     this.sortA='False';
     this.databaseService.getIssues(this.currPage,this.filter,this.sortA).subscribe(this.issuesHandler);
   }
   SortZA(){
-    this.sortA='False';
+    this.sortA='True';
     this.databaseService.getIssues(this.currPage,this.filter,this.sortA).subscribe(this.issuesHandler);
   }
 }
