@@ -31,34 +31,51 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) { }
 
-  getCharacters(page: number, filter: string): Observable<CharacterPage> {
+  getCharacters(page: number, filter: string, sortA:string): Observable<CharacterPage> {
     let finalUrl = fullyDetailedCharactersUrl + page;
-    if (filter == '') {
-      return this.http.get<CharacterPage>(finalUrl);
-    } else {
-      let headers = new HttpHeaders({
-        'filter': filter
-      });
-      let filterOptions = {
-        headers: headers
-      };
+    let headers = new HttpHeaders();
+    if(filter!=''){
+      headers=headers.append('filter',filter);
+    }
+    if(sortA=='True'){
+      headers=headers.append('sort', 'True');
+    }
+    if(sortA=='False'){
+      headers=headers.append('sort', 'False');
+    }
+    let filterOptions = {
+      headers: headers
+    };
+
+    if (filter == ''&&sortA=='') {
+      return this.http.get<CharacterPage>(finalUrl, filterOptions);
+    }else{
       return this.http.get<CharacterPage>(finalUrl, filterOptions);
     }
   }
-  getAuthors(page: number, filter: string): Observable<AuthorPage> {
+  getAuthors(page: number, filter: string, sortA: string): Observable<AuthorPage> {
     let finalUrl = fullyDetailedAuthorsUrl + page;
-    if (filter == '') {
+    let headers = new HttpHeaders();
+    if(filter!=''){
+      headers=headers.append('filter',filter);
+    }
+    if(sortA=='True'){
+      headers=headers.append('sort', 'True');
+    }
+    if(sortA=='False'){
+      headers=headers.append('sort', 'False');
+    }
+    let filterOptions = {
+      headers: headers
+    };
+
+    if (filter == ''&&sortA=='') {
       return this.http.get<AuthorPage>(finalUrl);
-    } else {
-      let headers = new HttpHeaders({
-        'filter': filter
-      });
-      let filterOptions = {
-        headers: headers
-      };
+    }else{
       return this.http.get<AuthorPage>(finalUrl, filterOptions);
     }
   }
+  
   getIssues(page: number, filter: string, sortA: string): Observable<IssuePage> {
     let finalUrl = fullyDetailedIssuesUrl + page;
     let headers = new HttpHeaders();
