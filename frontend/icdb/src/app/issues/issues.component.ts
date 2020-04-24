@@ -18,10 +18,11 @@ export class IssuesComponent implements OnInit {
   issues: Issue[];
   currPage = 1;
   totalPages = 2;
-
+  
   searchModel = 'issues';
 
   filter = '';
+  sortA ='';
 
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router) { }
 
@@ -37,11 +38,11 @@ export class IssuesComponent implements OnInit {
   };
 
   backPage() {
-    this.databaseService.getIssues(this.currPage - 1, this.filter).subscribe(this.issuesHandler);
+    this.databaseService.getIssues(this.currPage - 1, this.filter,this.sortA).subscribe(this.issuesHandler);
   }
 
   forwardPage() {
-    this.databaseService.getIssues(this.currPage + 1, this.filter).subscribe(this.issuesHandler);
+    this.databaseService.getIssues(this.currPage + 1, this.filter,this.sortA).subscribe(this.issuesHandler);
   }
 
   detailIssue(row: Issue){
@@ -50,7 +51,7 @@ export class IssuesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.databaseService.getIssues(1, this.filter).subscribe(this.issuesHandler);
+    this.databaseService.getIssues(1, this.filter,this.sortA).subscribe(this.issuesHandler);
   }
 
   search(value: string) {
@@ -59,13 +60,15 @@ export class IssuesComponent implements OnInit {
 
   applyFilter(filter: string) {
     this.filter = filter;
-    this.databaseService.getIssues(this.currPage, filter).subscribe(this.issuesHandler);
+    this.databaseService.getIssues(this.currPage, filter,'').subscribe(this.issuesHandler);
   }
 
   SortAZ(){
-
+     this.sortA='true';
+    this.databaseService.getIssues(this.currPage,this.filter,this.sortA).subscribe(this.issuesHandler);
   }
   SortZA(){
-
+    this.sortA='false';
+    this.databaseService.getIssues(this.currPage,this.filter,this.sortA).subscribe(this.issuesHandler);
   }
 }

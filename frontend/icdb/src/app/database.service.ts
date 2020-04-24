@@ -59,21 +59,31 @@ export class DatabaseService {
       return this.http.get<AuthorPage>(finalUrl, filterOptions);
     }
   }
-  getIssues(page: number, filter: string): Observable<IssuePage> {
+  getIssues(page: number, filter: string, sortA: string): Observable<IssuePage> {
     let finalUrl = fullyDetailedIssuesUrl + page;
-    if (filter == '') {
+    let headers = new HttpHeaders();
+    if(filter!=''){
+      headers=headers.append('filter',filter);
+    }
+    if(sortA=='true'){
+      headers=headers.append('sort', true.toString());
+    }
+    if(sortA=='false'){
+      headers=headers.append('sort', false.toString());
+    }
+    let filterOptions = {
+      headers: headers
+    };
+
+    if (filter == ''&&sortA=='') {
       return this.http.get<IssuePage>(finalUrl);
     } else {
-      let headers = new HttpHeaders({
-        'filter': filter
-      });
-      let filterOptions = {
-        headers: headers
-      };
+      
       return this.http.get<IssuePage>(finalUrl, filterOptions);
     }
   }
 
+  
   getCharacterNames(): Observable<ListingPage> {
     return this.http.get<ListingPage>(nameOnlyCharactersUrl);
   }
