@@ -42,6 +42,8 @@ sqlalchemy.engine.url.URL(
 )
 )
 
+
+
 @app.route('/')
 def root():
     characters = []
@@ -634,7 +636,6 @@ def linkAuthor(Name):
     characters = list(dict.fromkeys(characters))
     result = (titles, characters)
     return result
-
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
