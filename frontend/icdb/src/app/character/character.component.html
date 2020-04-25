@@ -115,8 +115,7 @@
       </mat-expansion-panel-header>
       <p id="char-Description-description">{{character.description}}</p>
     </mat-expansion-panel>
-   <div *ngIf="character.appearance">
-    <mat-expansion-panel id="char-Appearance-expand">
+    <mat-expansion-panel *ngIf="character.appearance.race" id="char-Appearance-expand">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Appearance
@@ -127,23 +126,22 @@
       </mat-expansion-panel-header>
       <mat-card-content>
       <mat-list role="list">
-        <mat-list-item role="listitem">{{'Race: '+character.appearance.race}}</mat-list-item>
+        <mat-list-item *ngIf="character.appearance.race" role="listitem">{{'Race: '+character.appearance.race}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item role="listitem">{{'Gender: '+character.appearance.gender}}</mat-list-item>
+        <mat-list-item *ngIf="character.appearance.gender" role="listitem">{{'Gender: '+character.appearance.gender}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item role="listitem">{{'Hair Color: '+character.appearance.hair_color}}</mat-list-item>
+        <mat-list-item *ngIf="character.appearance.hair_color" role="listitem">{{'Hair Color: '+character.appearance.hair_color}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item role="listitem">{{'Eye Color: '+character.appearance.eye_color}}</mat-list-item>
+        <mat-list-item *ngIf="character.appearance.eye_color" role="listitem">{{'Eye Color: '+character.appearance.eye_color}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item role="listitem">{{'Height: '+character.appearance.height[0]}}</mat-list-item>
+        <mat-list-item *ngIf="character.appearance.height[0]" role="listitem">{{'Height: '+character.appearance.height[0]}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item role="listitem">{{'Weight: '+character.appearance.weight[0]}}</mat-list-item>
+        <mat-list-item *ngIf="character.appearance.weight[0]" role="listitem">{{'Weight: '+character.appearance.weight[0]}}</mat-list-item>
         <mat-divider></mat-divider>
       </mat-list>
     </mat-card-content>
     </mat-expansion-panel>
    
-   </div> 
   </mat-accordion>
   
 </div>
