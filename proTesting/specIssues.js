@@ -297,3 +297,55 @@ describe('Issue Detail Page can Search', () => {
 		});
 	}
 })
+
+describe('Issues Page can filter', () => {
+	it('should show filter results', function() {
+		browser.get('http://localhost:4200/#/issues');
+		linkFilter();
+	})
+	
+	function linkFilter() {
+		element(by.id('filter-input')).sendKeys('iron').then(function() {
+			element(by.id('filter-button')).click().then(function() {
+				expect(element(by.id('characterinfo')) !== null).toBeTruthy();
+			})
+		});
+	}
+})
+
+describe('Issues Page can filter', () => {
+	it('should hide filter results', function() {
+		browser.get('http://localhost:4200/#/issues');
+		hideFilter();
+	})
+	
+	function hideFilter() {
+		element(by.id('filter-input')).sendKeys('iron').then(function() {
+			element(by.id('filter-button')).click().then(function() {
+				element(by.id('hide-button')).click().then(function() {
+					expect(element(by.id('hide-button')).isDisplayed()).tobe(false);
+				})
+			})
+		});
+	}
+})
+
+describe('Issues Page can sort', () => {
+	it('should sort acendingly', function() {
+		browser.get('http://localhost:4200/#/issues');
+		sortAscending();
+		sortDecending();
+	})
+	
+	function sortAscending() {
+		element(by.id('chars-sortAZ-button')).click().then(function() {
+			expect(element(by.id('characterinfo')).getText().indexOf('A') !== -1).tobe(true);
+		});
+	}
+	
+	function sortDecending() {
+		element(by.id('chars-sortZA-button')).click().then(function() {
+			expect(element(by.id('characterinfo')).getText().indexOf('T') !== -1).tobe(true);
+		});
+	}	
+})
