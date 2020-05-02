@@ -6,40 +6,16 @@
 
 <body>
 	<h6> Welcome to About Page!</h6>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-	  <a class="navbar-brand" href="#" style="font-family:'Audiowide'">Home</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-	    aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarCollapse">
-	    <ul class="navbar-nav mr-auto">
-			<li class="nav-item ">
-				<a class="nav-link" routerLink="/characters">Characters</a>
-			</li>
-			<li class="nav-item ">
-			  <a class="nav-link" routerLink="/issues">Issues</a>
-			</li>
-			<li class="nav-item ">
-			  <a class="nav-link" routerLink="/authors">Authors</a>
-			</li>
-			<li class="nav-item ">
-			  <a class="nav-link" routerLink="/about">About</a>
-			</li>
-
-		  </ul>
-		  <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
-	  </div>
-    </nav>
+	<app-navigation-bar (searched)="search($event)"></app-navigation-bar>
 
 	<div style="margin-top: 58px;text-align:center">
 	  	<h3>The world's most famous Issues are presented here!<br>
 		  Click on an issue to see their full information.</h3>
 	    <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:skyblue; width:60%; text-align:center; margin: 0 auto">
   	</div>
-  	
+
   	<br>
-	  <div class="row"> 
+	  <div class="row">
 	  	<div class="filter">
 	  	    <app-filter (filtered)="applyFilter($event)"></app-filter>
 	  	</div>

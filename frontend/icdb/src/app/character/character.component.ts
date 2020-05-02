@@ -67,9 +67,6 @@ export class CharacterComponent implements OnInit {
     }
   };
 
-
-
-
   ngOnInit(): void {
     this.character = this.stateService.getCharacter();
     if(this.character == undefined) {
@@ -128,7 +125,7 @@ export class CharacterComponent implements OnInit {
 
   }
 
-  search(value: string) {
+  search(value) {
     this.router.navigateByUrl('/search-page');
-}
+  }
 }

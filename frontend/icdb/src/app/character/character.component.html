@@ -5,33 +5,10 @@
 <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 
 <!-- CSS Stuff -->
-<body> 
+<body>
     <h1> Welcome to About Page!</h1>
     <div id="nav">
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-	  <a class="navbar-brand" href="#" style="font-family:'Audiowide'">Home</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-	    aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarCollapse">
-	    <ul class="navbar-nav mr-auto">
-			<li class="nav-item ">
-				<a class="nav-link" routerLink="/characters">Characters</a>
-			</li>
-			<li class="nav-item ">
-			  <a class="nav-link" routerLink="/issues">Issues</a>
-			</li>
-			<li class="nav-item ">
-			  <a class="nav-link" routerLink="/authors">Authors</a>
-			</li>
-			<li class="nav-item ">
-			  <a class="nav-link" routerLink="/about">About</a>
-			</li>
-          </ul>
-        </div>
-        <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
-    </nav>
+	<app-navigation-bar (searched)="search($event)"></app-navigation-bar>
 	</div>
 
 <div id="Card" style="float:left;">
@@ -41,7 +18,7 @@
       <mat-card-subtitle><h2>{{character.real_name}}</h2></mat-card-subtitle>
       <mat-card-subtitle> {{'Alignment: ' +character.alignment}}</mat-card-subtitle>
       <button id="firstIssueButton" mat-raised-button (click)="detailIssue(character.first_appeared_in_issue)">{{'First Issue: '+character.first_appeared_in_issue}}</button>
-    </div>      
+    </div>
  <div id="charPhoto"class="box" align="center">
     <img mat-card-img src={{character.image}} height="300px" width="200px">
   </div>
@@ -49,7 +26,7 @@
       <br>
       <p> {{character.deck}}</p>
     </mat-card-content>
-    
+
   </mat-card>
 </div>
 
@@ -83,7 +60,7 @@
         <mat-list-item id="char-Author-description" role="listitem"*ngFor="let element of character.creators;" (click)="detailAuthor(element)">{{element}}
           <mat-divider></mat-divider>
         </mat-list-item>
-        
+
       </mat-list>
     </mat-expansion-panel>
 
@@ -100,7 +77,7 @@
         <mat-list-item id="char-Issue-description" role="listitem"*ngFor="let element of character.issues;" (click)="detailIssue(element)">{{element}}
           <mat-divider></mat-divider>
         </mat-list-item>
-        
+
       </mat-list>
     </mat-expansion-panel>
 
@@ -141,9 +118,9 @@
       </mat-list>
     </mat-card-content>
     </mat-expansion-panel>
-   
+
   </mat-accordion>
-  
+
 </div>
 </body>
 </html>

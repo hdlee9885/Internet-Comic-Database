@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from '../database.service';
-import { StateService } from '../state.service';
-import { Character, SingleCharacter } from '../character';
-import { Router } from '@angular/router';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -11,14 +7,15 @@ import { Router } from '@angular/router';
 })
 export class NavigationBarComponent implements OnInit {
 
+  @Output() searched = new EventEmitter();
 
   searchType = 'all';
-  constructor(private stateService: StateService, private databaseService: DatabaseService, private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   search(value: string) {
-    this.router.navigateByUrl('/search-page')
+    this.searched.emit(value);
 }
 }

@@ -20,16 +20,12 @@ export class SearchBarComponent implements OnInit {
   }
 
   search(event, value: string): void {
-    console.log('hello');
     event.preventDefault();
     this.stateService.setKeyword(value);
     this.searched.emit(value);
     this.searchValue = null;
-    
-
-    
   }
 
- 
+
 
 }

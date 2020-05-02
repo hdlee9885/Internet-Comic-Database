@@ -54,8 +54,8 @@ export class AuthorsComponent implements OnInit {
     this.databaseService.getAuthors(1, this.filter, this.sortA).subscribe(this.authorsHandler);
   }
 
-  search(value: string) {
-	this.router.navigateByUrl('search-page');
+  search(value) {
+	  this.router.navigateByUrl('search-page');
   }
 
   applyFilter(filter: string) {

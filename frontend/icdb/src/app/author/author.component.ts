@@ -95,7 +95,7 @@ export class AuthorComponent implements OnInit {
 
   }
 
-  search(value: string) {
+  search(value) {
     this.router.navigateByUrl('/search-page');
   }
 }

@@ -3,6 +3,7 @@ import { AboutService } from '../about.service';
 import { Developer } from '../developer';
 import { Stats } from '../stats';
 import { Issues } from '../issues';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -99,11 +100,15 @@ export class AboutComponent implements OnInit {
     }
   };
 
-  constructor(private aboutService: AboutService) { }
+  constructor(private aboutService: AboutService, private router: Router) { }
 
   ngOnInit(): void {
     this.aboutService.getStats().subscribe(this.statsHandler);
     this.aboutService.getIssues().subscribe(this.issuesHandler);
+  }
+
+  search(value): void {
+    this.router.navigateByUrl('/search-page');
   }
 }
 

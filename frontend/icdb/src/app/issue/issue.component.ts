@@ -111,7 +111,7 @@ export class IssueComponent implements OnInit {
     }
 
   }
-  search(value: string) {
+  search(value) {
     this.router.navigateByUrl('/search-page');
   }
 }

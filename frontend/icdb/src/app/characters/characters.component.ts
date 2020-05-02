@@ -55,7 +55,7 @@ export class CharactersComponent implements OnInit {
     this.databaseService.getCharacters(1, '','').subscribe(this.charactersHandler);
   }
 
-  search(value: string) {
+  search(value) {
       this.router.navigateByUrl('/search-page');
   }
 

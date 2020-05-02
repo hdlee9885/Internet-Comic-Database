@@ -72,11 +72,10 @@ export class SearchPageComponent implements OnInit {
 
   search(value: string) {
     this.databaseService.getSearchTerm(value, 1).subscribe(this.searchHandler);
-    this.keyword=value;
-    console.log(value);
-  
+    this.keyword = value;
+
   }
-  
+
   detailIssue(issue: string){
     this.databaseService.getSingleIssue(issue).subscribe(this.detailIssueHandler);
   }
@@ -109,6 +108,6 @@ export class SearchPageComponent implements OnInit {
     this.databaseService.getSearchTerm(this.keyword, this.currPage + 1).subscribe(this.searchHandler);
   }
 
-  
+
 
 }

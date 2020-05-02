@@ -18,7 +18,7 @@ export class IssuesComponent implements OnInit {
   issues: Issue[];
   currPage = 1;
   totalPages = 2;
-  
+
   searchModel = 'issues';
 
   filter = '';
@@ -54,8 +54,8 @@ export class IssuesComponent implements OnInit {
     this.databaseService.getIssues(1, this.filter,this.sortA).subscribe(this.issuesHandler);
   }
 
-  search(value: string) {
-	this.router.navigateByUrl('search-page');
+  search(value) {
+	  this.router.navigateByUrl('search-page');
   }
 
   applyFilter(filter: string) {

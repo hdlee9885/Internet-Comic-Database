@@ -7,20 +7,20 @@
 
 <body>
 	<h1> Welcome to Splash Page!</h1>
-	<app-navigation-bar></app-navigation-bar>
+	<app-navigation-bar (searched)="search($event)"></app-navigation-bar>
 
-	
+
 	<div>
 		<video autoplay muted loop id="myVideo">
 			<source src="../../assets/video/Intro.mp4" type="video/mp4">
-		</video>		
+		</video>
 		<div class="video">
 			<p style="font-size: 26px">Welcome to Internet Comic Database (ICDb)!<p>
 			<p>Click on the navbar button to start looking up your desired comics!</p>
-			<p style="text-align:center"><i class="down"></i></p>	
+			<p style="text-align:center"><i class="down"></i></p>
 		</div>
 	</div>
-	
+
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 	  	<ol class="carousel-indicators">
 	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -60,10 +60,10 @@
 	    		<span class="sr-only">Next</span>
 	  		</a>
 	</div>
-	
+
 	<div class="footer-bottom">
-		&copy; Comic Book DB | Designed by E E 461L Team		
-	
+		&copy; Comic Book DB | Designed by E E 461L Team
+
 	</div>
 
 </body>

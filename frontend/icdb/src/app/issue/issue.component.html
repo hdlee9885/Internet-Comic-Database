@@ -6,31 +6,7 @@
 
 <body>
 	<h1>!</h1>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-	  <a class="navbar-brand" href="#" style="font-family:'Audiowide'">Home</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-	    aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarCollapse">
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item ">
-			  <a class="nav-link" routerLink="/characters">Characters</a>
-		  </li>
-		  <li class="nav-item ">
-			<a class="nav-link" routerLink="/issues">Issues</a>
-		  </li>
-		  <li class="nav-item ">
-			<a class="nav-link" routerLink="/authors">Authors</a>
-		  </li>
-		  <li class="nav-item ">
-			<a class="nav-link" routerLink="/about">About</a>
-		  </li>
-	    </ul>
-	  </div>
-	   
-	  <app-search-bar [model]="searchModel" (searched)="search($event)"></app-search-bar>
-	</nav>
+	<app-navigation-bar (searched)="search($event)"></app-navigation-bar>
 
 	 <div id="Card" style="float:left;">
 		<mat-card class="example-card" >
