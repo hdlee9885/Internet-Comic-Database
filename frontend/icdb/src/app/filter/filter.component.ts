@@ -19,6 +19,7 @@ export class FilterComponent implements OnInit {
   }
 
   addFilter(filter: string) {
+    this.filterValue = null;
     this.filter = filter;
     this.applyingFilter = true;
     this.filtered.emit(filter);
