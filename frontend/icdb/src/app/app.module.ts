@@ -18,6 +18,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FilterComponent } from './filter/filter.component';
 import { SearchPageComponent } from './search-page/search-page.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SearchPageComponent } from './search-page/search-page.component';
     IssueComponent,
     SearchBarComponent,
     FilterComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,

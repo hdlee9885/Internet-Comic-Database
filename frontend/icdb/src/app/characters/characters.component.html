@@ -2,11 +2,12 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSS Stuff -->
+<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+
 <body>
 	<h6>Welcome to Characters Page!</h6>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-	  <a class="navbar-brand" href="#">Home</a>
+	  <a class="navbar-brand" href="#" style="font-family:'Audiowide'">Home</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
 	    aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,28 +37,24 @@
     <hr style="height:3px; border:none; color:rgb(60,90,180); background-color:skyblue; width:60%; text-align:center; margin: 0 auto">
   </div>
 
-  <div id="chars-under-Nav-Div" class ="Row">
-
-    <app-filter (filtered)="applyFilter($event)"></app-filter>
-
-    <div id="charsCaption" class="Column" style="padding: 20px">
-      <p> </p>
-    </div>
-
-    <div id="sortCharactersButtons" class="Column">
-      <br>
-      <button id="chars-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
-      <button id="chars-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button>
-    </div>
-
-
+  <br>
+  <div class="row"> 
+  	<div class="filter">
+  	    <app-filter (filtered)="applyFilter($event)"></app-filter>
+  	</div>
+  	<div class="sorting">
+	  	<div id="sortCharactersButtons" class="Column">
+	      <button id="chars-sortAZ-button" mat-flat-button color="primary" (click)="SortAZ()"><b>Sort Ascending</b></button>
+	      <button id="chars-sortZA-button" mat-flat-button color="primary" (click)="SortZA()"><b>Sort Descending</b></button>
+	    </div>
+  	</div>
   </div>
-
-
+  <br>
+ 
   <div>
     <mat-grid-list cols="3" rowHeight="2:1" gutterSize="3px">
       <mat-grid-tile *ngFor="let character of characters" (click)="detailCharacter(character)">
-		<div class="character-card">
+		<div id="characterinfo" class="character-card">
 
           <h3><strong>{{character.name}}</strong></h3>
            <p><strong>Real Name</strong>: {{character.real_name}}<br>
@@ -71,8 +68,8 @@
 
   </div>
   <div class="nav-buttons" style="float: right;">
-    <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()"><</button>
-    <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">></button>
+    <button id="char-backbutton" mat-raised-button *ngIf="currPage > 1" (click)="backPage()">&laquo; Previous</button>
+    <button id="char-fwdbutton" mat-raised-button *ngIf="currPage < totalPages" (click)="forwardPage()">Next &raquo;</button>
   </div>
 
 

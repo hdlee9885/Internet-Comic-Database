@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../database.service';
 import { StateService } from '../state.service';
 import { Character, SingleCharacter } from '../character';
-
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-splash',
@@ -27,7 +26,7 @@ export class SplashComponent implements OnInit {
   }
 
   search(value: string) {
-    console.log(value);
+      this.router.navigateByUrl('/search-page')
   }
 
 

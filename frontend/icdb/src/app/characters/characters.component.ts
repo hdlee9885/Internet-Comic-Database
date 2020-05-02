@@ -21,6 +21,7 @@ export class CharactersComponent implements OnInit {
 
   searchModel = 'characters';
 
+  sortA='';
   filter = '';
 
   constructor(private databaseService: DatabaseService, private stateService: StateService, private router: Router, private cd: ChangeDetectorRef) { }
@@ -38,11 +39,11 @@ export class CharactersComponent implements OnInit {
   };
 
   backPage() {
-    this.databaseService.getCharacters(this.currPage - 1, this.filter).subscribe(this.charactersHandler);
+    this.databaseService.getCharacters(this.currPage - 1, this.filter, this.sortA).subscribe(this.charactersHandler);
   }
 
   forwardPage() {
-    this.databaseService.getCharacters(this.currPage + 1, this.filter).subscribe(this.charactersHandler);
+    this.databaseService.getCharacters(this.currPage + 1, this.filter,this.sortA).subscribe(this.charactersHandler);
   }
 
   detailCharacter(row: Character) {
@@ -51,7 +52,7 @@ export class CharactersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.databaseService.getCharacters(1, '').subscribe(this.charactersHandler);
+    this.databaseService.getCharacters(1, '','').subscribe(this.charactersHandler);
   }
 
   search(value: string) {
@@ -60,13 +61,15 @@ export class CharactersComponent implements OnInit {
 
   applyFilter(filter: string) {
     this.filter = filter;
-    this.databaseService.getCharacters(this.currPage, filter).subscribe(this.charactersHandler);
+    this.databaseService.getCharacters(this.currPage, this.filter,this.sortA).subscribe(this.charactersHandler);
   }
 
   SortAZ(){
-
-  }
-  SortZA(){
-
-  }
+    this.sortA='False';
+   this.databaseService.getCharacters(this.currPage,this.filter,this.sortA).subscribe(this.charactersHandler);
+ }
+ SortZA(){
+   this.sortA='True';
+   this.databaseService.getCharacters(this.currPage,this.filter,this.sortA).subscribe(this.charactersHandler);
+ }
 }

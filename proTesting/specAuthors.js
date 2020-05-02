@@ -5,7 +5,7 @@ describe('Author Preview Page', () => {
 	});
 	
 	function navigateToAuthorsPage(){
-	  	actualUrl = 'http://localhost:4200/authors';
+	  	actualUrl = 'http://localhost:4200/#/authors';
 	    element(by.id('authors-nav')).click().then(function(){ // first find list-home a tag and than click 
 	        browser.sleep(2000).then(function(){
 	          browser.getCurrentUrl().then(function(actualUrl){ // promise
@@ -19,12 +19,12 @@ describe('Author Preview Page', () => {
 
 describe('Authors Detailed Page', () => {
     it('should nav to authors detail page', function () {
-        browser.get('http://localhost:4200/authors');
+        browser.get('http://localhost:4200/#/authors');
         navigateToAuthorDetailedPage();
     });
 
     function navigateToAuthorDetailedPage() {
-        actualUrl = 'http://localhost:4200/author';
+        actualUrl = 'http://localhost:4200/#/author';
         const issuesList = element.all(by.id('authors-row'));
         const issuesCount = issuesList.count();
         for (var i = 0; i < issuesCount; i++) {
@@ -41,12 +41,12 @@ describe('Authors Detailed Page', () => {
 
 describe('Preview Page Forward and Backward', () => {
     it('should nav to next page and test new authors', function () {
-        browser.get('http://localhost:4200/authors');
+        browser.get('http://localhost:4200/#/authors');
         forwardToNextAuthors();
     });
 
     it('should nav to previous page and test older authors', function () {
-        browser.get('http://localhost:4200/authors');
+        browser.get('http://localhost:4200/#/authors');
         backwardToPreviousAuthors();
     });
 
@@ -83,12 +83,12 @@ describe('Preview Page Forward and Backward', () => {
 
 describe('Detail Page Expansion', () => {
 	it('should open all tabs', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    openAllTabs();
     })
     
     it('should close all tabs', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    closeAllTabs();
     })
 
@@ -143,22 +143,22 @@ describe('Detail Page Expansion', () => {
 
 describe('Detail Page Expansion One by One', () => {
 	it('should open the Characters Tab', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    openCharactersTab();
     })
     
     it('should open the Info Tab', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    openInfoTab();
     })
     
 	it('should open the Description Tab', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    openDescriptionTab();
     })
 
     it('should open the Issues Tab', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    openIssuesTab();
     })
     	
@@ -206,13 +206,13 @@ describe('Detail Page Expansion One by One', () => {
 
 describe('Detail Page Linkage', () => {
 	it('should link to character page', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    linkCharacters();
     })
 	
 	function linkCharacters() {
 		b = false;
-		actualUrl = 'http://localhost:4200/character';
+		actualUrl = 'http://localhost:4200/#/character';
 	    browser.sleep(2000).then(function(){
 			element(by.id('authors-row')).click().then(function(){
 				element(by.id('author-Characters-expand')).click().then(function() {
@@ -235,13 +235,13 @@ describe('Detail Page Linkage', () => {
 
 describe('Detail Page Linkage', () => {
 	it('should link to issue page', function() {
-		browser.get('http://localhost:4200/authors');
+		browser.get('http://localhost:4200/#/authors');
 	    linkIssues();
     })
 	
 	function linkIssues() {
 		b = false;
-		actualUrl = 'http://localhost:4200/issue';
+		actualUrl = 'http://localhost:4200/#/issue';
 	    browser.sleep(2000).then(function(){
 			element(by.id('authors-row')).click().then(function(){
 				element(by.id('author-Issues-expand')).click().then(function() {
@@ -260,4 +260,90 @@ describe('Detail Page Linkage', () => {
 			})
 	    })
     }
+})
+
+describe('Authors Page can Search', () => {
+	it('should show search page', function() {
+		browser.get('http://localhost:4200/#/authors');
+		linkSearch();
+	})
+	
+	function linkSearch() {
+		element(by.id('search-input')).sendKeys('man').then(function() {
+			element(by.id('search-button')).click().then(function() {
+				browser.getCurrentUrl().then(function(actualUrl){ // promise
+		            expect(actualUrl.indexOf('search-page') !== -1).toBeTruthy();
+				})
+			})
+		});
+	}
+})
+
+describe('Author Detail Page can Search', () => {
+	it('should show search page', function() {
+		browser.get('http://localhost:4200/#/author');
+		linkSearch();
+	})
+	
+	function linkSearch() {
+		element(by.id('search-input')).sendKeys('iron').then(function() {
+			element(by.id('search-button')).click().then(function() {
+				browser.getCurrentUrl().then(function(actualUrl){ // promise
+		            expect(actualUrl.indexOf('search-page') !== -1).toBeTruthy();
+				})
+			})
+		});
+	}
+})
+
+describe('Authors Page can filter', () => {
+	it('should show filter results', function() {
+		browser.get('http://localhost:4200/#/authors');
+		linkFilter();
+	})
+	
+	function linkFilter() {
+		element(by.id('filter-input')).sendKeys('iron').then(function() {
+			element(by.id('filter-button')).click().then(function() {
+				expect(element(by.id('characterinfo')) !== null).toBeTruthy();
+			})
+		});
+	}
+})
+
+describe('Authors Page can filter', () => {
+	it('should hide filter results', function() {
+		browser.get('http://localhost:4200/#/authors');
+		hideFilter();
+	})
+	
+	function hideFilter() {
+		element(by.id('filter-input')).sendKeys('iron').then(function() {
+			element(by.id('filter-button')).click().then(function() {
+				element(by.id('hide-button')).click().then(function() {
+					expect(element(by.id('hide-button')).isDisplayed()).tobe(false);
+				})
+			})
+		});
+	}
+})
+
+describe('Authors Page can sort', () => {
+	it('should sort acendingly', function() {
+		browser.get('http://localhost:4200/#/authors');
+		sortAscending();
+		sortDecending();
+	})
+	
+	function sortAscending() {
+		element(by.id('chars-sortAZ-button')).click().then(function() {
+			expect(element(by.id('characterinfo')).getText().indexOf('A') !== -1).tobe(true);
+		});
+	}
+	
+	function sortDecending() {
+		element(by.id('chars-sortZA-button')).click().then(function() {
+			expect(element(by.id('characterinfo')).getText().indexOf('T') !== -1).tobe(true);
+		});
+	}	
 })

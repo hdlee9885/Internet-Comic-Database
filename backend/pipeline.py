@@ -115,6 +115,8 @@ def get_issue(url,name):
             issueDict[trait] = resp[trait]
         except:
             issueDict[trait] = 'null'
+
+
     issueDict['description'] = remove_tags(issueDict['description'])
     tempList = []
     for character in issueDict['character_credits']:
@@ -133,7 +135,7 @@ def get_issue(url,name):
 
     image_selector(issueDict)
     OUTPUT_DIR = 'Issues'
-    comic_name = issueDict['name']
+    comic_name = name#issueDict['name']
     if comic_name == None:
         issueDict['name'] = name
     write_json_to_filesystem(OUTPUT_DIR,issueDict['name'],issueDict)
@@ -142,6 +144,14 @@ def get_issue(url,name):
 
 
 
+def clean_json(dictionary, traits):
+    for trait in traits:
+        
+        if dictionary['trait'] is list:
+            newList = []
+        elif dictionary['trait'] is str:
+            dictionary['trait'] = dictionary['trait'].replace("'","''")
+            
 
 
 def get_bio(heroName,charDict):
@@ -188,6 +198,7 @@ TAG_RE = re.compile(r'<[^>]+>')
 def remove_tags(text):
     try:
         string =  TAG_RE.sub('', text)[0:1000]
+        string.replace("'", "''")
         return string
     except:
         return 'null'
