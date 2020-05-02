@@ -120,17 +120,6 @@ def issuesPagedNew(pageNum):
     return issueObj.IssuesPagedNEW(pageNum,headers)
 
 
-@app.route('/issue/Spider-Man! / The Bell Ringer / The Man in the Mummy Case / There are Martians Among Us')
-def specialTempCase():
-    issueName = 'Spider-Man! / The Bell Ringer / The Man in the Mummy Case / There are Martians Among Us'
-    return issue(issueName)
-
-@app.route('/issue/Tales of Suspense ')
-def specialCase():
-    issueName = 'Tales of Suspense #41 The Stronghold Of Dr. Strange!'
-    return issue(issueName)
-
-
 @app.route('/')
 def root():
     return "Welcome to icdb API \n \n We are happy to have you!"
